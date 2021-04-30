@@ -1,0 +1,157 @@
+//////////////////////////////////////  
+///// COLOR SCHEME & MIXINS
+$color-red: hsl(0, 78%, 62%);
+$color-cyan: hsl(180, 62%, 55%);
+$color-orange: hsl(34, 97%, 64%);
+$color-blue: rgb(84, 158, 242);
+    
+$color-very-dark-blue: hsl(234, 12%, 34%);
+$color-grayish-blue: hsl(229, 6%, 66%);
+$color-very-light-gray: hsl(0, 0%, 98%);
+
+@mixin border($color) {
+    border-radius: .5rem;
+    border-top: .5rem solid;
+    border-top-color: $color;
+}
+
+@mixin media($breakpoint) {
+    @if $breakpoint == tablet {
+        @media (max-width: 1140px) { @content };
+    }
+    @if $breakpoint == phone {
+        @media (max-width: 500px) { @content };
+    }
+}
+
+
+//////////////////////////////////////  
+///// UNIVERSAL BASIC RESET
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+//////////////////////////////////////  
+///// HTML & BODY LAYOUT PROPERTIES
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem;
+    background-color: $color-very-light-gray;
+}
+
+
+//////////////////////////////////////  
+///// HEADING SECTION
+.heading {
+    text-align: center;
+    width: 50rem;
+    margin: 6rem auto;
+
+    @include media(phone) {
+        width: 80%;
+    }
+
+    &__main {
+        font-weight: 200;
+        font-size: 3.6rem;
+        color: $color-very-dark-blue;
+        line-height: 1.4;
+
+        @include media(phone) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__sub {
+        font-weight: 400;
+        font-size: 3.7rem;
+        color: $color-very-dark-blue;
+
+        @include media(phone) {
+            font-size: 2.4rem;
+        }
+    }
+
+    &__description {
+        margin-top: 1.3rem;
+        color: $color-grayish-blue;
+
+        @include media(phone) {
+            font-size: 1.3rem;
+        }
+    }
+}
+
+
+//////////////////////////////////////  
+///// CARDS SECTION
+.cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include media(tablet) {
+        flex-direction: column;
+    }
+
+    &__content {
+        background-color: #fff;
+        height: 25rem;
+        width: 35rem;
+        margin: 3rem 1.5rem;
+        padding: 3rem 3.5rem;
+        box-shadow: 0 1rem 2rem rgba(19, 97, 187, 0.15);
+        position: relative;
+
+        @include media(tablet) {
+            margin-bottom: 1rem;
+        }
+        @include media(phone) {
+            width: 30rem;
+        }
+        
+        &--supervisor { @include border($color-cyan); }
+        &--team-builder { @include border($color-red); }
+        &--karma { @include border($color-orange);
+            @include media(tablet) { margin-top: 4rem; } 
+        }
+        &--calculator { @include border($color-blue); }
+    }
+
+    &__title {
+        color: $color-very-dark-blue;
+        font-size: 2rem;
+    }
+
+    &__description {
+        font-size: 1.3rem;
+        margin-top: 1rem;
+        color: $color-grayish-blue;
+    }
+
+    &__image {
+        position: absolute;
+        bottom: 3rem;
+        right: 3rem;
+    }
+}
+
+//////////////////////////////////////  
+///// FOOTER SECTION
+.attribution {
+    @include media(tablet) {
+        margin: 3rem 0;
+    }
+}
