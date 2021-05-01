@@ -11,8 +11,6 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 62.5%;
-  width: 1440px;
-  margin: 0 auto;
 }
 
 body {
@@ -21,7 +19,7 @@ body {
   background-color: #f2f2f2;
 }
 
-.container {
+.box {
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,34 +32,64 @@ body {
           align-items: center;
 }
 
-.cards {
+@media (max-width: 950px) {
+  .box {
+    height: auto;
+  }
+}
+
+.container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 50rem;
-  width: 92rem;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   border-radius: .8rem;
   overflow: hidden;
-  position: relative;
 }
 
-.cards > div {
+@media (max-width: 950px) {
+  .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 8rem 0;
+  }
+}
+
+.container > div {
   padding: 5rem;
 }
 
-.cards > div:nth-child(1) {
+.container > div:nth-child(1) {
   background-color: #e38826;
 }
 
-.cards > div:nth-child(2) {
+.container > div:nth-child(2) {
   background-color: #006970;
 }
 
-.cards > div:nth-child(3) {
+.container > div:nth-child(3) {
   background-color: #004241;
 }
 
-.single-card__heading {
+.card {
+  height: 50rem;
+  width: 31rem;
+  position: relative;
+}
+
+@media (max-width: 950px) {
+  .card {
+    height: 44rem;
+  }
+}
+
+.card__heading {
   font-family: 'Big Shoulders Display', cursive;
   text-transform: uppercase;
   font-size: 4rem;
@@ -69,13 +97,18 @@ body {
   padding: 3rem 0;
 }
 
-.single-card__description {
+.card__description {
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.6;
 }
 
+@media (max-width: 950px) {
+  .card__description {
+    font-size: 1.4rem;
+  }
+}
+
 .btn, .btn:link, .btn:visited {
-  display: inline-block;
   text-decoration: none;
   background-color: #f2f2f2;
   padding: 1.5rem 3rem;
@@ -85,8 +118,8 @@ body {
   bottom: 5rem;
   mix-blend-mode: screen;
   color: #000;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  -webkit-transition: all .3s;
+  transition: all .3s;
 }
 
 .btn:hover {

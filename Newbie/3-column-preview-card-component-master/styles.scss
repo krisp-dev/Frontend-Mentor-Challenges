@@ -1,11 +1,17 @@
 //////////////////////////////////////  
-///// COLOR SCHEME
+///// COLOR SCHEME & MIXINS
 $bright-orange: hsl(31, 77%, 52%);
 $dark-cyan: hsl(184, 100%, 22%);
 $very-dark-cyan: hsl(179, 100%, 13%);
 
 $transparent-white: hsla(0, 0%, 100%, 0.75); //paragraphs
 $very-light-gray: hsl(0, 0%, 95%); //background, headings, buttons
+
+@mixin media($breakpoint) {
+    @if $breakpoint == tablet&mobile {
+        @media (max-width: 950px) { @content };
+    }
+}
 
 //////////////////////////////////////  
 ///// UNIVERSAL BASIC RESET
@@ -18,12 +24,10 @@ $very-light-gray: hsl(0, 0%, 95%); //background, headings, buttons
 }
 
 //////////////////////////////////////  
-///// HTML & BODY LAYOUT PROPERTIES
+///// HTML & BODY LAYOUT
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
-    width: 1440px;
-    margin: 0 auto;
 }
 
 body {
@@ -33,25 +37,30 @@ body {
 }
 
 //////////////////////////////////////  
-///// CONTAINER LAYOUT
-.container {
+///// BOX & CONTAINER LAYOUT
+.box {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+
+    @include media(tablet&mobile) {
+        height: auto;
+    }
 }
 
-
-//////////////////////////////////////  
-///// CARDS COMPONENT
-.cards {
+.container {
     display: flex;
-    height: 50rem;
-    width: 92rem;
+    align-self: center;
+    width: fit-content;
     border-radius: .8rem;
     overflow: hidden;
-    position: relative;
 
+    @include media(tablet&mobile) {
+        flex-direction: column;
+        margin: 8rem 0;
+    }
+    
     & > div{
         padding: 5rem;
 
@@ -67,7 +76,18 @@ body {
     }
 }
 
- .single-card {
+
+//////////////////////////////////////  
+///// CARD COMPONENT
+.card {
+    height: 50rem;
+    width: 31rem;
+    position: relative;
+
+    @include media(tablet&mobile) {
+        height: 44rem;
+    }
+
     &__heading {
         font-family: 'Big Shoulders Display', cursive;
         text-transform: uppercase;
@@ -79,16 +99,19 @@ body {
     &__description {
         color: $transparent-white;
         line-height: 1.6;
+        
+        @include media(tablet&mobile) {
+            font-size: 1.4rem;
+        }
     }   
 }
-
 //////////////////////////////////////  
 ///// BUTTON COMPONENT
 .btn {
     &,
     &:link,
     &:visited {
-        display: inline-block;
+            
         text-decoration: none;
         background-color: $very-light-gray;
         padding: 1.5rem 3rem;
@@ -99,16 +122,16 @@ body {
 
         mix-blend-mode: screen;
         color: #000;
-
-        transition: all .2s;
+    
+        transition: all .3s;
     }
-
+    
     &:hover {
         mix-blend-mode: screen;
         background-color:  #000;
         color: $very-light-gray;
     }
-
+    
     &:active {
         transform: translateY(-2px);
     }
