@@ -1,0 +1,121 @@
+//////////////////////////////////////  
+///// COLOR SCHEME & MIXINS
+$cyan: hsl(179, 62%, 43%);
+$bright-yellow: hsl(71, 73%, 54%);
+
+$light-gray: hsl(204, 43%, 93%);
+$grayish-blue: hsl(218, 22%, 67%);
+
+@mixin media($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 500px) { @content };
+    }
+}
+
+//////////////////////////////////////  
+///// UNIVERSAL BASIC RESET
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+//////////////////////////////////////  
+///// HTML & BODY LAYOUT PROPERTIES
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.6rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+//////////////////////////////////////  
+///// GRID LAYOUT
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "one one"
+      "two three";
+    
+    &__one {grid-area: one;}
+    &__two {grid-area: two;}
+    &__three {grid-area: three;}
+}
+
+//////////////////////////////////////  
+///// GRID STYLES
+.grid {
+    width: 64rem;
+    height: 48rem;
+
+    &__one {
+
+        &--heading-main {
+
+        }
+
+        &--heading-sub {
+
+        }
+
+        &--text {
+
+        }
+    }
+
+    &__two {
+
+        &--heading-sub {
+
+        }
+
+        &--price {
+
+            span {
+
+            }
+        }
+        
+        &--text {
+
+        }
+    }
+
+    &__three {
+
+        &--heading-sub {
+
+        }
+
+        &--text {
+
+        }
+    }
+}
+
+//////////////////////////////////////  
+///// BUTTON SECTION
+.btn {
+    
+}
+
+//////////////////////////////////////  
+///// FOOTER SECTION
+.attribution {
+    margin-top: 2rem;
+}
