@@ -204,6 +204,10 @@ body {
 //////////////////////////////////////  
 ///// FOOTER SECTION
 .attribution {
-    margin-bottom: 2rem;
+    margin-top: 2rem;
     text-align: center;
+
+    @include media(phone&tablet) {
+        margin-top: -2.5rem;
+    }
 }

@@ -236,7 +236,13 @@ body {
 }
 
 .attribution {
-  margin-bottom: 2rem;
+  margin-top: 2rem;
   text-align: center;
+}
+
+@media (max-width: 700px) {
+  .attribution {
+    margin-top: -2.5rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
