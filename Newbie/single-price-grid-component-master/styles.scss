@@ -1,14 +1,18 @@
 //////////////////////////////////////  
 ///// COLOR SCHEME & MIXINS
 $cyan: hsl(179, 62%, 43%);
+$cyan-secondary: hsl(179, 47%, 52%);
 $bright-yellow: hsl(71, 73%, 54%);
+$bright-yellow2:hsl(71, 83%, 44%);
 
 $light-gray: hsl(204, 43%, 93%);
+$light-gray2: hsla(203, 44%, 93%, 0.8);
+$light-gray3: hsla(203, 44%, 93%, 0.6);
 $grayish-blue: hsl(218, 22%, 67%);
 
 @mixin media($breakpoint) {
-    @if $breakpoint == phone {
-        @media (max-width: 500px) { @content };
+    @if $breakpoint == phone&tablet {
+        @media (max-width: 700px) { @content };
     }
 }
 
@@ -27,8 +31,6 @@ $grayish-blue: hsl(218, 22%, 67%);
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
-    max-width: 1440px;
-    margin: 0 auto;
 }
 
 body {
@@ -39,6 +41,11 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    background-color: $light-gray;
+
+    @include media(phone&tablet) {
+        height: auto;
+    }
 }
 
 //////////////////////////////////////  
@@ -46,64 +53,120 @@ body {
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
     gap: 0px 0px;
     grid-template-areas:
       "one one"
       "two three";
     
-    &__one {grid-area: one;}
-    &__two {grid-area: two;}
-    &__three {grid-area: three;}
+    &1 {grid-area: one;}
+    &2 {grid-area: two;}
+    &3 {grid-area: three;}
+    
+    @include media(phone&tablet) {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 0px 0px;
+        grid-template-areas:
+          "one"
+          "two"
+           "three";
+          
+        .one { grid-area: one; }
+        .two { grid-area: two; }
+        .three { grid-area: three; }
+    }
 }
 
 //////////////////////////////////////  
 ///// GRID STYLES
 .grid {
     width: 64rem;
-    height: 48rem;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 2rem 2rem rgba(19, 97, 187, 0.15);
 
-    &__one {
+    h2 {color: $cyan;}
+    h3 {color: $bright-yellow; 
+        &:nth-child(1) {color: #fff;}
+    }
 
-        &--heading-main {
+    @include media(phone&tablet) {
+        width: 31rem;
+        margin: 7rem 0 5rem 0;
+        border-radius: .5rem;
+        font-size: 1.4rem;
+    }
 
+    &1 {
+        background-color: #fff; 
+        height: 21.5rem;
+        padding: 4rem;
+
+        @include media(phone&tablet) {
+            height: 27rem;
+            padding: 2.5rem;
         }
 
-        &--heading-sub {
-
+        &__heading {
+            margin-bottom: 2.5rem;
         }
 
-        &--text {
+        &__text {
+            margin-top: 1.5rem;
+            color: $grayish-blue;
+            line-height: 1.6;
 
+            @include media(phone&tablet) {
+                line-height: 2;
+            }
         }
     }
 
-    &__two {
+    &2 {
+        background-color: $cyan; 
+        height: 26rem;
+        padding: 4rem;
 
-        &--heading-sub {
-
+        @include media(phone&tablet) {
+            height: 23rem;
+            padding: 2.5rem;
         }
 
-        &--price {
-
+        &__price {
+            color: $light-gray3;
+            display: flex;
+            align-items: center;
+            margin-top: 1.7rem;
+            
             span {
-
+                color: #fff;
+                font-size: 3rem;
+                font-weight: 700;
+                padding-right: 1.2rem;
             }
         }
         
-        &--text {
-
+        &__text {
+            color: $light-gray;
+            margin-top: 1rem;
         }
     }
 
-    &__three {
+    &3 {
+        background-color: $cyan-secondary; 
+        height: 26rem;
+        padding: 4rem;
 
-        &--heading-sub {
-
+        @include media(phone&tablet) {
+            height: 23rem;
+            padding: 2.5rem;
         }
 
-        &--text {
-
+        &__text {
+            color: $light-gray2;
+            margin-top: 1.5rem;
+            font-size: 1.4rem;
+            line-height: 1.6;
         }
     }
 }
@@ -111,11 +174,36 @@ body {
 //////////////////////////////////////  
 ///// BUTTON SECTION
 .btn {
-    
+    &,
+    &:link,
+    &:visited {
+        text-decoration: none;
+        background-color: $bright-yellow;
+        padding: 1.5rem 3rem;
+        border-radius: .5rem;
+        display: block;
+        color: #fff;
+        text-align: center;
+        margin-top: 3rem;
+        box-shadow: 0 1rem 2rem rgba(0,0,0, .15);
+        
+        transition: all .3s;
+    }
+
+    &:hover {
+        background-color: $bright-yellow2;
+        transform: translateY(-2px);
+        box-shadow: 0 1rem 2rem rgba(0,0,0, .3);
+    }
+
+    &:active {
+        transform: translateY(1px);
+    }
 }
 
 //////////////////////////////////////  
 ///// FOOTER SECTION
 .attribution {
-    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
 }
