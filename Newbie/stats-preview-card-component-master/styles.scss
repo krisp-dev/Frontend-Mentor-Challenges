@@ -1,0 +1,155 @@
+//////////////////////////////////////  
+///// COLOR SCHEME & MIXINS
+$color-primary-dark: hsl(233, 47%, 7%);
+$color-primary-light: hsl(244, 38%, 16%);
+$color-primary-accent: hsl(277, 64%, 61%);
+
+$color-white-main: hsl(0, 0%, 100%);
+$color-white-paragraph: hsla(0, 0%, 100%, 0.75);
+$color-white-stats: hsla(0, 0%, 100%, 0.6);
+
+@mixin media($breakpoint) {
+    @if $breakpoint == tablet {
+        @media (max-width: 1150px) { @content };
+    }
+}
+
+//////////////////////////////////////  
+///// UNIVERSAL BASIC RESET
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+//////////////////////////////////////  
+///// HTML & BODY LAYOUT
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem; //15px
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: $color-primary-dark;
+
+    @include media(tablet) {
+        height: auto;
+    }
+}
+
+//////////////////////////////////////  
+///// CONTAINER LAYOUT
+.container {
+    display: flex;
+    width: 111rem;
+    height: 44.5rem;
+    border-radius: .5rem;
+    overflow: hidden;
+    background-color: $color-primary-light;
+
+    @include media(tablet) {
+        flex-direction: column-reverse;
+        width: 33rem;
+        height: auto;
+        border-radius: 1rem;
+        margin: 8rem 0;
+    }
+}
+
+//////////////////////////////////////  
+///// CARDS SECTION
+.card1 {
+    padding: 7rem 12.5rem 7rem 7.5rem;
+    
+    @include media(tablet) {
+        padding: 4rem 3rem;
+        text-align: center;
+    }
+
+    &__heading {
+        color: $color-white-main;
+        font-size: 3.5rem;
+        line-height: 1.3;
+
+        @include media(tablet) {
+            font-size: 2.7rem;
+        }
+
+        &--insights {
+            color: $color-primary-accent;
+        }
+    }
+
+    &__text {
+        margin-top: 2.5rem;
+        color: $color-white-paragraph;
+        line-height: 1.6;
+    }
+
+    &__stats {
+        display: flex;
+        justify-content: space-between;
+        margin: 8rem 2rem 0 0;
+
+        @include media(tablet) {
+            flex-direction: column;
+            margin: 4rem auto 0;
+            height: 21rem;
+        }
+
+        &--number {
+            color: $color-white-main;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        &--text {
+            color: $color-white-stats;
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            font-family: 'Lexend Deca', sans-serif;
+            letter-spacing: .1rem;
+            margin-top: .5rem;
+        }
+    }
+}
+
+.card2 {
+    background-color: $color-primary-accent;
+
+    @include media(tablet) {
+        height: 24rem;
+    }
+
+    &__img {
+        mix-blend-mode: multiply;
+        filter: opacity(0.8);
+
+        @include media(tablet) {
+            width: 33rem;
+            height: 24rem;
+        }
+    }
+}
+
+//////////////////////////////////////  
+///// FOOTER LAYOUT
+
+.attribution {
+    margin-top: 2rem;
+    color: $color-white-main;
+
+    @include media(tablet) {
+        padding-bottom: 2rem;
+        margin-top: 0;
+    }
+}

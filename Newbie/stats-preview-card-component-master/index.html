@@ -5,29 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   
   <title>Frontend Mentor | Stats preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution a { color: hsl(228, 100%, 77%); }
   </style>
 </head>
 <body>
 
-  Get insights that help your business grow.
+  <section class="container">
+      <div class="card1">
+        <h1 class="card1__heading">
+          Get <span class="card1__heading--insights">insights</span> that help your business grow.
+        </h1>
+        <p class="card1__text">
+          Discover the benefits of data analytics and make better decisions regarding revenue, customer experience, and overall efficiency.
+        </p>
+        <div class="card1__stats">
+          <div class="card1__stats--companies">
+            <span class="card1__stats--number">10k+</span>
+            <p class="card1__stats--text">companies</p>
+          </div>
+          <div class="card1__stats--templates">
+            <span class="card1__stats--number">314</span>
+            <p class="card1__stats--text">templates</p>
+          </div>
+          <div class="card1__stats--queries">
+            <span class="card1__stats--number">12M+</span>
+            <p class="card1__stats--text">queries</p>
+          </div>
+        </div>
+      </div>
 
-  Discover the benefits of data analytics and make better decisions regarding revenue, customer 
-  experience, and overall efficiency.
-
-  10k+ companies
-  314 templates
-  12m+ queries
-
+      <div class="card2">
+        <picture>
+          <source srcset="images/image-header-desktop.jpg" media="(min-width: 1151px)">
+          <img src="images/image-header-mobile.jpg" alt="Header Image" class="card2__img">
+        </picture>
+      </div>
+  </section>
+  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/krisp-dev">Krisp Dev</a>.
   </div>
+
 </body>
 </html>
