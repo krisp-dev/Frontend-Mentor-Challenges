@@ -162,8 +162,8 @@ body {
 
 @media (max-width: 1150px) {
   .attribution {
-    padding-bottom: 2rem;
-    margin-top: 0;
+    margin-top: -2rem;
+    margin-bottom: 2rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */
