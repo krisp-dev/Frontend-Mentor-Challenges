@@ -1,1 +1,139 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5rem;
+  background-color: #674baf;
+  background-image: url(images/bg-desktop.svg);
+  background-size: cover;
+  height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.logo {
+  padding: 5rem 8rem 0;
+}
+
+.container {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 8rem 8rem 0;
+}
+
+.container__col2 {
+  margin-left: 5.5rem;
+  margin-top: 5rem;
+}
+
+.container__heading {
+  font-size: 4rem;
+  letter-spacing: .1rem;
+}
+
+.container__text {
+  margin-top: 4rem;
+  font-size: 1.8rem;
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.5;
+}
+
+.socials {
+  text-align: right;
+  margin: 4rem 8rem 0 0;
+  padding-bottom: 4rem;
+}
+
+.socials__icon {
+  height: 4rem;
+  width: 4rem;
+  padding: 1rem;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  fill: #fff;
+  overflow: visible;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.socials__icon:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.socials__icon:hover {
+  fill: #e882e8;
+  border-color: #e882e8;
+}
+
+.btn, .btn:link, .btn:visited {
+  display: inline-block;
+  background-color: #fff;
+  padding: 1.5rem 7rem;
+  border-radius: 10rem;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.8rem;
+  color: #674baf;
+  margin-top: 2.5rem;
+  -webkit-box-shadow: 0rem 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.4);
+          box-shadow: 0rem 0.5rem 1.5rem 0 rgba(0, 0, 0, 0.4);
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.btn:hover {
+  -webkit-transform: translateY(-0.75rem);
+          transform: translateY(-0.75rem);
+  color: #fff;
+  -webkit-box-shadow: 0rem 1rem 2rem 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0rem 1rem 2rem 0 rgba(0, 0, 0, 0.6);
+}
+
+.gradient {
+  -webkit-animation: gradient 8s ease infinite;
+          animation: gradient 8s ease infinite;
+  background-image: linear-gradient(124deg, #fff, #e882e8, #eb47b4);
+  background-size: 800% 800%;
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 1% 80%;
+  }
+  50% {
+    background-position: 99% 20%;
+  }
+  100% {
+    background-position: 1% 80%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 1% 80%;
+  }
+  50% {
+    background-position: 99% 20%;
+  }
+  100% {
+    background-position: 1% 80%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

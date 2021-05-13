@@ -1,0 +1,148 @@
+//////////////////////////////////////  
+///// COLOR SCHEME & MIXINS
+$color-primary-dark: hsl(257, 40%, 49%);
+$color-primary-light: hsl(300, 69%, 71%);
+$color-primary-light2: hsl(320, 80%, 60%);
+
+@mixin media($breakpoint) {
+    @if $breakpoint == tablet {
+        @media (max-width: 1150px) { @content };
+    }
+}
+
+//////////////////////////////////////  
+///// UNIVERSAL BASIC RESET
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+//////////////////////////////////////  
+///// HTML & BODY LAYOUT
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.5rem; //16px font size
+    background-color: $color-primary-dark;
+    background-image: url(images/bg-desktop.svg);
+    background-size: cover;
+    height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+    position: relative;
+}
+
+//////////////////////////////////////  
+///// LOGO SECTION
+.logo {
+    padding: 5rem 8rem 0;
+}
+
+//////////////////////////////////////  
+///// CONTAINER SECTION
+.container {
+    color: #fff;
+    display: flex;
+    margin: 8rem 8rem 0;
+
+    &__col2 {
+        margin-left: 5.5rem;
+        margin-top: 5rem;
+    }
+
+    &__heading {
+        font-size: 4rem;
+        letter-spacing: .1rem;
+    }
+
+    &__text {
+        margin-top: 4rem;
+        font-size: 1.8rem;
+        font-family: 'Open Sans', sans-serif;
+        line-height: 1.5;
+    }
+}
+
+//////////////////////////////////////  
+///// SOCIALS SECTION
+.socials { 
+    text-align: right;
+    margin: 4rem 8rem 0 0;
+    padding-bottom: 4rem;
+
+    &__icon {
+        height: 4rem;
+        width: 4rem;
+        padding: 1rem;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        fill: #fff;
+        overflow: visible;
+
+        transition: all .3s;
+        
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+
+        &:hover {
+            fill: $color-primary-light;
+            border-color: $color-primary-light;
+        }
+    }
+}
+
+//////////////////////////////////////  
+///// BUTTON SECTION
+.btn {
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        background-color: #fff;
+        padding: 1.5rem 7rem;
+        border-radius: 10rem;
+        text-decoration: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1.8rem;
+        color: $color-primary-dark;
+        margin-top: 2.5rem;
+        box-shadow: 0rem 0.5rem 1.5rem 0 rgba(0,0,0,.4);
+
+        transition: all .3s;
+    }
+
+    &:hover {
+        transform: translateY(-.75rem);
+        color: #fff;
+        box-shadow: 0rem 1rem 2rem 0 rgba(0,0,0,.6);
+    }
+}
+
+//////////////////////////////////////  
+///// ANIMATIONS SECTION
+.gradient {
+    animation: gradient 8s ease infinite;
+    background-image: linear-gradient(124deg, #fff, $color-primary-light, $color-primary-light2);
+    background-size: 800% 800%
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 1% 80%
+    }
+    50% {
+        background-position: 99% 20%
+    }
+    100% {
+        background-position: 1% 80%
+    }
+}
