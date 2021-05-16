@@ -6,5 +6,5 @@ Completed practice projects from https://www.frontendmentor.io/
 - 3 Column Preview Card Component ✔️
 - Single price grid component ✔️
 - Stats preview card component ✔️
-- Huddle landing page with a single introductory section 🚧
-- Base Apparel coming soon page ⛔
+- Huddle landing page with a single introductory section ✔️ 
+- Base Apparel coming soon page 
