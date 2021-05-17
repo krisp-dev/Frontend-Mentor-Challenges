@@ -77,26 +77,26 @@ body {
     &__col1 {
         width: 55%;
 
-        svg {
+        &--img {
             width: 100%;
         }
     }
-
+    
     &__col2 {
         width: 45%;
         margin-left: 5.5rem;
-    }
 
-    &__heading {
-        font-size: 4rem;
-        letter-spacing: .1rem;
-    }
+        &--heading {
+            font-size: 4rem;
+            letter-spacing: .1rem;
+        }
 
-    &__text {
-        margin-top: 4rem;
-        font-size: 1.8rem;
-        font-family: 'Open Sans', sans-serif;
-        line-height: 1.5;
+        &--text {
+            margin-top: 4rem;
+            font-size: 1.8rem;
+            font-family: 'Open Sans', sans-serif;
+            line-height: 1.5;
+        }
     }
 }
 
@@ -135,7 +135,7 @@ body {
     bottom: 4rem;
     right: 8rem;
 
-    &__icon {
+    &__icons {
         height: 4rem;
         width: 4rem;
         padding: 1rem;
