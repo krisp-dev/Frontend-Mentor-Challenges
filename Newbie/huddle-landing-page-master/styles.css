@@ -13,13 +13,26 @@ html {
   font-size: 62.5%;
 }
 
+@media (max-width: 1206px) {
+  html {
+    font-size: 53.5%;
+  }
+}
+
+@media (max-width: 1033px) {
+  html {
+    font-size: 47.5%;
+  }
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   font-size: 1.5rem;
   background-color: #674baf;
   background-image: url(images/bg-desktop.svg);
   background-size: cover;
-  height: auto;
+  overflow: hidden;
+  height: 100vh;
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
@@ -29,17 +42,32 @@ body {
   padding: 5rem 8rem 0;
 }
 
+.logo svg {
+  width: 23rem;
+}
+
 .container {
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 8rem 8rem 0;
 }
 
+.container__col1 {
+  width: 55%;
+}
+
+.container__col1 svg {
+  width: 100%;
+}
+
 .container__col2 {
+  width: 45%;
   margin-left: 5.5rem;
-  margin-top: 5rem;
 }
 
 .container__heading {
@@ -52,33 +80,6 @@ body {
   font-size: 1.8rem;
   font-family: 'Open Sans', sans-serif;
   line-height: 1.5;
-}
-
-.socials {
-  text-align: right;
-  margin: 4rem 8rem 0 0;
-  padding-bottom: 4rem;
-}
-
-.socials__icon {
-  height: 4rem;
-  width: 4rem;
-  padding: 1rem;
-  border-radius: 50%;
-  border: 1px solid #fff;
-  fill: #fff;
-  overflow: visible;
-  -webkit-transition: all .3s;
-  transition: all .3s;
-}
-
-.socials__icon:not(:last-child) {
-  margin-right: 1.5rem;
-}
-
-.socials__icon:hover {
-  fill: #e882e8;
-  border-color: #e882e8;
 }
 
 .btn, .btn:link, .btn:visited {
@@ -104,6 +105,33 @@ body {
   color: #fff;
   -webkit-box-shadow: 0rem 1rem 2rem 0 rgba(0, 0, 0, 0.6);
           box-shadow: 0rem 1rem 2rem 0 rgba(0, 0, 0, 0.6);
+}
+
+.socials {
+  position: absolute;
+  bottom: 4rem;
+  right: 8rem;
+}
+
+.socials__icon {
+  height: 4rem;
+  width: 4rem;
+  padding: 1rem;
+  border-radius: 50%;
+  border: 1px solid #fff;
+  fill: #fff;
+  overflow: visible;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.socials__icon:not(:last-child) {
+  margin-right: 1.5rem;
+}
+
+.socials__icon:hover {
+  fill: #e882e8;
+  border-color: #e882e8;
 }
 
 .gradient {

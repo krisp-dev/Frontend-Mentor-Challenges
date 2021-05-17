@@ -5,8 +5,16 @@ $color-primary-light: hsl(300, 69%, 71%);
 $color-primary-light2: hsl(320, 80%, 60%);
 
 @mixin media($breakpoint) {
-    @if $breakpoint == tablet {
-        @media (max-width: 1150px) { @content };
+    @if $breakpoint == tabletLandscape {
+        @media (max-width: 1206px) { @content };
+    }
+
+    @if $breakpoint == tabletPortrait {
+        @media (max-width: 1033px) { @content };
+    }
+
+    @if $breakpoint == mobile {
+        @media (max-width: 810px) { @content };
     }
 }
 
@@ -25,6 +33,14 @@ $color-primary-light2: hsl(320, 80%, 60%);
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+
+    @include media(tabletLandscape) {
+        font-size: 53.5%;
+    }
+
+    @include media(tabletPortrait) {
+        font-size: 47.5%;
+    }
 }
 
 body {
@@ -33,7 +49,8 @@ body {
     background-color: $color-primary-dark;
     background-image: url(images/bg-desktop.svg);
     background-size: cover;
-    height: auto;
+    overflow: hidden;
+    height: 100vh;
     max-width: 1440px;
     margin: 0 auto;
     position: relative;
@@ -43,6 +60,10 @@ body {
 ///// LOGO SECTION
 .logo {
     padding: 5rem 8rem 0;
+
+    svg {
+        width: 23rem;
+    }
 }
 
 //////////////////////////////////////  
@@ -50,11 +71,20 @@ body {
 .container {
     color: #fff;
     display: flex;
+    align-items: center;
     margin: 8rem 8rem 0;
 
+    &__col1 {
+        width: 55%;
+
+        svg {
+            width: 100%;
+        }
+    }
+
     &__col2 {
+        width: 45%;
         margin-left: 5.5rem;
-        margin-top: 5rem;
     }
 
     &__heading {
@@ -67,35 +97,6 @@ body {
         font-size: 1.8rem;
         font-family: 'Open Sans', sans-serif;
         line-height: 1.5;
-    }
-}
-
-//////////////////////////////////////  
-///// SOCIALS SECTION
-.socials { 
-    text-align: right;
-    margin: 4rem 8rem 0 0;
-    padding-bottom: 4rem;
-
-    &__icon {
-        height: 4rem;
-        width: 4rem;
-        padding: 1rem;
-        border-radius: 50%;
-        border: 1px solid #fff;
-        fill: #fff;
-        overflow: visible;
-
-        transition: all .3s;
-        
-        &:not(:last-child) {
-            margin-right: 1.5rem;
-        }
-
-        &:hover {
-            fill: $color-primary-light;
-            border-color: $color-primary-light;
-        }
     }
 }
 
@@ -124,6 +125,35 @@ body {
         transform: translateY(-.75rem);
         color: #fff;
         box-shadow: 0rem 1rem 2rem 0 rgba(0,0,0,.6);
+    }
+}
+
+//////////////////////////////////////  
+///// SOCIALS SECTION
+.socials { 
+    position: absolute;
+    bottom: 4rem;
+    right: 8rem;
+
+    &__icon {
+        height: 4rem;
+        width: 4rem;
+        padding: 1rem;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        fill: #fff;
+        overflow: visible;
+
+        transition: all .3s;
+        
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+
+        &:hover {
+            fill: $color-primary-light;
+            border-color: $color-primary-light;
+        }
     }
 }
 
