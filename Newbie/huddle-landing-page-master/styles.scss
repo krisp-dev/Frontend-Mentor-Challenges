@@ -95,11 +95,15 @@ body {
 
         @include media(mobile) {
             width: 100%;
-            height: 50%;
+            padding: 6rem 0;
         }
 
         &--img {
             width: 100%;
+
+            @include media(mobile) {
+                height: auto;
+            }
         }
     }
     
