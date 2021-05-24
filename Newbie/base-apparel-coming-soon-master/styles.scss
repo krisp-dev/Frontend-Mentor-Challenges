@@ -50,12 +50,12 @@ html {
 body {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1.6rem; //15px font size
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-size: cover;
 }
 
 .main {
     height: 100vh;
-    background-image: url(images/bg-pattern-desktop.svg);
-    background-size: cover;
     display: flex;
     flex-direction: row-reverse;
     position: relative;
