@@ -15,13 +15,10 @@ $color-neutral: hsl(0, 6%, 24%);
 
 @mixin media($breakpoint) {
     @if $breakpoint == tablet {
-        @media (max-width: 1150px) { @content };
+        @media (max-width: 1000px) { @content };
     }
-}
-
-@mixin media($breakpoint) {
     @if $breakpoint == mobile {
-        @media (max-width: 850px) { @content };
+        @media (max-width: 650px) { @content };
     }
 }
 
@@ -40,6 +37,14 @@ $color-neutral: hsl(0, 6%, 24%);
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+
+    @include media(tablet) {
+        font-size: 55%;
+    }
+
+    @include media(mobile) {
+        font-size: 62.5%;
+    }
 }
 
 body {
@@ -54,6 +59,11 @@ body {
     display: flex;
     flex-direction: row-reverse;
     position: relative;
+
+    @include media(mobile) {
+        flex-direction: column;
+        height: auto;
+    }
 }
 
 //////////////////////////////////////  
@@ -62,15 +72,37 @@ body {
     height: 3.3rem;
     background-image: url(images/logo.svg);
     background-repeat: no-repeat;
-    width: 15.8rem;
+    width: 18rem;
     position: absolute;
     left: 17rem;
     top: 6.5rem;
+
+    @include media(mobile) {
+        left: 3.5rem;
+        top: 3rem;
+    }
+
+    @include media(tablet) {
+        height: 4rem;
+        left: 10rem;
+    }
 }
 
 .content {
     flex-basis: 58%;
     margin: 6.5rem 17rem;
+
+    @include media(tablet) {
+        margin: 6.5rem 10rem;
+    }
+
+    @include media(mobile) {
+        margin: 0 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
     &__heading {
         margin-top: 14rem;
@@ -79,6 +111,12 @@ body {
         letter-spacing: 2rem;
         line-height: 1.1;
         color: $color-neutral;
+
+        @include media(mobile) {
+            margin-top: 7rem;
+            font-size: 4rem;
+            letter-spacing: 1.5;
+        }
 
         span {
             display: block;
@@ -91,8 +129,20 @@ body {
         color: $color-primary1;
         font-weight: 400;
         margin-top: 2.5rem;
-        margin-right: 20rem;
+        width: 65%;
         line-height: 1.7;
+
+        @include media(mobile) {
+            margin: 2rem 0;
+            font-size: 1.4rem;
+            font-weight: 600;
+            width: 100%;
+        }
+
+        @include media(tablet) {
+            margin-right: 0;
+            width: 100%;
+        }
     }
 
     &__email {
@@ -101,6 +151,14 @@ body {
         flex-direction: column;
         width: 70%;
         margin-top: 4rem;
+
+        @include media(mobile) {
+            margin-top: 1.5rem;
+        }
+
+        @include media(tablet) {
+            width: 90%;
+        }
 
         &-input {
             position: relative;
@@ -167,6 +225,14 @@ body {
 
     transition: all .2s;
 
+    @include media(mobile) {
+        width: 7rem;
+    }
+
+    @include media(tablet) {
+        width: 7rem;
+    }
+
     &:hover {
         @include gradient2();
     }
@@ -180,10 +246,12 @@ body {
 //////////////////////////////////////  
 ///// IMAGE SECTION
 .hero {
-    flex-basis: 42%;
-    
+    @include media(mobile) {
+        margin-top: 9rem;
+    }
+
     &__img {
         width: 100%;
-        height: 100%;
+        height: 100%;     
     }
 }

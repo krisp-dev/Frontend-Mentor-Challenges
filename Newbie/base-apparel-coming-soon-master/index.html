@@ -22,9 +22,10 @@
   <section class="main">
     <div class="logo"></div>
 
-    <div class="hero">
-      <img src="images/hero-desktop.jpg" alt="Hero Image" class="hero__img">
-    </div>
+    <picture class="hero">
+      <source srcset="images/hero-mobile.jpg" media="(max-width: 650px)">
+      <img srcset="images/hero-desktop.jpg" alt="Hero Image" class="hero__img">
+    </picture>
 
     <div class="content">
       <h2 class="content__heading"><span>We're</span>coming soon</h2>
@@ -39,8 +40,6 @@
         </button>
       </form>
     </div>
-
-    
   </section>
 </body>
 </html>
