@@ -79,14 +79,12 @@ body {
 }
 
 .content {
-  -ms-flex-preferred-size: 58%;
-      flex-basis: 58%;
   margin: 6.5rem 17rem;
 }
 
 @media (max-width: 1000px) {
   .content {
-    margin: 6.5rem 10rem;
+    margin: 6.5rem 4rem 0 10rem;
   }
 }
 
@@ -124,6 +122,12 @@ body {
   }
 }
 
+@media (max-width: 1000px) {
+  .content__heading {
+    font-size: 5rem;
+  }
+}
+
 .content__heading span {
   display: block;
   color: #ce9797;
@@ -134,7 +138,7 @@ body {
   color: #ce9797;
   font-weight: 400;
   margin-top: 2.5rem;
-  width: 65%;
+  width: 80%;
   line-height: 1.7;
 }
 
@@ -281,6 +285,11 @@ body {
           transform: scale(1.1);
   -webkit-box-shadow: 0 1.5rem 2rem rgba(238, 140, 140, 0.5);
           box-shadow: 0 1.5rem 2rem rgba(238, 140, 140, 0.5);
+}
+
+.hero {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
 }
 
 @media (max-width: 650px) {
