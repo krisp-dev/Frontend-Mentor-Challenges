@@ -13,11 +13,8 @@ $color-neutral3: hsl(220, 17%, 79%);
 
 
 @mixin media($breakpoint) {
-    @if $breakpoint == tablet {
-        @media (max-width: 1000px) { @content };
-    }
     @if $breakpoint == mobile {
-        @media (max-width: 650px) { @content };
+        @media (max-width: 800px) { @content };
     }
 }
 
@@ -46,7 +43,7 @@ body {
 }
 
 //////////////////////////////////////  
-///// HEADER LAYOUT
+///// HEADER SECTION
 .header {
     text-align: center;
     margin-top: 8.5rem;
@@ -56,6 +53,10 @@ body {
         font-weight: 300;
         color: $color-neutral;
         margin-top: 4rem;
+
+        @include media(mobile) {
+            font-size: 3rem;
+        }
 
         &--bold {
             font-weight: 700;
@@ -68,14 +69,22 @@ body {
         font-weight: 300;
         color: $color-neutral2;
         margin-top: 2rem;
+
+        @include media(mobile) {
+            font-size: 1.8rem;
+        }
     }
 }
 
 //////////////////////////////////////  
-///// EMAIL LAYOUT
+///// EMAIL SECTION
 .email {
     display: flex;
     margin-top: 3.5rem;
+
+    @include media(mobile) {
+        flex-direction: column;
+    }
 
     &__input {
         height: 5rem;
@@ -86,19 +95,29 @@ body {
         outline: 0;
         font-size: 1.5rem;
 
+        @include media(mobile) {
+            width: 34rem;
+        }
+
         &::placeholder {
             color: $color-neutral3;
         }
     }
+
+    &__error {
+        text-align: center;
+        margin-top: .5rem;
+        color: $color-secondary2;
+    }
 }
 
 //////////////////////////////////////  
-///// BTN LAYOUT
+///// BUTTON SECTION
 .btn {
     height: 5rem;
     width: 19rem;
     margin-left: 2rem;
-    border: 1px solid $color-primary;
+    border: none;
     border-radius: 10rem;
     box-shadow: 0 5px 10px hsla(223, 87%, 63%, 0.3);
     background-color: $color-primary;
@@ -107,4 +126,75 @@ body {
     letter-spacing: 1px;
     cursor: pointer;
     outline: none;
+
+    @include media(mobile) {
+        width: 100%;
+        margin: 1rem 0;
+    }
+
+    transition: all .3s;
+
+    &:hover {
+        background-color: hsl(223, 87%, 75%);
+        box-shadow: 0 5px 10px hsla(223, 87%, 63%, 0.5);
+        transform: scale(1.03);
+    }
+
+    &:active {
+        box-shadow: 0 5px 10px hsla(223, 87%, 63%, 0.7);
+        transform: translateZ(.5rem);
+    }
+}
+
+//////////////////////////////////////  
+///// ILLUSTRATION SECTION
+.illustration {
+    width: 65rem;
+    margin-top: 7rem;
+
+    @include media(mobile) {
+        width: 38rem;
+    }
+}
+
+//////////////////////////////////////  
+///// SOCIALS SECTION
+.socials { 
+margin-top: 5rem;
+
+    &__icons {
+        height: 2.6rem;
+        width: 2.6rem;
+        border-radius: 50%;
+        border: 1px solid $color-secondary;
+        padding: .5rem;
+        overflow: visible;
+        fill: $color-primary;
+        cursor: pointer;
+
+        @include media(mobile) {
+            height: 3.2rem;
+            width: 3.2rem;
+        }
+
+        transition: all .3s;
+
+        &:not(:last-child) {
+            margin-right: 1.5rem;
+        }
+
+        &:hover {
+            fill: #fff;
+            background-color: $color-primary;
+        }
+    }
+}
+
+//////////////////////////////////////  
+///// FOOTER SECTION
+.footer {
+    margin: 2rem 0 1rem 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: $color-neutral;
 }
