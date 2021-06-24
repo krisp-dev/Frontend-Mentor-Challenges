@@ -80,55 +80,67 @@ body {
   }
 }
 
-.email__input {
+.email__control input {
   height: 5rem;
   width: 40rem;
   border-radius: 10rem;
-  border: 1px solid #c0c6d3;
+  border: 1px solid #c2d3ff;
   padding-left: 2.5rem;
   outline: 0;
   font-size: 1.5rem;
 }
 
-.email__input.error {
-  border: 1px solid #ff5263;
-}
-
-.email__input.success {
-  border: 1px solid #42eb6c;
-}
-
 @media (max-width: 800px) {
-  .email__input {
+  .email__control input {
     width: 34rem;
   }
 }
 
-.email__input::-webkit-input-placeholder {
+.email__control input::-webkit-input-placeholder {
   color: #c0c6d3;
 }
 
-.email__input:-ms-input-placeholder {
+.email__control input:-ms-input-placeholder {
   color: #c0c6d3;
 }
 
-.email__input::-ms-input-placeholder {
+.email__control input::-ms-input-placeholder {
   color: #c0c6d3;
 }
 
-.email__input::placeholder {
+.email__control input::placeholder {
   color: #c0c6d3;
 }
 
-.email__error {
-  text-align: center;
+.email__control.error input {
+  border: 1px solid #ff5263;
+}
+
+.email__control.success input {
+  border: 1px solid #4f7df3;
+}
+
+.email__control p {
+  margin-left: 2.7rem;
   margin-top: .5rem;
   color: #ff5263;
   visibility: hidden;
 }
 
-.email__error.error {
+@media (max-width: 800px) {
+  .email__control p {
+    text-align: center;
+    margin-left: 0;
+  }
+}
+
+.email__control.error p {
   visibility: visible;
+}
+
+.email__control.success p {
+  visibility: visible;
+  color: #4f7df3;
 }
 
 .btn {
