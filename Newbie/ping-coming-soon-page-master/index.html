@@ -16,11 +16,21 @@
 </head>
 <body>
 
-  We are launching soon!
+  <div class="header">
+    <img src="images/logo.svg" alt="Logo" class="header__logo">
+    <h1 class="header__title">We are launching <span class="header__title--bold">soon!</span></h1>
+    <h2 class="header__sub-title">Subscribe and get notified</h2>
+  </div>
 
-  Subscribe and get notified
+  <form id="email" class="email">
+    <div class="email__control">
+      <input type="email" name="email" id="email__input" class="email__input" placeholder="Your email address..." required>
+			<p class="email__error">Error message</p>
+    </div>
+    <button class="btn">Notify Me</button>
+  </form>
 
-  Notify Me
+  
 
   &copy; Copyright Ping. All rights reserved.
 

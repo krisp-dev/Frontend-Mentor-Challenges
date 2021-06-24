@@ -9,6 +9,7 @@ $color-secondary2: hsl(354, 100%, 66%);
 
 $color-neutral: hsl(0, 0%, 59%);
 $color-neutral2: hsl(209, 33%, 12%);
+$color-neutral3: hsl(220, 17%, 79%);
 
 
 @mixin media($breakpoint) {
@@ -39,5 +40,71 @@ html {
 
 body {
     font-family: 'Libre Franklin', sans-serif;
-    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+//////////////////////////////////////  
+///// HEADER LAYOUT
+.header {
+    text-align: center;
+    margin-top: 8.5rem;
+
+    &__title {
+        font-size: 4.5rem;
+        font-weight: 300;
+        color: $color-neutral;
+        margin-top: 4rem;
+
+        &--bold {
+            font-weight: 700;
+            color: $color-neutral2;
+        }
+    }
+
+    &__sub-title {
+        font-size: 2rem;
+        font-weight: 300;
+        color: $color-neutral2;
+        margin-top: 2rem;
+    }
+}
+
+//////////////////////////////////////  
+///// EMAIL LAYOUT
+.email {
+    display: flex;
+    margin-top: 3.5rem;
+
+    &__input {
+        height: 5rem;
+        width: 40rem;
+        border-radius: 10rem;
+        border: 1px solid $color-neutral3;
+        padding-left: 2.5rem;
+        outline: 0;
+        font-size: 1.5rem;
+
+        &::placeholder {
+            color: $color-neutral3;
+        }
+    }
+}
+
+//////////////////////////////////////  
+///// BTN LAYOUT
+.btn {
+    height: 5rem;
+    width: 19rem;
+    margin-left: 2rem;
+    border: 1px solid $color-primary;
+    border-radius: 10rem;
+    box-shadow: 0 5px 10px hsla(223, 87%, 63%, 0.3);
+    background-color: $color-primary;
+    color: white;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    cursor: pointer;
+    outline: none;
 }

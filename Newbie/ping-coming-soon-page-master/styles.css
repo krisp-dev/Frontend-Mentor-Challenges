@@ -16,5 +16,88 @@ html {
 
 body {
   font-family: 'Libre Franklin', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  margin-top: 8.5rem;
+}
+
+.header__title {
+  font-size: 4.5rem;
+  font-weight: 300;
+  color: #969696;
+  margin-top: 4rem;
+}
+
+.header__title--bold {
+  font-weight: 700;
+  color: #151f29;
+}
+
+.header__sub-title {
+  font-size: 2rem;
+  font-weight: 300;
+  color: #151f29;
+  margin-top: 2rem;
+}
+
+.email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 3.5rem;
+}
+
+.email__input {
+  height: 5rem;
+  width: 40rem;
+  border-radius: 10rem;
+  border: 1px solid #c0c6d3;
+  padding-left: 2.5rem;
+  outline: 0;
+  font-size: 1.5rem;
+}
+
+.email__input::-webkit-input-placeholder {
+  color: #c0c6d3;
+}
+
+.email__input:-ms-input-placeholder {
+  color: #c0c6d3;
+}
+
+.email__input::-ms-input-placeholder {
+  color: #c0c6d3;
+}
+
+.email__input::placeholder {
+  color: #c0c6d3;
+}
+
+.btn {
+  height: 5rem;
+  width: 19rem;
+  margin-left: 2rem;
+  border: 1px solid #4f7df3;
+  border-radius: 10rem;
+  -webkit-box-shadow: 0 5px 10px rgba(79, 125, 243, 0.3);
+          box-shadow: 0 5px 10px rgba(79, 125, 243, 0.3);
+  background-color: #4f7df3;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: none;
 }
 /*# sourceMappingURL=styles.css.map */
