@@ -6,6 +6,7 @@ $color-primary: hsl(223, 87%, 63%);
 
 $color-secondary: hsl(223, 100%, 88%);
 $color-secondary2: hsl(354, 100%, 66%);
+$color-secondary3: hsl(135, 81%, 59%);
 
 $color-neutral: hsl(0, 0%, 59%);
 $color-neutral2: hsl(209, 33%, 12%);
@@ -86,6 +87,10 @@ body {
         flex-direction: column;
     }
 
+    &__control {
+
+    }
+
     &__input {
         height: 5rem;
         width: 40rem;
@@ -94,6 +99,14 @@ body {
         padding-left: 2.5rem;
         outline: 0;
         font-size: 1.5rem;
+
+        &.error {
+            border: 1px solid $color-secondary2;
+        }
+
+        &.success {
+            border: 1px solid $color-secondary3;
+        }
 
         @include media(mobile) {
             width: 34rem;
@@ -108,8 +121,14 @@ body {
         text-align: center;
         margin-top: .5rem;
         color: $color-secondary2;
+        visibility: hidden;
+
+        &.error {
+            visibility: visible;
+        }
     }
 }
+
 
 //////////////////////////////////////  
 ///// BUTTON SECTION

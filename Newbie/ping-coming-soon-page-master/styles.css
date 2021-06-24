@@ -90,6 +90,14 @@ body {
   font-size: 1.5rem;
 }
 
+.email__input.error {
+  border: 1px solid #ff5263;
+}
+
+.email__input.success {
+  border: 1px solid #42eb6c;
+}
+
 @media (max-width: 800px) {
   .email__input {
     width: 34rem;
@@ -116,6 +124,11 @@ body {
   text-align: center;
   margin-top: .5rem;
   color: #ff5263;
+  visibility: hidden;
+}
+
+.email__error.error {
+  visibility: visible;
 }
 
 .btn {
