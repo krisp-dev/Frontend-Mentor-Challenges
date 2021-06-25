@@ -26,6 +26,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 100vh;
 }
 
 .header {
@@ -92,7 +93,7 @@ body {
 
 @media (max-width: 800px) {
   .email__control input {
-    width: 34rem;
+    width: 31rem;
   }
 }
 
@@ -190,7 +191,7 @@ body {
 
 @media (max-width: 800px) {
   .illustration {
-    width: 38rem;
+    width: 34rem;
   }
 }
 
