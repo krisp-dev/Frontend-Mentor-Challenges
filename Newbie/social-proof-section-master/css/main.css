@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Spartan', sans-serif;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
+  background-position: top left, bottom right;
+  background-repeat: no-repeat;
+  background-size: 50%, 50%;
+}
+
+.container {
+  margin: 0 16rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content {
+  flex: 0 1 42%;
+  margin-right: 3rem;
+}
+
+.content__heading {
+  font-size: 5rem;
+  color: #502050;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+.content__description {
+  color: #937b92;
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.6;
+}
+
+.ratings__box {
+  display: flex;
+  align-items: center;
+  background-color: #f7f2f7;
+  width: 44.5rem;
+  height: 5.5rem;
+  border-radius: .5rem;
+}
+
+.ratings__box:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.ratings__box:nth-child(2) {
+  margin-left: 5rem;
+}
+
+.ratings__box:nth-child(3) {
+  margin-left: 10rem;
+}
+
+.ratings__stars {
+  margin: 0 3rem;
+}
+
+.ratings__star-icon:not(:last-child) {
+  margin-right: .3rem;
+}
+
+.ratings__text {
+  color: #502050;
+  font-weight: 700;
+}
+/*# sourceMappingURL=main.css.map */

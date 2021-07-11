@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
+
+//////////////////////////////////////  
+///// COLOR SCHEME & MIXINS
+
+$color-primary-dark: hsl(300, 43%, 22%);
+$color-primary-light: hsl(333, 80%, 67%);
+
+$color-neutral-dark: hsl(303, 10%, 53%);
+$color-neutral-light: hsl(300, 24%, 96%);
+$color-white: hsl(0, 0%, 100%);
+
+@mixin media($breakpoint) {
+    @if $breakpoint == mobile {
+        @media (max-width: 800px) { @content };
+    }
+}
+
+
+//////////////////////////////////////  
+///// UNIVERSAL BASIC RESET
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+//////////////////////////////////////  
+///// BASE LAYOUT
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+}
+
+body {
+    font-family: 'Spartan', sans-serif;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+    background-image:   url(../images/bg-pattern-top-desktop.svg),
+                        url(../images/bg-pattern-bottom-desktop.svg);
+    background-position: top left, bottom right;
+    background-repeat: no-repeat;
+    background-size: 50%, 50%;
+
+}
+
+
+//////////////////////////////////////  
+///// CONTAINER SECTION
+.container {
+    margin: 0 16rem;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+//////////////////////////////////////  
+///// CONTENT SECTION
+.content {
+    flex: 0 1 42%;
+    margin-right: 3rem;
+    
+    &__heading {
+        font-size: 5rem;
+        color: $color-primary-dark;
+        line-height: 1;
+        margin-bottom: 1.5rem;
+    }
+
+    &__description {
+        color: $color-neutral-dark;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.6;
+    }
+}
+
+
+//////////////////////////////////////  
+///// RATINGS SECTION
+.ratings {
+
+    &__box {
+        display: flex;
+        align-items: center;
+
+        background-color: $color-neutral-light;
+        width: 44.5rem;
+        height: 5.5rem;
+        border-radius: .5rem;
+        
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        &:nth-child(2) {
+            margin-left: 5rem;
+        }
+
+        &:nth-child(3) {
+            margin-left: 10rem;
+        }
+    }
+
+    &__stars {
+        margin: 0 3rem;
+    }
+
+    &__star-icon:not(:last-child) {
+        margin-right: .3rem;
+    }
+
+    &__text {
+        color: $color-primary-dark;
+        font-weight: 700;
+    }
+}
+
+
+//////////////////////////////////////  
+///// USER REVIEWS SECTION
+.review {
+
+
+    &__user {
+
+    }
+
+    &__photo {
+
+    }
+
+    &__user-box {
+
+    }
+
+    &__user-name {
+
+    }
+
+    &__user-title {
+
+    }
+
+    &__text {
+        
+    }
+}
