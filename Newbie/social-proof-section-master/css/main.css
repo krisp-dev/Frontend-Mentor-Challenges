@@ -15,19 +15,19 @@ html {
 body {
   font-family: 'Spartan', sans-serif;
   font-size: 1.5rem;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   background-image: url(../images/bg-pattern-top-desktop.svg), url(../images/bg-pattern-bottom-desktop.svg);
   background-position: top left, bottom right;
   background-repeat: no-repeat;
-  background-size: 50%, 50%;
+  background-size: 42%, 80%;
 }
 
 .container {
-  margin: 0 16rem;
+  margin: 13rem 16rem 10rem;
 }
 
 .header {
@@ -37,7 +37,6 @@ body {
 
 .content {
   flex: 0 1 42%;
-  margin-right: 3rem;
 }
 
 .content__heading {
@@ -50,7 +49,6 @@ body {
 .content__description {
   color: #937b92;
   font-weight: 500;
-  font-size: 1.5rem;
   line-height: 1.6;
 }
 
@@ -60,7 +58,7 @@ body {
   background-color: #f7f2f7;
   width: 44.5rem;
   height: 5.5rem;
-  border-radius: .5rem;
+  border-radius: .7rem;
 }
 
 .ratings__box:not(:last-child) {
@@ -86,5 +84,71 @@ body {
 .ratings__text {
   color: #502050;
   font-weight: 700;
+}
+
+.user-reviews {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 7rem;
+}
+
+.review {
+  width: 35rem;
+  height: 23.5rem;
+  background-color: #502050;
+  border-radius: .7rem;
+  padding: 4rem 3.2rem;
+}
+
+.review:nth-child(2) {
+  margin-top: 1.6rem;
+}
+
+.review:nth-child(3) {
+  margin-top: 3.2rem;
+}
+
+.review__user {
+  display: flex;
+}
+
+.review__photo {
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+}
+
+.review__user-box {
+  margin-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.review__user-name {
+  color: white;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: .3rem;
+}
+
+.review__user-title {
+  color: #ee68a4;
+  font-size: 1.3rem;
+  opacity: 0.8;
+}
+
+.review__text {
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 3rem;
+  line-height: 1.7;
+}
+
+.attribution {
+  padding-top: 2rem;
+  color: #502050;
+  font-size: 11px;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

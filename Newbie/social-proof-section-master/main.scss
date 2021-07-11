@@ -38,17 +38,17 @@ html {
 body {
     font-family: 'Spartan', sans-serif;
     font-size: 1.5rem;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
 
     background-image:   url(../images/bg-pattern-top-desktop.svg),
                         url(../images/bg-pattern-bottom-desktop.svg);
     background-position: top left, bottom right;
     background-repeat: no-repeat;
-    background-size: 50%, 50%;
+    background-size: 42%, 80%;
 
 }
 
@@ -56,7 +56,7 @@ body {
 //////////////////////////////////////  
 ///// CONTAINER SECTION
 .container {
-    margin: 0 16rem;
+    margin: 13rem 16rem 10rem;
 }
 
 .header {
@@ -69,7 +69,6 @@ body {
 ///// CONTENT SECTION
 .content {
     flex: 0 1 42%;
-    margin-right: 3rem;
     
     &__heading {
         font-size: 5rem;
@@ -81,7 +80,6 @@ body {
     &__description {
         color: $color-neutral-dark;
         font-weight: 500;
-        font-size: 1.5rem;
         line-height: 1.6;
     }
 }
@@ -98,7 +96,7 @@ body {
         background-color: $color-neutral-light;
         width: 44.5rem;
         height: 5.5rem;
-        border-radius: .5rem;
+        border-radius: .7rem;
         
         &:not(:last-child) {
             margin-bottom: 2rem;
@@ -130,30 +128,71 @@ body {
 
 //////////////////////////////////////  
 ///// USER REVIEWS SECTION
-.review {
+.user-reviews {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 7rem;
+}
 
+.review {
+    width: 35rem;
+    height: 23.5rem;
+    background-color: $color-primary-dark;
+    border-radius: .7rem;
+    padding: 4rem 3.2rem;
+
+    &:nth-child(2) {
+        margin-top: 1.6rem;
+    }
+
+    &:nth-child(3) {
+        margin-top: 3.2rem;
+    }
 
     &__user {
-
+        display: flex;
     }
 
     &__photo {
-
+        border-radius: 50%;
+        height: 4rem;
+        width: 4rem;
     }
 
     &__user-box {
-
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     &__user-name {
-
+        color: $color-white;
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin-bottom: .3rem;
     }
 
     &__user-title {
-
+        color: $color-primary-light;
+        font-size: 1.3rem;
+        opacity: 0.8;
     }
 
     &__text {
-        
+        color: $color-white;
+        font-size: 1.3rem;
+        margin-top: 3rem;
+        line-height: 1.7;
     }
+}
+
+
+//////////////////////////////////////  
+///// FOOTER SECTION
+.attribution {
+    padding-top: 2rem;
+    color: $color-primary-dark;
+    font-size: 11px;
+    text-align: center;
 }
