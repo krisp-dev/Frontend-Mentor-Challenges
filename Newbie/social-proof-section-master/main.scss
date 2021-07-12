@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700&display=swap');
 
 //////////////////////////////////////  
-///// COLOR SCHEME & MIXINS
-
+///// COLOR SCHEME
 $color-primary-dark: hsl(300, 43%, 22%);
 $color-primary-light: hsl(333, 80%, 67%);
 
@@ -10,9 +9,20 @@ $color-neutral-dark: hsl(303, 10%, 53%);
 $color-neutral-light: hsl(300, 24%, 96%);
 $color-white: hsl(0, 0%, 100%);
 
+
+//////////////////////////////////////  
+///// MIXINS MEDIA QUERY MANAGER
 @mixin media($breakpoint) {
-    @if $breakpoint == mobile {
-        @media (max-width: 800px) { @content };
+    @if $breakpoint == large {
+        @media (max-width: 68.75em) { @content }; //1100px / 16 = 68.75em
+    }
+
+    @if $breakpoint == medium {
+        @media (max-width: 53.125em) { @content }; //850px / 16 = 53.125em
+    }
+
+    @if $breakpoint == small {
+        @media (max-width: 43.75em) { @content }; //700px / 16 = 43.75em
     }
 }
 
@@ -33,6 +43,18 @@ $color-white: hsl(0, 0%, 100%);
 html {
     box-sizing: border-box;
     font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+
+    @include media(large) {
+        font-size: 50%;
+    }
+
+    @include media(medium) {
+        font-size: 40%;
+    }
+
+    @include media(small) {
+        font-size: 62.5%;
+    }
 }
 
 body {
@@ -50,6 +72,12 @@ body {
     background-repeat: no-repeat;
     background-size: 42%, 80%;
 
+    @include media(small) {
+        background-image:   url(../images/bg-pattern-top-mobile.svg),
+                            url(../images/bg-pattern-bottom-mobile.svg);
+        background-size: 100%, 100%;
+    }
+
 }
 
 
@@ -57,11 +85,21 @@ body {
 ///// CONTAINER SECTION
 .container {
     margin: 13rem 16rem 10rem;
+
+    @include media(small) {
+        margin: 0;
+    }
 }
 
 .header {
     display: flex;
     justify-content: space-between;
+
+    @include media(small) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 
@@ -69,18 +107,32 @@ body {
 ///// CONTENT SECTION
 .content {
     flex: 0 1 42%;
+
+    @include media(small) {
+        margin: 8rem 2.5rem 0;
+    }
     
     &__heading {
         font-size: 5rem;
         color: $color-primary-dark;
         line-height: 1;
         margin-bottom: 1.5rem;
+
+        @include media(small) {
+            font-size: 3rem;
+            margin-bottom: 2.5rem;
+        }
     }
 
     &__description {
         color: $color-neutral-dark;
         font-weight: 500;
         line-height: 1.6;
+
+        @include media(small) {
+            font-size: 1.4rem;
+            margin-bottom: 4rem;
+        }
     }
 }
 
@@ -97,6 +149,13 @@ body {
         width: 44.5rem;
         height: 5.5rem;
         border-radius: .7rem;
+
+        @include media(small) {
+            flex-direction: column;
+            width: 33rem;
+            height: 7.5rem;
+            justify-content: center;
+        }
         
         &:not(:last-child) {
             margin-bottom: 2rem;
@@ -104,10 +163,18 @@ body {
 
         &:nth-child(2) {
             margin-left: 5rem;
+
+            @include media(small) {
+                margin-left: 0;
+            }
         }
 
         &:nth-child(3) {
             margin-left: 10rem;
+
+            @include media(small) {
+                margin-left: 0;
+            }
         }
     }
 
@@ -115,13 +182,30 @@ body {
         margin: 0 3rem;
     }
 
-    &__star-icon:not(:last-child) {
-        margin-right: .3rem;
+    &__star-icon {
+
+        @include media(medium) {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        @include media(small) {
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+
+        &:not(:last-child) {
+            margin-right: .3rem;
+        }
     }
 
     &__text {
         color: $color-primary-dark;
         font-weight: 700;
+
+        @include media(small) {
+            margin-top: 1rem;
+        }
     }
 }
 
@@ -132,7 +216,13 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 7rem;
-}
+
+    @include media(small) {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5rem;
+    }
+} 
 
 .review {
     width: 35rem;
@@ -141,12 +231,33 @@ body {
     border-radius: .7rem;
     padding: 4rem 3.2rem;
 
+    @include media(small) {
+        width: 33rem;
+        height: 25rem;
+    }
+
+    &:not(:last-child) {
+        margin-right: 1rem;
+
+        @include media(small) {
+            margin-right: 0;
+        }
+    }
+
     &:nth-child(2) {
         margin-top: 1.6rem;
+
+        @include media(small) {
+            margin-top: 1.5rem;
+        }
     }
 
     &:nth-child(3) {
         margin-top: 3.2rem;
+
+        @include media(small) {
+            margin-top: 1.5rem;
+        }
     }
 
     &__user {
@@ -195,4 +306,8 @@ body {
     color: $color-primary-dark;
     font-size: 11px;
     text-align: center;
+
+    @include media(small) {
+        margin: 2rem 0;
+    }
 }
