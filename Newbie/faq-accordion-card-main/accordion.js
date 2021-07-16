@@ -10,7 +10,7 @@ for (let i = 0; i < faqButtons.length; i++) {
             faqContent.style.maxHeight = null;
         }
         else {
-            
+            faqContent.style.maxHeight = faqContent.scrollHeight + "px";
         }
     });
 }
