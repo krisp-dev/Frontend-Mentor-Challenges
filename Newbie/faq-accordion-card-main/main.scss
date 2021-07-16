@@ -65,7 +65,7 @@ body {
 .container {
     background-color: #fff;
     width: 92rem;
-    height: 50rem;
+    height: auto;
     position: relative;
     border-radius: 3rem;
     box-shadow: 0 4rem 6rem rgba(0, 0, 0, .33);
@@ -87,6 +87,7 @@ body {
     background-position: -57.75rem 65%;
     background-repeat: no-repeat;
 
+
     &__img {
         height: 36rem;
         margin-top: 7rem;
@@ -98,7 +99,8 @@ body {
         margin-left: auto;
         padding: 7rem 2rem;
 
-        overflow-y: auto; //adds a scrollbar to overflowing FAQ elements
+        margin-bottom: 2.75rem;
+        //overflow-y: auto; //adds a scrollbar to overflowing FAQ elements
     }
 
     &__heading {
@@ -124,8 +126,6 @@ body {
         margin-bottom: 1rem;
         color: $color-gray-dark1;
 
-        transition: all .3s ease-in-out;
-
         &:after {
             content: "";
             background-image: url(../images/icon-arrow-down.svg);
@@ -134,6 +134,8 @@ body {
             height: 1rem;
             width: 1rem;
             float: right;
+
+            transition: all .25s ease-in-out;
         }
 
         &.active,
@@ -142,7 +144,6 @@ body {
         }
 
         &.active {
-
             &:after {
                 content: "";
                 transform: rotate(180deg);
