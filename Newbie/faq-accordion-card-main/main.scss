@@ -16,16 +16,8 @@ $color-gray-light: hsl(240, 5%, 91%);
 //////////////////////////////////////  
 ///// MIXINS MEDIA QUERY MANAGER
 @mixin media($breakpoint) {
-    @if $breakpoint == large {
-        @media (max-width: 68.75em) { @content }; //1100px / 16 = 68.75em
-    }
-
-    @if $breakpoint == medium {
+    @if $breakpoint == mobile {
         @media (max-width: 53.125em) { @content }; //850px / 16 = 53.125em
-    }
-
-    @if $breakpoint == small {
-        @media (max-width: 43.75em) { @content }; //700px / 16 = 43.75em
     }
 }
 
@@ -57,6 +49,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
+    @include media(mobile) {
+        flex-direction: row;
+    }
 }
 
 
@@ -69,13 +66,23 @@ body {
     position: relative;
     border-radius: 3rem;
     box-shadow: 0 4rem 6rem rgba(0, 0, 0, .33);
+    margin: 0 5rem;
+
+    @include media(mobile) {
+        margin: 14rem 2.5rem 2rem;
+    }
 }
 
 .box-img {
     position: absolute;
     top: 20.5rem;
     left: -9.25rem;
+
+    @include media(mobile) {
+        display: none;
+    }
 }
+
 
 //////////////////////////////////////  
 ///// CONTENT SECTION
@@ -87,11 +94,34 @@ body {
     background-position: -57.75rem 65%;
     background-repeat: no-repeat;
 
+    @include media(mobile) {
+        flex-direction: column;
+        background: url(../images/bg-pattern-mobile.svg);
+        background-repeat: no-repeat;
+        overflow: visible;
+        background-position: top;
+    }
+
 
     &__img {
         height: 36rem;
         margin-top: 7rem;
         margin-left: -8.5rem;
+        
+        @include media(mobile) {
+            height: 18rem;
+            margin-top: -10rem;
+            margin-left: -2.5rem;
+        }
+        
+    }
+    
+    @include media(mobile) {
+        picture {
+            height: 100%;
+            display: flex;
+            justify-content: center;
+        }
     }
 
     &__text-wrapper {
@@ -99,21 +129,35 @@ body {
         margin-left: auto;
         padding: 7rem 2rem;
 
-        margin-bottom: 2.75rem;
         //overflow-y: auto; //adds a scrollbar to overflowing FAQ elements
+
+        @include media(mobile) {
+            margin: 0;
+            width: 100%;
+            padding: 5rem 2.5rem;
+        }
     }
 
     &__heading {
         font-size: 3.5rem;
         margin-bottom: 4rem;
+
+        @include media(mobile) {
+            text-align: center;
+        }
     }
 }
+
 
 //////////////////////////////////////  
 ///// FAQ SECTION
 .FAQ-item {
     margin-top: 2rem;
     width: 82.5%;
+
+    @include media(mobile) {
+        width: 100%;
+    }
 
     &__button {
         border: 0;
@@ -125,6 +169,8 @@ body {
         font-family: 'Kumbh Sans', sans-serif;
         margin-bottom: 1rem;
         color: $color-gray-dark1;
+
+        transition: all .25s;
 
         &:after {
             content: "";
@@ -138,12 +184,14 @@ body {
             transition: all .25s ease-in-out;
         }
 
-        &.active,
         &:hover {
-            font-weight: 700;
+            color: $color-primary2;
         }
 
         &.active {
+            font-weight: 700;
+            color: $color-gray-dark1;
+
             &:after {
                 content: "";
                 transform: rotate(180deg);
@@ -167,5 +215,22 @@ body {
     &__text {
         color: $color-gray-dark2;
         margin-bottom: 1.75rem;
+    }
+}
+
+
+//////////////////////////////////////  
+///// FOOTER SECTION
+.attribution {
+    margin-top: 4rem;
+    text-align: center;
+    color: #fff;
+
+    a {
+        color: $color-primary2;
+    }
+
+    @include media(mobile) {
+        display: none;
     }
 }

@@ -5,24 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
   <title>Frontend Mentor | FAQ Accordion Card</title>
   <link rel="stylesheet" href="css/main.css">
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-  
 </head>
 <body>
 
   <main class="container">
-    <img src="../images/illustration-box-desktop.svg" alt="box" class="box-img">
+    <img src="images/illustration-box-desktop.svg" alt="box" class="box-img">
 
     <article class="content">
-      <img src="../images/illustration-woman-online-desktop.svg" alt="Illustration woman online" class="content__img">
+      <picture>
+        <source srcset="images/illustration-woman-online-mobile.svg" media="(max-width: 850px)" class="content__img--mobile">
+        <img src="images/illustration-woman-online-desktop.svg" alt="Illustration woman online" class="content__img">
+       </picture>
       <div class="content__text-wrapper">
         <h1 class="content__heading">FAQ</h1>
         <div class="FAQ">
@@ -77,15 +73,11 @@
     </article>
   </main>
 
-
   
-  <!--
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="https://github.com/krisp-dev">krisp-dev</a>.
   </div>
-  -->
-  
 <script type="text/javascript" src="accordion.js"></script>
 </body>
 </html>
