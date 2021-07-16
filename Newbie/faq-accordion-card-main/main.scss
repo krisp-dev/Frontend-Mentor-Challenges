@@ -98,7 +98,7 @@ body {
         margin-left: auto;
         padding: 7rem 2rem;
 
-
+        overflow-y: auto; //adds a scrollbar to overflowing FAQ elements
     }
 
     &__heading {
