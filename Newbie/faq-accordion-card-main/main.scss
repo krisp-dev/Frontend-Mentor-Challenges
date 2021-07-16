@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+//////////////////////////////////////  
+///// COLOR SCHEME
+$color-primary1: hsl(238, 29%, 16%);
+$color-primary2: hsl(14, 88%, 65%);
+
+$color-gradient1: #af67e9;
+$color-gradient2: #6565e7;
+
+$color-gray-dark1: hsl(237, 12%, 33%);
+$color-gray-dark2: hsl(240, 6%, 50%);
+$color-gray-light: hsl(240, 5%, 91%);
+
+
+//////////////////////////////////////  
+///// MIXINS MEDIA QUERY MANAGER
+@mixin media($breakpoint) {
+    @if $breakpoint == large {
+        @media (max-width: 68.75em) { @content }; //1100px / 16 = 68.75em
+    }
+
+    @if $breakpoint == medium {
+        @media (max-width: 53.125em) { @content }; //850px / 16 = 53.125em
+    }
+
+    @if $breakpoint == small {
+        @media (max-width: 43.75em) { @content }; //700px / 16 = 43.75em
+    }
+}
+
+
+//////////////////////////////////////  
+///// UNIVERSAL BASIC RESET
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+//////////////////////////////////////  
+///// BASE LAYOUT
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+}
+
+body {
+    font-family: 'Kumbh Sans', sans-serif;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    background: linear-gradient($color-gradient1, $color-gradient2);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+//////////////////////////////////////  
+///// CONTAINER SECTION
+.container {
+    background-color: #fff;
+    width: 92rem;
+    height: 50rem;
+    position: relative;
+    border-radius: 3rem;
+    box-shadow: 0 4rem 6rem rgba(0, 0, 0, .33);
+}
+
+.box-img {
+    position: absolute;
+    top: 20.5rem;
+    left: -9.25rem;
+}
+
+//////////////////////////////////////  
+///// CONTENT SECTION
+.content {
+    display: flex;
+    height: 100%;
+    overflow: hidden;
+    background: url(../images/bg-pattern-desktop.svg);
+    background-position: -57.75rem 65%;
+    background-repeat: no-repeat;
+
+    &__img {
+        height: 36rem;
+        margin-top: 7rem;
+        margin-left: -8.5rem;
+    }
+
+    &__text-wrapper {
+        width: 50%;
+        margin-left: auto;
+        padding: 7rem 2rem;
+
+
+    }
+
+    &__heading {
+        font-size: 3.5rem;
+        margin-bottom: 4rem;
+    }
+}
+
+//////////////////////////////////////  
+///// FAQ SECTION
+.FAQ-item {
+    margin-top: 2rem;
+    width: 82.5%;
+
+    &__button {
+        border: 0;
+        display: block;
+        background: transparent;
+        width: 100%;
+        text-align: left;
+        cursor: pointer;
+        font-family: 'Kumbh Sans', sans-serif;
+        margin-bottom: 1rem;
+        color: $color-gray-dark1;
+
+        transition: all .3s ease-in-out;
+
+        &:after {
+            content: "";
+            background-image: url(../images/icon-arrow-down.svg);
+            background-repeat: no-repeat;
+            display: block;
+            height: 1rem;
+            width: 1rem;
+            float: right;
+        }
+
+        &.active,
+        &:hover {
+            font-weight: 700;
+        }
+
+        &.active {
+
+            &:after {
+                content: "";
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__content {
+        padding-top: 1rem;
+        max-height: 0;
+        overflow: hidden;
+        border-bottom: 1px solid $color-gray-light;
+
+        transition: all .3s ease-in-out;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    &__text {
+        color: $color-gray-dark2;
+        margin-bottom: 1.75rem;
+    }
+}

@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Kumbh Sans', sans-serif;
+  font-size: 1.2rem;
+  min-height: 100vh;
+  background: linear-gradient(#af67e9, #6565e7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: #fff;
+  width: 92rem;
+  height: 50rem;
+  position: relative;
+  border-radius: 3rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.33);
+}
+
+.box-img {
+  position: absolute;
+  top: 20.5rem;
+  left: -9.25rem;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  background: url(../images/bg-pattern-desktop.svg);
+  background-position: -57.75rem 65%;
+  background-repeat: no-repeat;
+}
+
+.content__img {
+  height: 36rem;
+  margin-top: 7rem;
+  margin-left: -8.5rem;
+}
+
+.content__text-wrapper {
+  width: 50%;
+  margin-left: auto;
+  padding: 7rem 2rem;
+}
+
+.content__heading {
+  font-size: 3.5rem;
+  margin-bottom: 4rem;
+}
+
+.FAQ-item {
+  margin-top: 2rem;
+  width: 82.5%;
+}
+
+.FAQ-item__button {
+  border: 0;
+  display: block;
+  background: transparent;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-family: 'Kumbh Sans', sans-serif;
+  margin-bottom: 1rem;
+  color: #4a4b5e;
+  transition: all .3s ease-in-out;
+}
+
+.FAQ-item__button:after {
+  content: "";
+  background-image: url(../images/icon-arrow-down.svg);
+  background-repeat: no-repeat;
+  display: block;
+  height: 1rem;
+  width: 1rem;
+  float: right;
+}
+
+.FAQ-item__button.active, .FAQ-item__button:hover {
+  font-weight: 700;
+}
+
+.FAQ-item__button.active:after {
+  content: "";
+  transform: rotate(180deg);
+}
+
+.FAQ-item__content {
+  padding-top: 1rem;
+  max-height: 0;
+  overflow: hidden;
+  border-bottom: 1px solid #e7e7e9;
+  transition: all .3s ease-in-out;
+}
+
+.FAQ-item__content.active {
+  display: block;
+}
+
+.FAQ-item__text {
+  color: #787887;
+  margin-bottom: 1.75rem;
+}
+/*# sourceMappingURL=main.css.map */
