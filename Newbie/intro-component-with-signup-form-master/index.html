@@ -5,37 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/main.css">
   
   <title>Frontend Mentor | Intro component with sign up form</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 11px; text-align: center; color: #fff; margin-top: 2rem;}
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
-  Learn to code by watching others
+  <main class="container">
+    <div class="intro-box">
+      <h1 class="intro-box__header">
+        Learn to code by watching others
+      </h1>
+      <p class="intro-box__description">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but understanding how developers think is invaluable.
+      </p>
+    </div>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+    <div class="form-box">
+      <button class="form-box__button"><span>Try it free 7 days</span> then $20/mo. thereafter</button>
 
-  Try it free 7 days then $20/mo. thereafter
+      <form class="form" id="form">
+        <div class="form-item">
+          <input type="text" placeholder="First Name" id="first-name" class="form-item__input">
+          <img src="images/icon-error.svg" alt="Error Icon" class="form-item__error-icon">
+          <span class="form-item__error-msg">Error msg</span>
+        </div>
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+        <div class="form-item">
+          <input type="text" placeholder="Last Name" id="last-name" class="form-item__input">
+          <img src="images/icon-error.svg" alt="Error Icon" class="form-item__error-icon">
+          <span class="form-item__error-msg">Error msg</span>
+        </div>
 
-  Claim your free trial 
+        <div class="form-item">
+          <input type="email" placeholder="Email Address" id="email" class="form-item__input">
+          <img src="images/icon-error.svg" alt="Error Icon" class="form-item__error-icon">
+          <span class="form-item__error-msg">Error msg</span>
+        </div>
 
-  By clicking the button, you are agreeing to our Terms and Services
-  
+        <div class="form-item">
+          <input type="password" placeholder="Password" id="password" class="form-item__input">
+          <img src="images/icon-error.svg" alt="Error Icon" class="form-item__error-icon">
+          <span class="form-item__error-msg">Error msg</span>
+        </div>
+
+        <button class="form-item__button">Claim your free trial</button>
+        <p class="form-item__ToS">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
+      </form>
+    </div>
+  </main>
+
   <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/krisp-dev">krisp-dev</a>.
     </p>
   </footer>
 </body>

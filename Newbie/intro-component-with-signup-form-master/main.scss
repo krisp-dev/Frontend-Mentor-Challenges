@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+//////////////////////////////////////  
+///// COLOR SCHEME
+$color-primary-1: hsl(0, 100%, 74%);
+$color-primary-2: hsl(154, 59%, 51%);
+$color-primary-3: hsl(154, 100%, 30%);
+
+$color-secondary-1: hsl(248, 32%, 49%);
+
+$color-neutral-dark: hsl(249, 10%, 26%) ;
+$color-neutral-light: hsl(246, 25%, 77%);
+
+$color-white: hsl(0, 0%, 100%);
+
+
+//////////////////////////////////////  
+///// MIXINS MEDIA QUERY MANAGER
+// @mixin media($breakpoint) {
+//     @if $breakpoint == large {
+//         @media (max-width: 68.75em) { @content }; //1100px / 16 = 68.75em
+//     }
+
+//     @if $breakpoint == medium {
+//         @media (max-width: 53.125em) { @content }; //850px / 16 = 53.125em
+//     }
+
+//     @if $breakpoint == small {
+//         @media (max-width: 43.75em) { @content }; //700px / 16 = 43.75em
+//     }
+// }
+
+
+//////////////////////////////////////  
+///// UNIVERSAL BASIC RESET
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+//////////////////////////////////////  
+///// BASE LAYOUT
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.6rem; //16px
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url(../images/bg-intro-desktop.png);
+    background-color: $color-primary-1;
+}
+
+
+//////////////////////////////////////  
+///// CONTAINER SECTION
+.container {
+    display: flex;
+    margin: 0 16.5rem;
+}
+
+
+//////////////////////////////////////  
+///// INTRO-BOX SECTION
+.intro-box {
+    flex: 1;
+    margin-right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &__header {
+        color: $color-white;
+        font-size: 5rem;
+        line-height: 1.1;
+    }
+
+    &__description {
+        color: $color-white;
+        margin-top: 3rem;
+    }
+}
+
+
+//////////////////////////////////////  
+///// FORM-BOX SECTION
+.form-box {
+    flex: 1;
+    margin-left: 1.5rem;
+
+    &__button {
+        border: none;
+        background-color: $color-secondary-1;
+        width: 100%;
+        height: 6rem;
+        color: $color-white;
+        font-size: 1.5rem;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 1rem;
+        box-shadow: 0 .8rem 0 0 rgba(0, 0, 0, .2);
+
+        & span {
+            font-weight: 700;
+        }
+    }
+}
+
+
+//////////////////////////////////////  
+///// FORM SECTION
+.form {
+    background-color: $color-white;
+    margin-top: 2.5rem;
+    padding: 4rem;
+    border-radius: 1rem;
+}
+
+
+.form-item {
+position: relative;
+margin-bottom: 2rem;
+
+    &__input {
+        display: block;
+        width: 100%;
+        padding: 1.5rem;
+        border-radius: .5rem;
+        border: 1px solid rgba($color-neutral-dark, $alpha: 0.25);
+        padding-left: 3.5rem;
+        color: $color-neutral-dark;
+        outline: 0;
+
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.5rem;
+        font-weight: 600;
+
+        &:focus {
+            border: 1px solid $color-neutral-dark;
+        }
+    }
+
+    &__error-icon {
+        position: absolute;
+        top: 1.5rem;
+        right: 2.5rem;
+        visibility: hidden;
+    }
+
+    &__error-msg {
+        position: absolute;
+        top: 5.75rem;
+        right: 2rem;
+        font-size: 1rem;
+        font-weight: 600;
+        font-style: italic;
+        color: $color-primary-1;
+        visibility: hidden;
+    }
+
+    &__button {
+        border: none;
+        background-color: $color-primary-2;
+        width: 100%;
+        height: 5.25rem;
+        border-radius: .5rem;
+
+        color: $color-white;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.6rem;
+        font-weight: 500;
+
+        box-shadow: 0 .4rem 0 0 rgba($color-primary-3, $alpha: 0.85)
+    }
+
+    &__ToS {
+        font-size: 1.1rem;
+        margin-top: 1.5rem;
+        text-align: center;
+        color: $color-neutral-light;
+        font-weight: 600;
+
+        & span {
+            color: $color-primary-1;
+            font-weight: 700;
+        }
+    }
+
+    //Error class changes
+    &.error {
+        .form-item {
+            &__input {
+                border: 2px solid $color-primary-1;
+                color: $color-primary-1;
+            }
+            &__error-icon,
+            &__error-msg {
+                visibility: visible;
+            }
+        }
+    }
+    //Success class changes
+    &.success {
+        .form-item__input {
+            border: 2px solid $color-primary-2;
+            color: $color-primary-2;
+        }
+    }
+}
