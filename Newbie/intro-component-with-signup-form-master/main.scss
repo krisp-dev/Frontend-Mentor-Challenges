@@ -145,6 +145,8 @@ margin-bottom: 2rem;
         font-size: 1.5rem;
         font-weight: 600;
 
+        transition: all .3s;
+
         &:focus {
             border: 1px solid $color-neutral-dark;
         }
@@ -181,7 +183,14 @@ margin-bottom: 2rem;
         font-size: 1.6rem;
         font-weight: 500;
 
-        box-shadow: 0 .4rem 0 0 rgba($color-primary-3, $alpha: 0.85)
+        box-shadow: 0 .4rem 0 0 rgba($color-primary-3, $alpha: 0.85);
+        cursor: pointer;
+
+        transition: all .3s;
+        
+        &:hover {
+            background-color: rgba($color-primary-2, $alpha: 0.75);
+        }
     }
 
     &__ToS {
@@ -200,6 +209,8 @@ margin-bottom: 2rem;
     //Error class changes
     &.error {
         .form-item {
+            transition: all .3s;
+
             &__input {
                 border: 2px solid $color-primary-1;
                 color: $color-primary-1;
@@ -213,6 +224,8 @@ margin-bottom: 2rem;
     //Success class changes
     &.success {
         .form-item__input {
+            transition: all .3s;
+    
             border: 2px solid $color-primary-2;
             color: $color-primary-2;
         }
