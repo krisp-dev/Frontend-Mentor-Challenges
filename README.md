@@ -10,7 +10,11 @@ Completed practice projects from https://www.frontendmentor.io/
 - [**HTML**/**CSS**] Base Apparel coming soon page ✔️ [Challenge](https://www.frontendmentor.io/challenges/base-apparel-coming-soon-page-5d46b47f8db8a7063f9331a0) [Solution](https://krisp-dev.github.io/Frontend-Mentor-Challenges/Newbie/base-apparel-coming-soon-master/index.html)
 - [**HTML**/**CSS**] Social proof section ✔️ [Challenge](https://www.frontendmentor.io/challenges/social-proof-section-6e0qTv_bA) [Solution](https://krisp-dev.github.io/Frontend-Mentor-Challenges/Newbie/social-proof-section-master/index.html)
 - [**HTML**/**CSS**/**JS**] Ping single column coming soon page ✔️ [Challenge](https://www.frontendmentor.io/challenges/ping-single-column-coming-soon-page-5cadd051fec04111f7b848da) [Solution](https://krisp-dev.github.io/Frontend-Mentor-Challenges/Newbie/ping-coming-soon-page-master/index.html)
-- [**HTML**/**CSS**/**JS**] Intro component with sign-up form 🚧 [Challenge](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1) [Solution]
+- [**HTML**/**CSS**/**JS**] Intro component with sign-up form ✔️ [Challenge](https://www.frontendmentor.io/challenges/intro-component-with-signup-form-5cf91bd49edda32581d28fd1) [Solution](https://krisp-dev.github.io/Frontend-Mentor-Challenges/Newbie/intro-component-with-signup-form-master/index.html)
 - [**HTML**/**CSS**/**JS**] FAQ accordion card ✔️ [Challenge](https://www.frontendmentor.io/challenges/faq-accordion-card-XlyjD0Oam) [Solution](https://krisp-dev.github.io/Frontend-Mentor-Challenges/Newbie/faq-accordion-card-main/index.html)
 
-
+## Junior level
+- [**HTML**/**CSS**] Fylo data storage component 🚧 [Challenge](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n) [Solution]()
+- [**HTML**/**CSS**] Testimonials grid section 🚧 [Challenge](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7) [Solution]()
+- [**HTML**/**CSS**] Fylo dark theme landing page 🚧 [Challenge](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd) [Solution]()
+- [**HTML**/**CSS**] Clipboard landing page 🚧 [Challenge](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9) [Solution]()
