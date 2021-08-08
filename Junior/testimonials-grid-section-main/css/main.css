@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-size: 1.3rem;
+  min-height: 100vh;
+}
+
+.testimonial:nth-child(1) {
+  background-color: #7541c8;
+  background-image: url(../images/bg-pattern-quotation.svg);
+  background-repeat: no-repeat;
+}
+
+.testimonial:nth-child(2) {
+  background-color: #48556a;
+}
+
+.testimonial:nth-child(3) {
+  background-color: white;
+}
+
+.testimonial:nth-child(4) {
+  background-color: #19212e;
+}
+
+.testimonial:nth-child(5) {
+  background-color: white;
+}
+/*# sourceMappingURL=main.css.map */

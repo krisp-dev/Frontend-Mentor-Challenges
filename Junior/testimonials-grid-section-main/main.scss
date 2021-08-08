@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+//////////////////////////////////////  
+///// COLOR SCHEME
+$color-primary-1: hsl(263, 55%, 52%);
+$color-primary-light: hsl(217, 19%, 35%);
+$color-primary-dark: hsl(219, 29%, 14%);
+
+$color-neutral-light-1: hsl(0, 0%, 81%);
+$color-neutral-light-2: hsl(210, 46%, 95%);
+
+$color-white: hsl(0, 0%, 100%);
+
+
+//////////////////////////////////////  
+///// MIXINS MEDIA QUERY MANAGER
+@mixin media($breakpoint) {
+    @if $breakpoint == large {
+        @media (max-width: 68.75em) { @content }; //1100px / 16 = 68.75em
+    }
+
+    @if $breakpoint == medium {
+        @media (max-width: 53.125em) { @content }; //850px / 16 = 53.125em
+    }
+
+    @if $breakpoint == small {
+        @media (max-width: 43.75em) { @content }; //700px / 16 = 43.75em
+    }
+}
+
+
+//////////////////////////////////////  
+///// UNIVERSAL BASIC RESET
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+//////////////////////////////////////  
+///// BASE LAYOUT
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 1.3rem; // ### Body Copy - Font size: 13px
+    min-height: 100vh;
+}
+
+
+//////////////////////////////////////  
+///// TESTIMONIAL GRID LAYOUT
+.testimonial-grid {
+
+}
+
+
+//////////////////////////////////////  
+///// TESTIMONIALS SECTION
+.testimonial {
+
+    &:nth-child(1) { 
+        background-color: $color-primary-1; 
+        background-image: url(../images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+    }
+    &:nth-child(2) { background-color: $color-primary-light; }
+    &:nth-child(3) { background-color: $color-white; }
+    &:nth-child(4) { background-color: $color-primary-dark; }
+    &:nth-child(5) { background-color: $color-white; }
+
+    &__user {
+
+    }
+
+    &__photo {
+
+    }
+
+    &__user-box {
+
+    }
+
+    &__user-name {
+
+    }
+
+    &__user-title {
+
+    }
+
+    &__caption {
+
+    }
+
+    &__text {
+        
+    }
+}
