@@ -204,7 +204,7 @@ body {
 
 //////////////////////////////////////  
 ///// ANIMATIONS & KEYFRAMES
-/* @include media(desktop) {
+@include media(desktop) {
     .moveInRight {
         animation: moveInRight 1s;
         animation-fill-mode: backwards;
@@ -228,7 +228,7 @@ body {
         animation-delay: 1.8s;
         animation-fill-mode: backwards;
     }
-} */
+}
 
 @keyframes moveInLeft {
     0% {

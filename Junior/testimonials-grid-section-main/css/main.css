@@ -160,31 +160,31 @@ body {
   color: #48556a;
 }
 
-/* @include media(desktop) {
-    .moveInRight {
-        animation: moveInRight 1s;
-        animation-fill-mode: backwards;
-    
-        &:nth-child(3) {
-            animation-delay: 2.4s;
-        }
-    }
-    .moveInTop {
-        animation: moveInTop 1s;
-        animation-delay: .6s;
-        animation-fill-mode: backwards;
-    }
-    .moveInLeft {
-        animation: moveInLeft 1s;
-        animation-delay: 1.2s;
-        animation-fill-mode: backwards;
-    }
-    .moveInBottom {
-        animation: moveInBottom 1s;
-        animation-delay: 1.8s;
-        animation-fill-mode: backwards;
-    }
-} */
+@media (min-width: 75em) {
+  .moveInRight {
+    animation: moveInRight 1s;
+    animation-fill-mode: backwards;
+  }
+  .moveInRight:nth-child(3) {
+    animation-delay: 2.4s;
+  }
+  .moveInTop {
+    animation: moveInTop 1s;
+    animation-delay: .6s;
+    animation-fill-mode: backwards;
+  }
+  .moveInLeft {
+    animation: moveInLeft 1s;
+    animation-delay: 1.2s;
+    animation-fill-mode: backwards;
+  }
+  .moveInBottom {
+    animation: moveInBottom 1s;
+    animation-delay: 1.8s;
+    animation-fill-mode: backwards;
+  }
+}
+
 @keyframes moveInLeft {
   0% {
     opacity: 0;
