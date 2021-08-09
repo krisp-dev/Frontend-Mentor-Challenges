@@ -18,14 +18,14 @@ body {
   min-height: 100vh;
   background-color: #ecf2f8;
   margin: 7rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media (min-width: 53.125em) {
+@media (min-width: 75em) {
   body {
     margin: 0 16.5rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
   }
 }
 
