@@ -88,6 +88,12 @@ body {
   top: 0;
 }
 
+@media (min-width: 75em) {
+  .testimonial__quotation {
+    right: 8rem;
+  }
+}
+
 .testimonial__user {
   display: flex;
 }
@@ -134,6 +140,7 @@ body {
   color: #ecf2f8;
   font-size: 2rem;
   margin-top: 1.75rem;
+  font-weight: 600;
   z-index: 1;
   position: relative;
 }
@@ -150,5 +157,74 @@ body {
 
 .testimonial__text--jeanette, .testimonial__text--kira {
   color: #48556a;
+}
+
+/* @include media(desktop) {
+    .moveInRight {
+        animation: moveInRight 1s;
+        animation-fill-mode: backwards;
+    
+        &:nth-child(3) {
+            animation-delay: 2.4s;
+        }
+    }
+    .moveInTop {
+        animation: moveInTop 1s;
+        animation-delay: .6s;
+        animation-fill-mode: backwards;
+    }
+    .moveInLeft {
+        animation: moveInLeft 1s;
+        animation-delay: 1.2s;
+        animation-fill-mode: backwards;
+    }
+    .moveInBottom {
+        animation: moveInBottom 1s;
+        animation-delay: 1.8s;
+        animation-fill-mode: backwards;
+    }
+} */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(15rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-15rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-15rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(15rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
 }
 /*# sourceMappingURL=main.css.map */
