@@ -16,27 +16,139 @@ body {
   font-family: 'Barlow Semi Condensed', sans-serif;
   font-size: 1.3rem;
   min-height: 100vh;
+  background-color: #ecf2f8;
+  margin: 7rem 2.5rem;
+}
+
+@media (min-width: 53.125em) {
+  body {
+    margin: 0 16.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 53.125em) {
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2.5rem 3rem;
+    grid-template-areas: "daniel daniel jonathan kira" "jeanette patrick patrick kira";
+  }
+}
+
+.testimonial {
+  padding: 2rem 3.3rem;
+  border-radius: 1rem;
+  position: relative;
+}
+
+.testimonial:not(:last-child) {
+  margin-bottom: 2.5rem;
+}
+
+@media (min-width: 53.125em) {
+  .testimonial:not(:last-child) {
+    margin-bottom: 0;
+  }
 }
 
 .testimonial:nth-child(1) {
   background-color: #7541c8;
-  background-image: url(../images/bg-pattern-quotation.svg);
-  background-repeat: no-repeat;
+  grid-area: daniel;
 }
 
 .testimonial:nth-child(2) {
   background-color: #48556a;
+  grid-area: jonathan;
 }
 
 .testimonial:nth-child(3) {
   background-color: white;
+  box-shadow: 0 2rem 4rem -3rem #48556a;
+  grid-area: jeanette;
 }
 
 .testimonial:nth-child(4) {
   background-color: #19212e;
+  grid-area: patrick;
 }
 
 .testimonial:nth-child(5) {
   background-color: white;
+  box-shadow: 0 2rem 4rem -3rem #48556a;
+  grid-area: kira;
+}
+
+.testimonial__quotation {
+  position: absolute;
+  right: 2.5rem;
+  top: 0;
+}
+
+.testimonial__user {
+  display: flex;
+}
+
+.testimonial__photo {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  z-index: 1;
+}
+
+.testimonial__photo--daniel, .testimonial__photo--patrick {
+  border: 0.2rem solid #a67de8;
+}
+
+.testimonial__user-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 1.5rem;
+  z-index: 1;
+}
+
+.testimonial__user-name {
+  color: white;
+}
+
+.testimonial__user-name--jeanette, .testimonial__user-name--kira {
+  color: #48556a;
+  font-weight: 600;
+}
+
+.testimonial__user-title {
+  color: white;
+  font-size: 1.1rem;
+  opacity: 50%;
+}
+
+.testimonial__user-title--jeanette, .testimonial__user-title--kira {
+  color: #48556a;
+}
+
+.testimonial__caption {
+  color: #ecf2f8;
+  font-size: 2rem;
+  margin-top: 1.75rem;
+  z-index: 1;
+  position: relative;
+}
+
+.testimonial__caption--jeanette, .testimonial__caption--kira {
+  color: #48556a;
+}
+
+.testimonial__text {
+  color: #ecf2f8;
+  opacity: 70%;
+  margin-top: 1.75rem;
+}
+
+.testimonial__text--jeanette, .testimonial__text--kira {
+  color: #48556a;
 }
 /*# sourceMappingURL=main.css.map */

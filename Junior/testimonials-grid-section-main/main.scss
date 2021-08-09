@@ -3,6 +3,7 @@
 //////////////////////////////////////  
 ///// COLOR SCHEME
 $color-primary-1: hsl(263, 55%, 52%);
+$color-primary-1-border: hsl(263, 70%, 70%); //user photo border
 $color-primary-light: hsl(217, 19%, 35%);
 $color-primary-dark: hsl(219, 29%, 14%);
 
@@ -15,17 +16,11 @@ $color-white: hsl(0, 0%, 100%);
 //////////////////////////////////////  
 ///// MIXINS MEDIA QUERY MANAGER
 @mixin media($breakpoint) {
-    @if $breakpoint == large {
-        @media (max-width: 68.75em) { @content }; //1100px / 16 = 68.75em
+
+    @if $breakpoint == desktop {
+        @media (min-width: 53.125em) { @content }; //850px / 16 = 53.125em
     }
 
-    @if $breakpoint == medium {
-        @media (max-width: 53.125em) { @content }; //850px / 16 = 53.125em
-    }
-
-    @if $breakpoint == small {
-        @media (max-width: 43.75em) { @content }; //700px / 16 = 43.75em
-    }
 }
 
 
@@ -51,6 +46,16 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
     font-size: 1.3rem; // ### Body Copy - Font size: 13px
     min-height: 100vh;
+    background-color: $color-neutral-light-2;
+    margin: 7rem 2.5rem;
+
+    @include media(desktop) {
+        margin: 0 16.5rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
 }
 
 
@@ -58,48 +63,132 @@ body {
 ///// TESTIMONIAL GRID LAYOUT
 .testimonial-grid {
 
+    @include media(desktop) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 2.5rem 3rem;
+
+        grid-template-areas: 
+        "daniel daniel jonathan kira"
+        "jeanette patrick patrick kira";
+    }
 }
 
 
 //////////////////////////////////////  
 ///// TESTIMONIALS SECTION
 .testimonial {
+    padding: 2rem 3.3rem;
+    border-radius: 1rem;
+    position: relative;
+
+    &:not(:last-child) { 
+        margin-bottom: 2.5rem; 
+
+        @include media(desktop) {
+            margin-bottom: 0;
+        }
+    }
 
     &:nth-child(1) { 
         background-color: $color-primary-1; 
-        background-image: url(../images/bg-pattern-quotation.svg);
-        background-repeat: no-repeat;
+        grid-area: daniel;
     }
-    &:nth-child(2) { background-color: $color-primary-light; }
-    &:nth-child(3) { background-color: $color-white; }
-    &:nth-child(4) { background-color: $color-primary-dark; }
-    &:nth-child(5) { background-color: $color-white; }
+    &:nth-child(2) { 
+        background-color: $color-primary-light; 
+        grid-area: jonathan;
+    }
+    &:nth-child(3) { 
+        background-color: $color-white; 
+        box-shadow: 0 2rem 4rem -3rem rgba($color-primary-light, $alpha: 1.0); 
+        grid-area: jeanette;
+    }
+    &:nth-child(4) { 
+        background-color: $color-primary-dark; 
+        grid-area: patrick;
+    }
+    &:nth-child(5) { 
+        background-color: $color-white; 
+        box-shadow: 0 2rem 4rem -3rem rgba($color-primary-light, $alpha: 1.0); 
+        grid-area: kira;
+    }
+
+    &__quotation {
+        position: absolute;
+        right: 2.5rem;
+        top: 0;
+    }
 
     &__user {
-
+        display: flex;
     }
 
     &__photo {
+        border-radius: 50%;
+        width: 3rem;
+        height: 3rem;
 
+        z-index: 1;
+        
+        &--daniel,
+        &--patrick {
+            border: .2rem solid $color-primary-1-border;
+        }
     }
 
     &__user-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-left: 1.5rem;
 
+        z-index: 1;
     }
 
     &__user-name {
+        color: $color-white;
 
+        &--jeanette,
+        &--kira {
+            color: $color-primary-light;
+            font-weight: 600;
+        }
     }
 
     &__user-title {
+        color: $color-white;
+        font-size: 1.1rem;
+        opacity: 50%;
 
+        &--jeanette,
+        &--kira {
+            color: $color-primary-light;
+        }
     }
 
     &__caption {
+        color: $color-neutral-light-2;
+        font-size: 2rem;
+        margin-top: 1.75rem;
+        
+        z-index: 1;
+        position: relative;
 
+        &--jeanette,
+        &--kira {
+            color: $color-primary-light;
+        }
     }
 
-    &__text {
-        
+    &__text {  
+        color: $color-neutral-light-2;
+        opacity: 70%;
+        margin-top: 1.75rem;
+
+        &--jeanette,
+        &--kira {
+            color: $color-primary-light;
+        }
     }
 }
