@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+//////////////////////////////////////  
+///// COLOR SCHEME
+$color-primary-1: hsl(6, 100%, 80%);
+$color-primary-2: hsl(335, 100%, 65%); 
+
+$color-neutral-light-1: hsl(243, 100%, 93%);
+$color-neutral-light-2: hsl(229, 7%, 55%);
+$color-neutral-dark-1: hsl(228, 56%, 26%);
+$color-neutral-dark-2: hsl(229, 57%, 11%);
+
+$color-white: hsl(0, 0%, 100%);
+
+
+//////////////////////////////////////  
+///// MIXINS MEDIA QUERY MANAGER
+@mixin media($breakpoint) {
+    @if $breakpoint == small {
+        @media (min-width: 53.125em) { @content }; //850px / 16 = 53.125em
+    }
+
+    @if $breakpoint == medium {
+        @media (min-width: 75em) { @content }; //1200px / 16 = 75em
+    }
+}
+
+
+//////////////////////////////////////  
+///// UNIVERSAL BASIC RESET
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+
+//////////////////////////////////////  
+///// BASE LAYOUT
+html {
+    box-sizing: border-box;
+    font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.4rem; // ### Body Copy - Font size: 14px
+    min-height: 100vh;
+}
+
+
+//////////////////////////////////////  
+///// 
