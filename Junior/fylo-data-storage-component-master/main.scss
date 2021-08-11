@@ -52,4 +52,64 @@ body {
 
 
 //////////////////////////////////////  
-///// 
+///// CONTAINER SECTION
+.container {
+
+}
+
+
+//////////////////////////////////////  
+///// FYLO SECTION
+.fylo {
+
+    &__logo {
+
+    }
+
+    &__icon-box {
+
+    }
+
+    &__icons {
+
+    }
+}
+
+
+//////////////////////////////////////  
+///// STORAGE SECTION
+.storage {
+
+    &__text {
+
+    }
+
+    &__progress { //https://codepen.io/evawythien/pen/jegRxN
+
+        &-bar {
+
+            &--dot {
+
+            }
+        }
+    }
+
+    &__limit {
+
+        &--low {
+
+        }
+
+        &--high {
+
+        }
+    }
+
+    &__bubble {
+
+        &--text {
+
+        }
+    }
+
+}

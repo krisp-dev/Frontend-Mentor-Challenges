@@ -17,13 +17,37 @@
 </head>
 <body>
 
-  You’ve used 815 GB of your storage
+  <main class="container">
 
-  185 GB Left
-  
-  0 GB
-  1000 GB
-  
+    <div class="fylo">
+      <img src="images/logo.svg" alt="Fylo Logo" class="fylo__logo">
+      <div class="fylo__icon-box">
+        <img src="images/icon-document.svg" alt="Document Icon" class="fylo__icons">
+        <img src="images/icon-folder.svg" alt="Folder Icon" class="fylo__icons">
+        <img src="images/icon-upload.svg" alt="Upload Icon" class="fylo__icons">
+      </div>
+    </div>
+
+    <div class="storage">
+      <p class="storage__text">You’ve used 815 GB of your storage</p>
+
+      <div class="storage__progress">
+        <div class="storage__progress-bar">
+          <div class="storage__progress-bar--dot"></div>
+        </div>
+      </div>
+
+      <div class="storage__limit">
+        <p class="storage__limit--low">0 GB</p>
+        <p class="storage__limit--high">1000 GB</p>
+      </div>
+
+      <div class="storage__bubble">
+        <p class="storage__bubble--text"><span>185</span> GB Left</p>
+      </div>
+    </div>
+  </main>
+
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/krisp-dev">krisp-dev</a>.
