@@ -237,12 +237,29 @@ body {
     animation: progressAnimation 2.5s;
 }
 
+.fadeIn {
+    animation: fadeIn 1s;
+    animation-delay: 2.5s;
+    animation-fill-mode: backwards;
+}
+
 @keyframes progressAnimation {
     0% {
         width: 5%;
     }
     100% {
         width: 81.5%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
