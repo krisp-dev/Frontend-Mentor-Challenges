@@ -192,18 +192,19 @@ body {
   margin-right: 1rem;
 }
 
-/* .progressAnimation {
-    animation: progressAnimation 2.5s;
+.progressAnimation {
+  animation: progressAnimation 2.5s;
 }
 
 @keyframes progressAnimation {
-    0% {
-        width: 5%;
-    }
-    100% {
-        width: 81.5%;
-    }
-} */
+  0% {
+    width: 5%;
+  }
+  100% {
+    width: 81.5%;
+  }
+}
+
 .attribution {
   margin-top: 5rem;
 }
