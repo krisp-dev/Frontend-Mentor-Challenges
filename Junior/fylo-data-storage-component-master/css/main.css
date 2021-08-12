@@ -16,5 +16,136 @@ body {
   font-family: 'Raleway', sans-serif;
   font-size: 1.4rem;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url(../images/bg-mobile.png);
+  background-size: 100%;
+}
+
+.fylo {
+  background-color: #1d2c67;
+  height: 20rem;
+  width: 32.5rem;
+  border-radius: 1rem;
+  border-top-right-radius: 10rem;
+  padding: 4rem;
+}
+
+.fylo__icon-box {
+  display: flex;
+  margin-top: 3rem;
+}
+
+.fylo__icons {
+  background-color: #0c122c;
+  border-radius: 1rem;
+  height: 4.7rem;
+  width: 4.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+}
+
+.fylo__icons:hover, .fylo__icons:focus {
+  opacity: .75;
+  transition: all .25s;
+}
+
+.storage {
+  margin-top: 2rem;
+  background-color: #1d2c67;
+  border-radius: 1rem;
+  padding: 3.5rem;
+  position: relative;
+}
+
+.storage__text {
+  color: #dddbff;
+  text-align: center;
+}
+
+.storage__text span {
+  color: white;
+  font-weight: 700;
+}
+
+.storage__progress {
+  padding: .3rem;
+  border-radius: 3rem;
+  background: rgba(0, 0, 0, 0.275);
+  margin-top: 1.5rem;
+}
+
+.storage__progress-bar {
+  height: 1.5rem;
+  border-radius: 3rem;
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  width: 81.5%;
+  position: relative;
+  transition: .4s linear;
+  transition-property: width, background-color;
+}
+
+.storage__progress-bar--dot {
+  height: 1.1rem;
+  width: 1.1rem;
+  background-color: white;
+  border-radius: 100%;
+  position: absolute;
+  top: .25rem;
+  right: .2rem;
+}
+
+.storage__limit {
+  color: white;
+  font-weight: 700;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.storage__bubble {
+  height: 7rem;
+  width: 18rem;
+  background-color: white;
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -3.5rem;
+  left: 7.25rem;
+}
+
+.storage__bubble--text {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  color: #848794;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 1.15rem;
+}
+
+.storage__bubble--text span {
+  font-size: 4rem;
+  color: #0c122c;
+  margin-right: 1rem;
+}
+
+.progressAnimation {
+  animation: progressAnimation 2.5s;
+}
+
+@keyframes progressAnimation {
+  0% {
+    width: 5%;
+  }
+  100% {
+    width: 81.5%;
+  }
 }
 /*# sourceMappingURL=main.css.map */

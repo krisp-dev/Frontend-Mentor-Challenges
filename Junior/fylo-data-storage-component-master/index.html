@@ -11,8 +11,8 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution { font-size: 11px; text-align: center; margin-top: 5rem; color: hsl(0, 0%, 100%);}
+    .attribution a { color: hsl(6, 100%, 80%); }
   </style>
 </head>
 <body>
@@ -22,24 +22,30 @@
     <div class="fylo">
       <img src="images/logo.svg" alt="Fylo Logo" class="fylo__logo">
       <div class="fylo__icon-box">
-        <img src="images/icon-document.svg" alt="Document Icon" class="fylo__icons">
-        <img src="images/icon-folder.svg" alt="Folder Icon" class="fylo__icons">
-        <img src="images/icon-upload.svg" alt="Upload Icon" class="fylo__icons">
+        <a aria-label="documents" href="#" class="fylo__icons">
+          <img src="images/icon-document.svg" alt="Document Icon">
+        </a>
+        <a aria-label="documents" href="#" class="fylo__icons">
+          <img src="images/icon-folder.svg" alt="Folder Icon">
+        </a>
+        <a aria-label="documents" href="#" class="fylo__icons">
+          <img src="images/icon-upload.svg" alt="Upload Icon">
+        </a>
       </div>
     </div>
 
     <div class="storage">
-      <p class="storage__text">You’ve used 815 GB of your storage</p>
+      <p class="storage__text">You’ve used <span>815 GB</span> of your storage</p>
 
       <div class="storage__progress">
-        <div class="storage__progress-bar">
+        <div class="storage__progress-bar progressAnimation">
           <div class="storage__progress-bar--dot"></div>
         </div>
       </div>
 
       <div class="storage__limit">
-        <p class="storage__limit--low">0 GB</p>
-        <p class="storage__limit--high">1000 GB</p>
+        <p>0 GB</p>
+        <p>1000 GB</p>
       </div>
 
       <div class="storage__bubble">

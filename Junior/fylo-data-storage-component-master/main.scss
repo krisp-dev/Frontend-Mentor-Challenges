@@ -48,30 +48,53 @@ body {
     font-family: 'Raleway', sans-serif;
     font-size: 1.4rem; // ### Body Copy - Font size: 14px
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background: url(../images/bg-mobile.png);
+    background-size: 100%;
 }
 
 
 //////////////////////////////////////  
 ///// CONTAINER SECTION
 .container {
-
+    
 }
 
 
 //////////////////////////////////////  
 ///// FYLO SECTION
 .fylo {
-
-    &__logo {
-
-    }
+    background-color: $color-neutral-dark-1;
+    height: 20rem;
+    width: 32.5rem;
+    border-radius: 1rem;
+    border-top-right-radius: 10rem;
+    padding: 4rem;
 
     &__icon-box {
-
+        display: flex;
+        margin-top: 3rem;
     }
 
     &__icons {
+        background-color: $color-neutral-dark-2;
+        border-radius: 1rem;
+        height: 4.7rem;
+        width: 4.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 1.5rem;
 
+        &:hover,
+        &:focus {
+            opacity: .75;
+            transition: all .25s;
+        }
     }
 }
 
@@ -79,37 +102,106 @@ body {
 //////////////////////////////////////  
 ///// STORAGE SECTION
 .storage {
+    margin-top: 2rem;
+    background-color: $color-neutral-dark-1;
+    border-radius: 1rem;
+    padding: 3.5rem;
+
+    position: relative;
 
     &__text {
+        color: $color-neutral-light-1;
+        text-align: center;
 
+        span {
+            color: $color-white;
+            font-weight: 700;
+        }
     }
 
-    &__progress { //https://codepen.io/evawythien/pen/jegRxN
+    &__progress { 
+        padding: .3rem;
+        border-radius: 3rem;
+        background: rgba(0, 0, 0, .275);
+        margin-top: 1.5rem;
 
         &-bar {
+            height: 1.5rem;
+            border-radius: 3rem;
+            background-image: linear-gradient(to right, $color-primary-1, $color-primary-2);
+            width: 81.5%;
+
+            position: relative;
+
+            transition: .4s linear;
+            transition-property: width, background-color;
 
             &--dot {
+                height: 1.1rem;
+                width: 1.1rem;
+                background-color: $color-white;
+                border-radius: 100%;
 
+                position: absolute;
+                top: .25rem;
+                right: .2rem;
             }
         }
     }
 
     &__limit {
-
-        &--low {
-
-        }
-
-        &--high {
-
-        }
+        color: $color-white;
+        font-weight: 700;
+        font-size: 1.2rem;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
     }
 
     &__bubble {
+        height: 7rem;
+        width: 18rem;
+        background-color: $color-white;
+        border-radius: 1rem;
+
+        position: absolute;
+        bottom: -3.5rem;
+        left: 7.25rem;
 
         &--text {
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color: $color-neutral-light-2;
+            font-weight: 700;
 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 1.15rem;
+
+            span {
+                font-size: 4rem;
+                color: $color-neutral-dark-2;
+                margin-right: 1rem;
+            }
         }
     }
 
+}
+
+
+//////////////////////////////////////  
+///// ANIMATION & KEYFRAMES
+.progressAnimation {
+    animation: progressAnimation 2.5s;
+}
+
+@keyframes progressAnimation {
+    0% {
+        width: 5%;
+    }
+    100% {
+        width: 81.5%;
+    }
 }
