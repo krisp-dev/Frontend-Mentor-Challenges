@@ -24,6 +24,21 @@ body {
   background-size: 100%;
 }
 
+@media (min-width: 59.375em) {
+  body {
+    background: url(../images/bg-desktop.png), #0c122c;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100vw 50vh;
+  }
+}
+
+@media (min-width: 59.375em) {
+  .container {
+    display: flex;
+  }
+}
+
 .fylo {
   background-color: #1d2c67;
   height: 20rem;
@@ -31,6 +46,13 @@ body {
   border-radius: 1rem;
   border-top-right-radius: 10rem;
   padding: 4rem;
+}
+
+@media (min-width: 59.375em) {
+  .fylo {
+    width: 35rem;
+    margin-right: 3rem;
+  }
 }
 
 .fylo__icon-box {
@@ -62,9 +84,24 @@ body {
   position: relative;
 }
 
+@media (min-width: 59.375em) {
+  .storage {
+    height: 15rem;
+    width: 54rem;
+    align-self: flex-end;
+  }
+}
+
 .storage__text {
   color: #dddbff;
   text-align: center;
+}
+
+@media (min-width: 59.375em) {
+  .storage__text {
+    text-align: left;
+    margin-top: .5rem;
+  }
 }
 
 .storage__text span {
@@ -119,6 +156,25 @@ body {
   left: 7.25rem;
 }
 
+@media (min-width: 59.375em) {
+  .storage__bubble {
+    top: -4.5rem;
+    left: 32rem;
+    border-bottom-right-radius: 0;
+  }
+  .storage__bubble::after {
+    content: '';
+    position: absolute;
+    border: 2.5rem solid transparent;
+    border-top-color: white;
+    border-right: 0;
+    margin-left: -1rem;
+    margin-bottom: -2rem;
+    bottom: -3rem;
+    right: 0;
+  }
+}
+
 .storage__bubble--text {
   font-size: 1.3rem;
   text-transform: uppercase;
@@ -136,16 +192,32 @@ body {
   margin-right: 1rem;
 }
 
-.progressAnimation {
-  animation: progressAnimation 2.5s;
+/* .progressAnimation {
+    animation: progressAnimation 2.5s;
 }
 
 @keyframes progressAnimation {
-  0% {
-    width: 5%;
+    0% {
+        width: 5%;
+    }
+    100% {
+        width: 81.5%;
+    }
+} */
+.attribution {
+  margin-top: 5rem;
+}
+
+@media (min-width: 59.375em) {
+  .attribution {
+    margin-top: 2rem;
   }
-  100% {
-    width: 81.5%;
-  }
+}
+
+.attribution a {
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 /*# sourceMappingURL=main.css.map */

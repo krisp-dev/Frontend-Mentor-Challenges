@@ -16,12 +16,8 @@ $color-white: hsl(0, 0%, 100%);
 //////////////////////////////////////  
 ///// MIXINS MEDIA QUERY MANAGER
 @mixin media($breakpoint) {
-    @if $breakpoint == small {
-        @media (min-width: 53.125em) { @content }; //850px / 16 = 53.125em
-    }
-
-    @if $breakpoint == medium {
-        @media (min-width: 75em) { @content }; //1200px / 16 = 75em
+    @if $breakpoint == desktop {
+        @media (min-width: 59.375em) { @content }; //950px / 16 = 59.375em
     }
 }
 
@@ -55,13 +51,22 @@ body {
 
     background: url(../images/bg-mobile.png);
     background-size: 100%;
+
+    @include media(desktop) {
+        background: url(../images/bg-desktop.png), $color-neutral-dark-2;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        background-size: 100vw 50vh;
+    }
 }
 
 
 //////////////////////////////////////  
 ///// CONTAINER SECTION
 .container {
-    
+    @include media(desktop) {
+        display: flex;
+    }
 }
 
 
@@ -74,6 +79,11 @@ body {
     border-radius: 1rem;
     border-top-right-radius: 10rem;
     padding: 4rem;
+
+    @include media(desktop) {
+        width: 35rem;
+        margin-right: 3rem;
+    }
 
     &__icon-box {
         display: flex;
@@ -109,9 +119,20 @@ body {
 
     position: relative;
 
+    @include media(desktop) {
+        height: 15rem;
+        width: 54rem;
+        align-self: flex-end;
+    }
+
     &__text {
         color: $color-neutral-light-1;
         text-align: center;
+
+        @include media(desktop) {
+            text-align: left;
+            margin-top: .5rem;
+        }
 
         span {
             color: $color-white;
@@ -169,6 +190,25 @@ body {
         bottom: -3.5rem;
         left: 7.25rem;
 
+        @include media(desktop) {
+            top: -4.5rem;
+            left: 32rem;
+            border-bottom-right-radius: 0;
+
+            &::after {
+                content: '';
+                position: absolute;
+                border: 2.5rem solid transparent;
+                border-top-color: $color-white;
+                border-right: 0;
+                margin-left: -1rem;
+                margin-bottom: -2rem;
+                bottom: -3rem;
+                right: 0;
+            }
+        }
+
+
         &--text {
             font-size: 1.3rem;
             text-transform: uppercase;
@@ -193,7 +233,7 @@ body {
 
 //////////////////////////////////////  
 ///// ANIMATION & KEYFRAMES
-.progressAnimation {
+/* .progressAnimation {
     animation: progressAnimation 2.5s;
 }
 
@@ -204,4 +244,20 @@ body {
     100% {
         width: 81.5%;
     }
+} */
+
+
+//////////////////////////////////////  
+///// ATTRIBUTION SECTION
+.attribution {
+    margin-top: 5rem;
+    @include media(desktop) {
+        margin-top: 2rem;
+    }
+     a {
+        background: linear-gradient(to right, $color-primary-1, $color-primary-2);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        }
 }
