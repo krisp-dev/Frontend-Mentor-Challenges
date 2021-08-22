@@ -1,0 +1,23 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.4rem;
+  min-height: 100vh;
+  background-color: #181f2a;
+  color: white;
+}
+/*# sourceMappingURL=main.css.map */

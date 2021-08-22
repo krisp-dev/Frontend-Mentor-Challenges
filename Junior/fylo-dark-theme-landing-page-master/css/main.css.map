@@ -1,0 +1,20 @@
+{
+    "version": 3,
+    "mappings": "AGEA,AAAA,CAAC;AACD,CAAC,AAAA,QAAQ;AACT,CAAC,AAAA,OAAO,CAAC;EACL,MAAM,EAAE,CAAC;EACT,OAAO,EAAE,CAAC;EACV,UAAU,EAAE,OAAO;CACtB;;AAKD,AAAA,IAAI,CAAC;EACD,UAAU,EAAE,UAAU;EACtB,SAAS,EAAE,KAAK;CACnB;;AAED,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,uBAAuB;EACpC,SAAS,EAAE,MAAM;EACjB,UAAU,EAAE,KAAK;EACjB,gBAAgB,EDnBC,OAAkB;ECqBnC,KAAK,EDbK,KAAgB;CCc7B",
+    "sources": [
+        "../sass/main.scss",
+        "../sass/abstracts/_mixins.scss",
+        "../sass/abstracts/_variables.scss",
+        "../sass/base/_base.scss",
+        "../sass/base/_typography.scss",
+        "../sass/components/_about.scss",
+        "../sass/components/_features.scss",
+        "../sass/components/_hero.scss",
+        "../sass/components/_newsletter.scss",
+        "../sass/components/_testimonials.scss",
+        "../sass/layout/_footer.scss",
+        "../sass/layout/_navigation.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
