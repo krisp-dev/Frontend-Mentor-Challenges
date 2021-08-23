@@ -1,0 +1,31 @@
+.about {
+  padding: 13rem 3rem;
+
+  &__img {
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  h3,
+  p {
+    margin-bottom: 2.5rem;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 0.5rem;
+
+    border-bottom: 1px solid $color-accent-light;
+    width: 15rem;
+    padding-bottom: 0.5rem;
+
+    font-size: 1.3rem;
+
+    &-item {
+      color: $color-accent-light;
+      text-decoration: none;
+    }
+  }
+}

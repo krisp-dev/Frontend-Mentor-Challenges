@@ -1,0 +1,20 @@
+.features {
+  padding: 0 3rem;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 8rem;
+  margin-top: 6rem;
+
+  &__item {
+  }
+
+  &__icon {
+    margin-bottom: 3rem;
+  }
+
+  p {
+    margin-top: 1.5rem;
+  }
+}

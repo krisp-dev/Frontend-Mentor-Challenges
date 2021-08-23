@@ -6,7 +6,11 @@
   border-radius: 10rem;
   padding: 1.5rem 0;
   width: 75%;
-  background-color: $color-accent-dark;
+  background-image: linear-gradient(
+    to right,
+    $color-accent-light,
+    $color-accent-dark
+  );
   color: $color-white;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
