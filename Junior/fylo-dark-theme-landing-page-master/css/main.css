@@ -78,6 +78,7 @@ body {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
 }
 
 .features {
@@ -120,8 +121,55 @@ body {
   margin: 2rem 0 3rem;
 }
 
+.newsletter {
+  text-align: center;
+  background-color: #1c2431;
+  padding: 4rem 3rem 3.5rem;
+  margin: 0 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.33);
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.newsletter h3,
+.newsletter p {
+  margin-bottom: 2rem;
+}
+
+.newsletter__input {
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  padding: 1.5rem 0;
+  border-radius: 10rem;
+  border: none;
+  display: block;
+  margin: 2.5rem 0;
+  padding-left: 3rem;
+  transition: all 0.3s;
+}
+
+.newsletter__input::placeholder {
+  font-size: 1.1rem;
+}
+
+.newsletter__input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+  border: 1px solid #65e2d9;
+}
+
+.newsletter__input:focus:invalid {
+  border: 1px solid red;
+}
+
+.newsletter__btn {
+  width: 100%;
+}
+
 .testimonials {
   padding: 4.5rem;
+  margin-bottom: 27.5rem;
 }
 
 .testimonial {
@@ -175,6 +223,10 @@ body {
 
 .testimonial__user-title {
   font-size: 0.9rem;
+}
+
+.footer {
+  background-color: #0b1523;
 }
 
 .nav {

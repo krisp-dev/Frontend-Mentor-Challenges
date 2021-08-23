@@ -1,0 +1,47 @@
+.newsletter {
+  text-align: center;
+  background-color: $color-primary-intro_email;
+  padding: 4rem 3rem 3.5rem;
+  margin: 0 2rem;
+  border-radius: 1rem;
+
+  box-shadow: 0 1rem 2rem rgba(black, 0.33);
+
+  position: absolute;
+  transform: translateY(-50%);
+
+  h3,
+  p {
+    margin-bottom: 2rem;
+  }
+
+  &__input {
+    font-family: "Raleway", sans-serif;
+    width: 100%;
+    padding: 1.5rem 0;
+    border-radius: 10rem;
+    border: none;
+    display: block;
+    margin: 2.5rem 0;
+    padding-left: 3rem;
+    transition: all 0.3s;
+
+    &::placeholder {
+      font-size: 1.1rem;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem rgba(black, 0.1);
+      border: 1px solid $color-accent-light;
+
+      &:invalid {
+        border: 1px solid red;
+      }
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+}
