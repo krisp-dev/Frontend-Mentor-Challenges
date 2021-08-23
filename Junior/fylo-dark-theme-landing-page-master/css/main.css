@@ -19,6 +19,21 @@ body {
   color: white;
 }
 
+.hero__img {
+  background-color: #1c2431;
+  width: 100%;
+  padding: 2.5rem 4rem;
+  padding-bottom: 10rem;
+  background-image: url(../../images/bg-curvy-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.hero__content {
+  transform: translateY(-50%);
+  text-align: center;
+}
+
 .nav {
   display: flex;
   padding: 2.5rem 2rem;
