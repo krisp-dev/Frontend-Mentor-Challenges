@@ -3,13 +3,11 @@
 *::after {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
@@ -18,6 +16,34 @@ body {
   font-size: 1.4rem;
   min-height: 100vh;
   background-color: #181f2a;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  background-color: #1c2431;
+}
+
+.nav__logo {
+  width: 25%;
+}
+
+.nav__list {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-left: auto;
+  list-style: none;
+  margin-right: .5rem;
+}
+
+.nav__link:link, .nav__link:visited {
+  display: inline-block;
+  text-decoration: none;
   color: white;
 }
 /*# sourceMappingURL=main.css.map */

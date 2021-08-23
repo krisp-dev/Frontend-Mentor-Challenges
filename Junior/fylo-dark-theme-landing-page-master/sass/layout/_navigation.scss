@@ -1,0 +1,31 @@
+.nav {
+   display: flex;
+   padding: 2.5rem 2rem;
+   width: 100%;
+   background-color: $color-primary-intro_email;
+
+   &__logo {
+      width: 25%;
+   }
+
+   &__list {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.3rem;
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      margin-left: auto;
+      list-style: none;
+      margin-right: .5rem;
+   }
+
+   &__link {
+
+      &:link,
+      &:visited {
+         display: inline-block;
+         text-decoration: none;
+         color: $color-white;
+      }
+   }
+}
