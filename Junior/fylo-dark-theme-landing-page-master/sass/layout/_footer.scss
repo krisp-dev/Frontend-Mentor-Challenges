@@ -1,3 +1,26 @@
 .footer {
   background-color: $color-primary-footer;
+  padding: 25rem 3rem 4.5rem;
+
+  &__logo {
+    margin-bottom: 4rem;
+  }
+
+  &__contact {
+    margin-bottom: 8rem;
+  }
+
+  &__contact-item {
+    display: flex;
+    margin-bottom: 2rem;
+    align-items: center;
+
+    &:nth-child(1) {
+      align-items: flex-start;
+    }
+  }
+
+  &__contact-icon {
+    margin-right: 2rem;
+  }
 }

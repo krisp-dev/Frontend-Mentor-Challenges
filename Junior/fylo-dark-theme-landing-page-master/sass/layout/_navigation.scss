@@ -1,31 +1,52 @@
 .nav {
-   display: flex;
-   padding: 2.5rem 2rem;
-   width: 100%;
-   background-color: $color-primary-intro_email;
+  display: flex;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  background-color: $color-primary-intro_email;
 
-   &__logo {
-      width: 25%;
-   }
+  &__logo {
+    width: 25%;
+  }
 
-   &__list {
-      font-family: 'Raleway', sans-serif;
-      font-size: 1.3rem;
-      display: flex;
-      align-items: center;
-      gap: 2.5rem;
-      margin-left: auto;
-      list-style: none;
-      margin-right: .5rem;
-   }
+  &__list {
+    font-family: "Raleway", sans-serif;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-left: auto;
+    list-style: none;
+    margin-right: 0.5rem;
+  }
 
-   &__link {
+  &__link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: $color-white;
+    }
+  }
+}
 
-      &:link,
-      &:visited {
-         display: inline-block;
-         text-decoration: none;
-         color: $color-white;
-      }
-   }
+.footer__nav {
+  &-list {
+    list-style: none;
+  }
+  &-link {
+    &:link,
+    &:visited {
+      display: inline-block;
+      text-decoration: none;
+      color: $color-white;
+      margin-bottom: 1.5rem;
+      font-size: 1.6rem;
+    }
+  }
+
+  li {
+    &:nth-child(4) {
+      margin-bottom: 4rem;
+    }
+  }
 }

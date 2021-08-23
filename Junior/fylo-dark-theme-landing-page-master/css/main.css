@@ -35,6 +35,10 @@ body {
   line-height: 1.5;
 }
 
+.paragraph-footer {
+  font-size: 1.6rem;
+}
+
 .about {
   padding: 13rem 3rem;
 }
@@ -227,6 +231,29 @@ body {
 
 .footer {
   background-color: #0b1523;
+  padding: 25rem 3rem 4.5rem;
+}
+
+.footer__logo {
+  margin-bottom: 4rem;
+}
+
+.footer__contact {
+  margin-bottom: 8rem;
+}
+
+.footer__contact-item {
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.footer__contact-item:nth-child(1) {
+  align-items: flex-start;
+}
+
+.footer__contact-icon {
+  margin-right: 2rem;
 }
 
 .nav {
@@ -241,19 +268,35 @@ body {
 }
 
 .nav__list {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 1.3rem;
   display: flex;
   align-items: center;
   gap: 2.5rem;
   margin-left: auto;
   list-style: none;
-  margin-right: .5rem;
+  margin-right: 0.5rem;
 }
 
 .nav__link:link, .nav__link:visited {
   display: inline-block;
   text-decoration: none;
   color: white;
+}
+
+.footer__nav-list {
+  list-style: none;
+}
+
+.footer__nav-link:link, .footer__nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+}
+
+.footer__nav li:nth-child(4) {
+  margin-bottom: 4rem;
 }
 /*# sourceMappingURL=main.css.map */
