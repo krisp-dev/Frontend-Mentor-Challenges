@@ -256,6 +256,29 @@ body {
   margin-right: 2rem;
 }
 
+.footer__socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 6rem;
+}
+
+.footer__socials a {
+  cursor: pointer;
+  margin-right: 1.5rem;
+}
+
+.footer__socials-icon {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  border: 1px solid white;
+  padding: 0.7rem;
+}
+
 .nav {
   display: flex;
   padding: 2.5rem 2rem;

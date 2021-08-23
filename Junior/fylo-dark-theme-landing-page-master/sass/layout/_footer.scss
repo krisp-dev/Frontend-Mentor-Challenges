@@ -23,4 +23,27 @@
   &__contact-icon {
     margin-right: 2rem;
   }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 6rem;
+
+    a {
+      cursor: pointer;
+      margin-right: 1.5rem;
+    }
+  }
+
+  &__socials-icon {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    border-radius: 50%;
+    text-align: center;
+    color: $color-white;
+    border: 1px solid $color-white;
+    padding: 0.7rem;
+  }
 }
