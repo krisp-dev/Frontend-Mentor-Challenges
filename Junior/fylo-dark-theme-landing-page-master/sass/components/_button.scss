@@ -1,3 +1,14 @@
 .btn {
-   
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10rem;
+  padding: 1.5rem 0;
+  width: 75%;
+  background-color: $color-accent-dark;
+  color: $color-white;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
