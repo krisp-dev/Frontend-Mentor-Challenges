@@ -1,0 +1,57 @@
+.testimonials {
+  padding: 4.5rem;
+}
+
+.testimonial {
+  background-color: $color-primary-testimonial;
+  padding: 3rem 1.75rem 2.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem 0.5rem rgba(rgb(255, 255, 255), 0.025);
+
+  &:not(:last-child) {
+    margin-bottom: 2.5rem;
+  }
+
+  position: relative;
+
+  &__img {
+    position: absolute;
+    width: 2.5rem;
+    top: -2rem;
+    left: 0.7rem;
+  }
+
+  &__text {
+    font-size: 1.1rem;
+    line-height: 1.9;
+    margin-bottom: 2rem;
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+  }
+
+  &__photo {
+    border-radius: 50%;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  &__user-box {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__user-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  &__user-title {
+    font-size: 0.9rem;
+  }
+}
