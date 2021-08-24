@@ -54,6 +54,18 @@ body {
   }
 }
 
+@media (min-width: 53.125em) {
+  .heading-3--about {
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 78.125em) {
+  .heading-3--about {
+    font-size: 4rem;
+  }
+}
+
 .paragraph-hero {
   font-family: "Raleway", sans-serif;
   line-height: 1.5;
@@ -76,6 +88,12 @@ body {
   line-height: 1.5;
 }
 
+@media (min-width: 53.125em) {
+  .paragraph-main {
+    font-size: 1.6rem;
+  }
+}
+
 .paragraph-footer {
   font-size: 1.6rem;
 }
@@ -86,6 +104,13 @@ body {
   flex-direction: column;
 }
 
+@media (min-width: 78.125em) {
+  .about {
+    flex-direction: row;
+    padding: 13rem 10.5rem;
+  }
+}
+
 .about__img {
   width: 100%;
   max-width: 62rem;
@@ -93,20 +118,58 @@ body {
   align-self: center;
 }
 
-.about h3,
-.about p {
+@media (min-width: 53.125em) {
+  .about__content {
+    padding: 5rem 5rem 5rem;
+    text-align: center;
+  }
+}
+
+@media (min-width: 78.125em) {
+  .about__content {
+    padding: 11.5rem 0 0 6rem;
+    text-align: left;
+  }
+}
+
+.about h3 {
   margin-bottom: 2.5rem;
+}
+
+@media (min-width: 78.125em) {
+  .about h3 {
+    margin-bottom: 2rem;
+    padding-right: 6rem;
+  }
+}
+
+.about p {
+  margin-bottom: 2rem;
 }
 
 .about__link {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-content: center;
   gap: 0.5rem;
   border-bottom: 1px solid #65e2d9;
   width: 15rem;
   padding-bottom: 0.5rem;
   font-size: 1.3rem;
+}
+
+@media (min-width: 53.125em) {
+  .about__link {
+    margin: 0 auto;
+    font-size: 1.6rem;
+    width: max-content;
+  }
+}
+
+@media (min-width: 78.125em) {
+  .about__link {
+    margin: 0;
+  }
 }
 
 .about__link-item {
