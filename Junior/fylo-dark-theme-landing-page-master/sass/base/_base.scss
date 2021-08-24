@@ -1,26 +1,24 @@
-//////////////////////////////////////  
+//////////////////////////////////////
 ///// UNIVERSAL BASIC RESET
 *,
 *::before,
 *::after {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-
-//////////////////////////////////////  
+//////////////////////////////////////
 ///// BASE LAYOUT
 html {
-    box-sizing: border-box;
-    font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+  box-sizing: border-box;
+  font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1.4rem; // ### Body Copy - Font size: 14px
-    min-height: 100vh;
-    background-color: $color-primary-main;
-
-    color: $color-white;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem; // ### Body Copy - Font size: 14px
+  min-height: 100vh;
+  background-color: $color-primary-main;
+  color: $color-white;
 }

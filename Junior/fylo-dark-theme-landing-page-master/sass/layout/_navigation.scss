@@ -4,8 +4,13 @@
   width: 100%;
   background-color: $color-primary-intro_email;
 
+  @include media(large) {
+    padding: 7rem 8rem;
+  }
+
   &__logo {
     width: 25%;
+    max-width: 18rem;
   }
 
   &__list {
@@ -17,6 +22,10 @@
     margin-left: auto;
     list-style: none;
     margin-right: 0.5rem;
+
+    @include media(large) {
+      font-size: 1.7rem;
+    }
   }
 
   &__link {

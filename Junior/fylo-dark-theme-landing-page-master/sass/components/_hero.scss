@@ -1,24 +1,62 @@
 .hero {
-   
-   &__img {
+  &__intro {
+    background-color: $color-primary-intro_email;
+    width: 100%;
+    padding: 3.5rem;
+    display: flex;
+    justify-content: center;
+
+    background-image: url(../../images/bg-curvy-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 100%;
+
+    @include media(large) {
+      background-image: url();
+      padding-bottom: 0;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 72rem;
+    padding-bottom: 6.5rem;
+
+    @include media(large) {
+      padding-bottom: 0;
+    }
+  }
+
+  &__content {
+    text-align: center;
+    padding: 0 3rem;
+
+    @include media(large) {
+      background-image: url(../../images/bg-curvy-desktop.svg);
       background-color: $color-primary-intro_email;
-      width: 100%;
-      padding: 2.5rem 4rem;
-      padding-bottom: 10rem;
-      background-image: url(../../images/bg-curvy-mobile.svg);
+      background-size: 100vw 81%;
       background-repeat: no-repeat;
       background-position: bottom;
-      background-size: 100%;
-   }
 
-   &__content {
-      transform: translateY(-6.5rem);
-      text-align: center;
-      padding: 0 3rem;
+      padding: 0 38rem;
+      padding-bottom: 19.5rem;
+      padding-top: 3rem;
+    }
 
-      p {
-         padding: 0 1rem;
-         margin: 2rem 0 3rem;
+    p {
+      padding: 0 1rem;
+      margin: 2rem 0 3rem;
+
+      @include media(large) {
+        padding: 0 3rem;
+        margin-top: 3.5rem;
       }
-   }
+    }
+  }
+
+  @include media(large) {
+    button {
+      width: 41.5%;
+    }
+  }
 }

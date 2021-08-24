@@ -2,11 +2,24 @@
   font-family: "Raleway", sans-serif;
   font-size: 2.5rem;
   line-height: 1.4;
+
+  @include media(large) {
+    font-size: 4rem;
+  }
 }
 
 .heading-3 {
   font-family: "Raleway", sans-serif;
   font-size: 1.8rem;
+}
+
+.paragraph-hero {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+
+  @include media(large) {
+    font-size: 2rem;
+  }
 }
 
 .paragraph-main {

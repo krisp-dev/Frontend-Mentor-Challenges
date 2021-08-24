@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1.4rem;
   min-height: 100vh;
   background-color: #181f2a;
@@ -25,9 +25,26 @@ body {
   line-height: 1.4;
 }
 
+@media (min-width: 78.125em) {
+  .heading-2 {
+    font-size: 4rem;
+  }
+}
+
 .heading-3 {
   font-family: "Raleway", sans-serif;
   font-size: 1.8rem;
+}
+
+.paragraph-hero {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+}
+
+@media (min-width: 78.125em) {
+  .paragraph-hero {
+    font-size: 2rem;
+  }
 }
 
 .paragraph-main {
@@ -41,11 +58,15 @@ body {
 
 .about {
   padding: 13rem 3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .about__img {
   width: 100%;
+  max-width: 62rem;
   margin-bottom: 4rem;
+  align-self: center;
 }
 
 .about h3,
@@ -85,6 +106,13 @@ body {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
 }
 
+@media (min-width: 78.125em) {
+  .btn {
+    padding: 2rem 0;
+    font-size: 1.6rem;
+  }
+}
+
 .features {
   padding: 0 3rem;
   text-align: center;
@@ -103,26 +131,71 @@ body {
   margin-top: 1.5rem;
 }
 
-.hero__img {
+.hero__intro {
   background-color: #1c2431;
   width: 100%;
-  padding: 2.5rem 4rem;
-  padding-bottom: 10rem;
+  padding: 3.5rem;
+  display: flex;
+  justify-content: center;
   background-image: url(../../images/bg-curvy-mobile.svg);
   background-repeat: no-repeat;
   background-position: bottom;
   background-size: 100%;
 }
 
+@media (min-width: 78.125em) {
+  .hero__intro {
+    background-image: url();
+    padding-bottom: 0;
+  }
+}
+
+.hero__img {
+  width: 100%;
+  max-width: 72rem;
+  padding-bottom: 6.5rem;
+}
+
+@media (min-width: 78.125em) {
+  .hero__img {
+    padding-bottom: 0;
+  }
+}
+
 .hero__content {
-  transform: translateY(-6.5rem);
   text-align: center;
   padding: 0 3rem;
+}
+
+@media (min-width: 78.125em) {
+  .hero__content {
+    background-image: url(../../images/bg-curvy-desktop.svg);
+    background-color: #1c2431;
+    background-size: 100vw 81%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    padding: 0 38rem;
+    padding-bottom: 19.5rem;
+    padding-top: 3rem;
+  }
 }
 
 .hero__content p {
   padding: 0 1rem;
   margin: 2rem 0 3rem;
+}
+
+@media (min-width: 78.125em) {
+  .hero__content p {
+    padding: 0 3rem;
+    margin-top: 3.5rem;
+  }
+}
+
+@media (min-width: 78.125em) {
+  .hero button {
+    width: 41.5%;
+  }
 }
 
 .newsletter {
@@ -286,8 +359,15 @@ body {
   background-color: #1c2431;
 }
 
+@media (min-width: 78.125em) {
+  .nav {
+    padding: 7rem 8rem;
+  }
+}
+
 .nav__logo {
   width: 25%;
+  max-width: 18rem;
 }
 
 .nav__list {
@@ -299,6 +379,12 @@ body {
   margin-left: auto;
   list-style: none;
   margin-right: 0.5rem;
+}
+
+@media (min-width: 78.125em) {
+  .nav__list {
+    font-size: 1.7rem;
+  }
 }
 
 .nav__link:link, .nav__link:visited {

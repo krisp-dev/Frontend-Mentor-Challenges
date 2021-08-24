@@ -1,9 +1,13 @@
 .about {
   padding: 13rem 3rem;
+  display: flex;
+  flex-direction: column;
 
   &__img {
     width: 100%;
+    max-width: 62rem;
     margin-bottom: 4rem;
+    align-self: center;
   }
 
   h3,

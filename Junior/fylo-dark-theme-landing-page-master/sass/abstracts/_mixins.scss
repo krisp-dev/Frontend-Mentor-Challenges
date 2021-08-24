@@ -1,7 +1,15 @@
-//////////////////////////////////////  
+//////////////////////////////////////
 ///// MIXINS MEDIA QUERY MANAGER
 @mixin media($breakpoint) {
-    @if $breakpoint == desktop {
-        @media (min-width: 59.375em) { @content }; //950px / 16 = 59.375em
-    }
+  @if $breakpoint == medium {
+    @media (min-width: 53.125em) {
+      @content;
+    } //850px / 16 = 53.125em
+  }
+
+  @if $breakpoint == large {
+    @media (min-width: 78.125em) {
+      @content;
+    } //1250px / 16 = 78.125em
+  }
 }
