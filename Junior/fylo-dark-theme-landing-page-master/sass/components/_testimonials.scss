@@ -4,9 +4,13 @@
 
   position: relative;
 
-  @include media(large) {
+  @include media(medium) {
     display: flex;
     gap: 4rem;
+    padding: 0 7rem;
+  }
+
+  @include media(large) {
     padding: 0 14rem;
   }
 }
@@ -27,7 +31,7 @@
   &:not(:last-child) {
     margin-bottom: 2.5rem;
 
-    @include media(large) {
+    @include media(medium) {
       margin-bottom: 0;
     }
   }
@@ -38,6 +42,12 @@
     width: 2.5rem;
     top: 2.75rem;
     left: 5.25rem;
+
+    @include media(medium) {
+      top: -2.5rem;
+      left: 6.5rem;
+      width: 3.75rem;
+    }
 
     @include media(large) {
       top: -3.5rem;
@@ -50,6 +60,10 @@
     font-size: 1.1rem;
     line-height: 1.9;
     margin-bottom: 2rem;
+
+    @include media(medium) {
+      font-size: 1.25rem;
+    }
 
     @include media(large) {
       font-size: 1.4rem;
