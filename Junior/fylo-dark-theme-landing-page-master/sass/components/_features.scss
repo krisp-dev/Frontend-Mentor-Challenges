@@ -7,11 +7,28 @@
   row-gap: 8rem;
   margin-top: 6rem;
 
+  @include media(medium) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 13rem;
+
+    padding: 0 11rem;
+    margin-top: -2rem;
+  }
+
+  @include media(large) {
+    padding: 0 27rem;
+  }
+
   &__item {
   }
 
   &__icon {
-    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8.8rem;
+    margin-bottom: 2.25rem;
   }
 
   p {

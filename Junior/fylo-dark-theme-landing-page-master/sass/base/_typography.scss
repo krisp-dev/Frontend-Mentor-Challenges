@@ -15,6 +15,14 @@
 .heading-3 {
   font-family: "Raleway", sans-serif;
   font-size: 1.8rem;
+
+  @include media(medium) {
+    font-size: 1.9rem;
+  }
+
+  @include media(large) {
+    font-size: 2rem;
+  }
 }
 
 .paragraph-hero {
@@ -31,7 +39,7 @@
 }
 
 .paragraph-main {
-  font-family: "Raleway", sans-serif;
+  font-family: "Open Sans", sans-serif;
   line-height: 1.5;
 }
 
