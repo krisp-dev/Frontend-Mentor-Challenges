@@ -4,27 +4,48 @@
   padding: 4rem 3rem 3.5rem;
   margin: 0 2rem;
   border-radius: 1rem;
-
   box-shadow: 0 1rem 2rem rgba(black, 0.33);
+  transform: translateY(50%);
 
-  position: absolute;
-  transform: translateY(-50%);
+  @include media(medium) {
+    box-shadow: 0.5rem 0.5rem 1rem 0.1rem rgba(black, 0.33);
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 5rem 3.5rem 4rem;
+  }
 
-  h3,
-  p {
+  @include media(large) {
+    max-width: 60%;
+  }
+
+  h3 {
     margin-bottom: 2rem;
+  }
+
+  p {
+    @include media(medium) {
+      font-size: 1.4rem;
+      padding: 0 4rem;
+    }
   }
 
   &__input {
     font-family: "Raleway", sans-serif;
     width: 100%;
-    padding: 1.5rem 0;
+    max-width: 100%;
+    padding: 1.5rem;
     border-radius: 10rem;
     border: none;
     display: block;
     margin: 2.5rem 0;
     padding-left: 3rem;
     transition: all 0.3s;
+
+    @include media(medium) {
+      padding: 1.75rem;
+      padding-left: 3rem;
+      margin: 0;
+    }
 
     &::placeholder {
       font-size: 1.1rem;
@@ -41,7 +62,26 @@
     }
   }
 
+  &__buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @include media(medium) {
+      flex-direction: row;
+      margin-top: 2.5rem;
+      gap: 3rem;
+    }
+  }
+
   &__btn {
     width: 100%;
+
+    @include media(medium) {
+      width: 42.5%;
+      padding: 1.75rem 0;
+      font-size: inherit;
+    }
   }
 }

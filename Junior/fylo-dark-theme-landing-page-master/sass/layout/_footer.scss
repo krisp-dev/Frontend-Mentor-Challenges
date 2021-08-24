@@ -1,6 +1,6 @@
 .footer {
   background-color: $color-primary-footer;
-  padding: 25rem 3rem 4.5rem;
+  padding: 25rem 3rem 3rem;
 
   &__logo {
     margin-bottom: 4rem;
@@ -45,5 +45,11 @@
     color: $color-white;
     border: 1px solid $color-white;
     padding: 0.7rem;
+  }
+}
+
+footer {
+  @include media(medium) {
+    margin-top: 6rem;
   }
 }

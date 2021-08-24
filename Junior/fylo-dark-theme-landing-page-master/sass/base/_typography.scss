@@ -32,6 +32,15 @@
       font-size: 4rem;
     }
   }
+
+  &--newsletter {
+    @include media(medium) {
+      font-size: 2.5rem;
+    }
+    @include media(large) {
+      font-size: 3.25rem;
+    }
+  }
 }
 
 .paragraph-hero {
