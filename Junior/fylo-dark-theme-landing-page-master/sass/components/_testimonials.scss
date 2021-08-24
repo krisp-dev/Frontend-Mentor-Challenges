@@ -1,6 +1,14 @@
 .testimonials {
   padding: 4.5rem;
   margin-bottom: 27.5rem;
+
+  position: relative;
+
+  @include media(large) {
+    display: flex;
+    gap: 4rem;
+    padding: 0 14rem;
+  }
 }
 
 .testimonial {
@@ -8,24 +16,45 @@
   padding: 3rem 1.75rem 2.5rem;
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem 0.5rem rgba(rgb(255, 255, 255), 0.025);
+  position: relative;
+  z-index: 2;
+
+  @include media(large) {
+    padding: 3.5rem 3rem 3rem;
+    box-shadow: 0.7rem 0.7rem 1rem 0.5rem rgba(rgb(255, 255, 255), 0.025);
+  }
 
   &:not(:last-child) {
     margin-bottom: 2.5rem;
-  }
 
-  position: relative;
+    @include media(large) {
+      margin-bottom: 0;
+    }
+  }
 
   &__img {
     position: absolute;
+    z-index: 1;
     width: 2.5rem;
-    top: -2rem;
-    left: 0.7rem;
+    top: 2.75rem;
+    left: 5.25rem;
+
+    @include media(large) {
+      top: -3.5rem;
+      left: 13rem;
+      width: 5.5rem;
+    }
   }
 
   &__text {
     font-size: 1.1rem;
     line-height: 1.9;
     margin-bottom: 2rem;
+
+    @include media(large) {
+      font-size: 1.4rem;
+      line-height: 1.6;
+    }
   }
 
   &__user {
