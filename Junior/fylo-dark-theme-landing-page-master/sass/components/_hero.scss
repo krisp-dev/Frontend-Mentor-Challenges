@@ -11,7 +11,7 @@
     background-position: bottom;
     background-size: 100%;
 
-    @include media(large) {
+    @include media(medium) {
       background-image: url();
       padding-bottom: 0;
     }
@@ -19,11 +19,12 @@
 
   &__img {
     width: 100%;
-    max-width: 72rem;
+    max-width: 52rem;
     padding-bottom: 6.5rem;
 
-    @include media(large) {
+    @include media(medium) {
       padding-bottom: 0;
+      max-width: 72rem;
     }
   }
 
@@ -31,16 +32,18 @@
     text-align: center;
     padding: 0 3rem;
 
-    @include media(large) {
+    @include media(medium) {
       background-image: url(../../images/bg-curvy-desktop.svg);
       background-color: $color-primary-intro_email;
       background-size: 100vw 81%;
       background-repeat: no-repeat;
       background-position: bottom;
 
-      padding: 0 38rem;
-      padding-bottom: 19.5rem;
-      padding-top: 3rem;
+      padding: 1.5rem 18rem 9.75rem;
+    }
+
+    @include media(large) {
+      padding: 3rem 38rem 19.5rem;
     }
 
     p {
@@ -51,12 +54,6 @@
         padding: 0 3rem;
         margin-top: 3.5rem;
       }
-    }
-  }
-
-  @include media(large) {
-    button {
-      width: 41.5%;
     }
   }
 }

@@ -25,6 +25,12 @@ body {
   line-height: 1.4;
 }
 
+@media (min-width: 53.125em) {
+  .heading-2 {
+    font-size: 3.25rem;
+  }
+}
+
 @media (min-width: 78.125em) {
   .heading-2 {
     font-size: 4rem;
@@ -39,6 +45,12 @@ body {
 .paragraph-hero {
   font-family: "Raleway", sans-serif;
   line-height: 1.5;
+}
+
+@media (min-width: 53.125em) {
+  .paragraph-hero {
+    font-size: 1.75rem;
+  }
 }
 
 @media (min-width: 78.125em) {
@@ -98,12 +110,20 @@ body {
   border-radius: 10rem;
   padding: 1.5rem 0;
   width: 75%;
+  max-width: 24.5rem;
   background-image: linear-gradient(to right, #65e2d9, #339ecc);
   color: white;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
   font-size: 1.5rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 53.125em) {
+  .btn {
+    width: 41.5%;
+    max-width: 100%;
+  }
 }
 
 @media (min-width: 78.125em) {
@@ -143,7 +163,7 @@ body {
   background-size: 100%;
 }
 
-@media (min-width: 78.125em) {
+@media (min-width: 53.125em) {
   .hero__intro {
     background-image: url();
     padding-bottom: 0;
@@ -152,13 +172,14 @@ body {
 
 .hero__img {
   width: 100%;
-  max-width: 72rem;
+  max-width: 52rem;
   padding-bottom: 6.5rem;
 }
 
-@media (min-width: 78.125em) {
+@media (min-width: 53.125em) {
   .hero__img {
     padding-bottom: 0;
+    max-width: 72rem;
   }
 }
 
@@ -167,16 +188,20 @@ body {
   padding: 0 3rem;
 }
 
-@media (min-width: 78.125em) {
+@media (min-width: 53.125em) {
   .hero__content {
     background-image: url(../../images/bg-curvy-desktop.svg);
     background-color: #1c2431;
     background-size: 100vw 81%;
     background-repeat: no-repeat;
     background-position: bottom;
-    padding: 0 38rem;
-    padding-bottom: 19.5rem;
-    padding-top: 3rem;
+    padding: 1.5rem 18rem 9.75rem;
+  }
+}
+
+@media (min-width: 78.125em) {
+  .hero__content {
+    padding: 3rem 38rem 19.5rem;
   }
 }
 
@@ -189,12 +214,6 @@ body {
   .hero__content p {
     padding: 0 3rem;
     margin-top: 3.5rem;
-  }
-}
-
-@media (min-width: 78.125em) {
-  .hero button {
-    width: 41.5%;
   }
 }
 
@@ -359,6 +378,12 @@ body {
   background-color: #1c2431;
 }
 
+@media (min-width: 53.125em) {
+  .nav {
+    padding: 3.5rem 6rem;
+  }
+}
+
 @media (min-width: 78.125em) {
   .nav {
     padding: 7rem 8rem;
@@ -379,6 +404,12 @@ body {
   margin-left: auto;
   list-style: none;
   margin-right: 0.5rem;
+}
+
+@media (min-width: 53.125em) {
+  .nav__list {
+    font-size: 1.5rem;
+  }
 }
 
 @media (min-width: 78.125em) {
