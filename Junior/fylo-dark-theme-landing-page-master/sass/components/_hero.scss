@@ -33,7 +33,7 @@
     padding: 0 3rem;
 
     @include media(medium) {
-      background-image: url(../../images/bg-curvy-desktop.svg);
+      background-image: url(../images/bg-curvy-desktop.svg);
       background-color: $color-primary-intro_email;
       background-size: 100vw 81%;
       background-repeat: no-repeat;

@@ -309,7 +309,7 @@ body {
 
 @media (min-width: 53.125em) {
   .hero__content {
-    background-image: url(../../images/bg-curvy-desktop.svg);
+    background-image: url(../images/bg-curvy-desktop.svg);
     background-color: #1c2431;
     background-size: 100vw 81%;
     background-repeat: no-repeat;
