@@ -39,6 +39,8 @@
     display: block;
     margin: 2.5rem 0;
     padding-left: 3rem;
+    outline: none;
+
     transition: all 0.3s;
 
     @include media(medium) {
@@ -51,14 +53,28 @@
       font-size: 1.1rem;
     }
 
-    &:focus {
-      outline: none;
+    &:focus:invalid {
       box-shadow: 0 1rem 2rem rgba(black, 0.1);
-      border: 1px solid $color-accent-light;
+      border: 1px solid red;
 
-      &:invalid {
-        border: 1px solid red;
+      & ~ span {
+        opacity: 1;
       }
+    }
+  }
+
+  &__error {
+    font-size: 1.1rem;
+    color: red;
+    position: absolute;
+    margin-top: 1.5rem;
+    left: 6rem;
+
+    opacity: 0;
+    transition: all 0.3s;
+
+    @include media(medium) {
+      bottom: 2rem;
     }
   }
 

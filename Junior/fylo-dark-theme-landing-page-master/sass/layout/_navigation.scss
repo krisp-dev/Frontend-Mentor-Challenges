@@ -42,6 +42,13 @@
       display: inline-block;
       text-decoration: none;
       color: $color-white;
+      border-width: 0rem;
+
+      &:hover {
+        font-weight: 700;
+        border-bottom: 1px solid $color-white;
+        transition: all 0.25s;
+      }
     }
   }
 }

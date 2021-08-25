@@ -180,6 +180,7 @@ body {
   width: 15rem;
   padding-bottom: 0.5rem;
   font-size: 1.3rem;
+  transition: all 0.25s;
 }
 
 @media (min-width: 53.125em) {
@@ -196,9 +197,18 @@ body {
   }
 }
 
+.about__link:hover {
+  border-bottom: 1px solid white;
+}
+
 .about__link-item {
   color: #65e2d9;
   text-decoration: none;
+  transition: all 0.25s;
+}
+
+.about__link-item:hover {
+  color: white;
 }
 
 .btn {
@@ -216,6 +226,18 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.25);
+  transition: all 0.25s;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to right, #9ee2ff, #9ee2ff);
+  transform: translateY(-0.5rem);
+  box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.45);
+}
+
+.btn:hover:active {
+  transform: translateY(0);
+  box-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.65);
 }
 
 @media (min-width: 53.125em) {
@@ -382,6 +404,7 @@ body {
   display: block;
   margin: 2.5rem 0;
   padding-left: 3rem;
+  outline: none;
   transition: all 0.3s;
 }
 
@@ -397,14 +420,29 @@ body {
   font-size: 1.1rem;
 }
 
-.newsletter__input:focus {
-  outline: none;
+.newsletter__input:focus:invalid {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-  border: 1px solid #65e2d9;
+  border: 1px solid red;
 }
 
-.newsletter__input:focus:invalid {
-  border: 1px solid red;
+.newsletter__input:focus:invalid ~ span {
+  opacity: 1;
+}
+
+.newsletter__error {
+  font-size: 1.1rem;
+  color: red;
+  position: absolute;
+  margin-top: 1.5rem;
+  left: 6rem;
+  opacity: 0;
+  transition: all 0.3s;
+}
+
+@media (min-width: 53.125em) {
+  .newsletter__error {
+    bottom: 2rem;
+  }
 }
 
 .newsletter__buttons {
@@ -631,6 +669,12 @@ body {
   color: white;
   border: 1px solid white;
   padding: 0.7rem;
+  transition: all 0.25s;
+}
+
+.footer__socials-icon:hover {
+  color: #65e2d9;
+  border: 1px solid #65e2d9;
 }
 
 @media (min-width: 53.125em) {
@@ -690,6 +734,13 @@ body {
   display: inline-block;
   text-decoration: none;
   color: white;
+  border-width: 0rem;
+}
+
+.nav__link:link:hover, .nav__link:visited:hover {
+  font-weight: 700;
+  border-bottom: 1px solid white;
+  transition: all 0.25s;
 }
 
 @media (min-width: 53.125em) {

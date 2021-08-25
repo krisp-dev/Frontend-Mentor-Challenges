@@ -52,8 +52,8 @@
     border-bottom: 1px solid $color-accent-light;
     width: 15rem;
     padding-bottom: 0.5rem;
-
     font-size: 1.3rem;
+    transition: all 0.25s;
 
     @include media(medium) {
       margin: 0 auto;
@@ -65,9 +65,18 @@
       margin: 0;
     }
 
+    &:hover {
+      border-bottom: 1px solid $color-white;
+    }
+
     &-item {
       color: $color-accent-light;
       text-decoration: none;
+      transition: all 0.25s;
+
+      &:hover {
+        color: $color-white;
+      }
     }
   }
 }

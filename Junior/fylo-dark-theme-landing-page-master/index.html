@@ -90,7 +90,7 @@
       <p class="paragraph-main">Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required.</p>
         <div class="about__link">
           <a href="#" class="about__link-item">See how Fylo works</a>
-          <img src="images/icon-arrow.svg" alt="Arrow Icon" class="about__item--img">
+          <img src="images/icon-arrow.svg" alt="Arrow Icon" class="about__link-img">
         </div>
     </div>
     
@@ -146,10 +146,12 @@
       <h3 class="heading-3 heading-3--newsletter">Get early access today</h3>
       <p class="paragraph-main">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any 
         questions, our support team would be happy to help you.</p>
-      <div class="newsletter__buttons">
-        <input type="email" class="newsletter__input" placeholder="email@example.com" id="email" required>
-      <button class="btn newsletter__btn">Get Started For Free</button>
-      </div>
+        <form class="newsletter__buttons">
+          <input type="email" class="newsletter__input" placeholder="email@example.com" id="email" required>
+          <button class="btn newsletter__btn">Get Started For Free</button>
+          <span class="newsletter__error">Please enter a valid email address</span>
+        </form>
+        
     </section>
 
     <section class="footer">

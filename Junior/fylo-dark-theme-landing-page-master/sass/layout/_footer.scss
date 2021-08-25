@@ -71,6 +71,12 @@
     color: $color-white;
     border: 1px solid $color-white;
     padding: 0.7rem;
+    transition: all 0.25s;
+
+    &:hover {
+      color: $color-accent-light;
+      border: 1px solid $color-accent-light;
+    }
   }
 }
 
