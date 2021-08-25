@@ -16,5 +16,5 @@ Completed practice projects from https://www.frontendmentor.io/
 ## Junior level
 - [**HTML**/**CSS**] Fylo data storage component ✔️ [Challenge](https://www.frontendmentor.io/challenges/fylo-data-storage-component-1dZPRbV5n) / [Solution](https://krisp-dev.github.io/Frontend-Mentor-Challenges/Junior/fylo-data-storage-component-master/index.html)
 - [**HTML**/**CSS**] Testimonials grid section ✔️ [Challenge](https://www.frontendmentor.io/challenges/testimonials-grid-section-Nnw6J7Un7) / [Solution](https://krisp-dev.github.io/Frontend-Mentor-Challenges/Junior/testimonials-grid-section-main/index.html)
-- [**HTML**/**CSS**] Fylo dark theme landing page 🚧 [Challenge](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd) / [Solution]()
+- [**HTML**/**CSS**] Fylo dark theme landing page ✔️ [Challenge](https://www.frontendmentor.io/challenges/fylo-dark-theme-landing-page-5ca5f2d21e82137ec91a50fd) / [Solution](https://krisp-dev.github.io/Frontend-Mentor-Challenges/Junior/fylo-dark-theme-landing-page-master/index.html)
 - [**HTML**/**CSS**] Clipboard landing page 🚧 [Challenge](https://www.frontendmentor.io/challenges/clipboard-landing-page-5cc9bccd6c4c91111378ecb9) / [Solution]()
