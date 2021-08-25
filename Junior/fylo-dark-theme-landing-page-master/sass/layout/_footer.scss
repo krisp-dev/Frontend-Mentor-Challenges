@@ -2,12 +2,24 @@
   background-color: $color-primary-footer;
   padding: 25rem 3rem 3rem;
 
+  @include media(medium) {
+    padding-left: 12.5rem;
+    padding-right: 8rem;
+  }
+
   &__logo {
     margin-bottom: 4rem;
   }
 
   &__contact {
-    margin-bottom: 8rem;
+    @include media(large) {
+      display: flex;
+      justify-content: space-between;
+
+      & > :first-child {
+        max-width: 36rem;
+      }
+    }
   }
 
   &__contact-item {
@@ -15,7 +27,11 @@
     margin-bottom: 2rem;
     align-items: center;
 
-    &:nth-child(1) {
+    &:last-child {
+      margin-bottom: 8rem;
+    }
+
+    @include media(medium) {
       align-items: flex-start;
     }
   }
@@ -30,9 +46,19 @@
     justify-content: center;
     margin-top: 6rem;
 
+    @include media(medium) {
+      margin-top: 0;
+      align-items: flex-start;
+    }
+
     a {
       cursor: pointer;
       margin-right: 1.5rem;
+
+      @include media(medium) {
+        margin-right: 0;
+        margin-left: 1.5rem;
+      }
     }
   }
 

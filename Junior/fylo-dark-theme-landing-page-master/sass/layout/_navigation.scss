@@ -47,6 +47,14 @@
 }
 
 .footer__nav {
+  @include media(medium) {
+    display: flex;
+
+    :not(:last-child) {
+      margin-right: 4rem;
+    }
+  }
+
   &-list {
     list-style: none;
   }

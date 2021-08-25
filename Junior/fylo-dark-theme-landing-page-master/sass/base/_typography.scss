@@ -67,4 +67,8 @@
 
 .paragraph-footer {
   font-size: 1.6rem;
+
+  @include media(medium) {
+    line-height: 1.5;
+  }
 }
