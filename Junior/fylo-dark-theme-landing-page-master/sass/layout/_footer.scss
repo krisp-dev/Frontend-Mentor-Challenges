@@ -3,8 +3,11 @@
   padding: 25rem 3rem 3rem;
 
   @include media(medium) {
-    padding-left: 12.5rem;
-    padding-right: 8rem;
+    padding: 25rem 8rem 3rem 12.5rem;
+  }
+
+  @include media(largest) {
+    padding: 25rem 15% 3rem 15%;
   }
 
   &__logo {
@@ -81,6 +84,8 @@
 }
 
 footer {
+  grid-column: 1 / -1;
+
   @include media(medium) {
     margin-top: 6rem;
   }

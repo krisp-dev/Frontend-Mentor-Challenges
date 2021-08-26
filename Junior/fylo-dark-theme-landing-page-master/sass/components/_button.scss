@@ -43,5 +43,6 @@
   @include media(large) {
     padding: 2rem 0;
     font-size: 1.6rem;
+    max-width: 28rem;
   }
 }

@@ -12,6 +12,10 @@
     padding: 7rem 8rem;
   }
 
+  @include media(largest) {
+    padding: 7rem 15%;
+  }
+
   &__logo {
     width: 25%;
     max-width: 18rem;
