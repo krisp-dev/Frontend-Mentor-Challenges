@@ -1,0 +1,9 @@
+.center-content {
+    display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: minmax(0rem, 1fr) minmax(0, 144rem) minmax(0rem, 1fr);
+  
+    & > * {
+      grid-column: 2;
+    }
+  }
