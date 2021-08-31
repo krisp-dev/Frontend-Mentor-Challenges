@@ -133,6 +133,17 @@ select {
   margin: 6rem 0;
 }
 
+.sponsors {
+  padding: 13rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sponsors__image {
+  padding: 3rem 0;
+}
+
 .supercharge {
   text-align: center;
 }
