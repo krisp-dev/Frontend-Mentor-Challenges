@@ -120,6 +120,15 @@ select {
   box-shadow: 0 0.2rem 0 0.1rem #404fbf;
 }
 
+.download {
+  text-align: center;
+  padding: 1rem 0 12.5rem;
+}
+
+.download__buttons {
+  padding: 4.5rem 0;
+}
+
 .features {
   padding: 4rem 0;
   text-align: center;
