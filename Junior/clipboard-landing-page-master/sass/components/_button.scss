@@ -1,0 +1,27 @@
+%button {
+   border: none;
+   cursor: pointer;
+   text-decoration: none;
+   display: inline-block;
+   border-radius: 10rem;
+   padding: 1.5rem 0;
+   width: 31rem;
+   color: #fff;
+   font-weight: 600;
+}
+
+.btn-primary {
+   @extend %button;
+   background-color: $clr-primary-100;
+   box-shadow: 0 0.2rem 0 0.1rem $clr-primary-101;
+
+   &:not(:last-child) {
+      margin-bottom: 2.5rem;
+   }
+}
+
+.btn-secondary {
+   @extend %button;
+   background-color: $clr-primary-200;
+   box-shadow: 0 0.2rem 0 0.1rem $clr-primary-201;
+}

@@ -4,13 +4,11 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-
 //////////////////////////////////////
 ///// BASE IMPORT
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
-
 
 //////////////////////////////////////
 ///// COMPONENTS IMPORT
@@ -20,7 +18,6 @@
 @import "components/features";
 @import "components/sponsors";
 @import "components/supercharge";
-
 
 //////////////////////////////////////
 ///// LAYOUT IMPORT

@@ -1,9 +1,14 @@
 .center-content {
-    display: grid;
-    grid-template-rows: min-content;
-    grid-template-columns: minmax(0rem, 1fr) minmax(0, 144rem) minmax(0rem, 1fr);
-  
-    & > * {
+   display: grid;
+   grid-template-rows: min-content;
+   grid-template-columns: minmax(3rem, 1fr) minmax(0, 144rem) minmax(3rem, 1fr);
+
+   & > * {
       grid-column: 2;
-    }
-  }
+   }
+}
+
+.full-bleed {
+   width: 100vw;
+   margin-left: calc(50% - 50vw);
+}
