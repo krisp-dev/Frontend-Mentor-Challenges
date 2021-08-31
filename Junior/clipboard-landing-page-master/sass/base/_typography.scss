@@ -24,9 +24,18 @@
 
 //////////////////////////////////////
 ///// PARAGRAPH STYLING
-.text-1 {
-   font-size: 1.7rem;
+%text {
    color: $clr-neutral-100;
    font-weight: 400;
    line-height: 1.7;
+}
+
+.text-1 {
+   @extend %text;
+   font-size: 1.7rem;
+}
+
+.text-2 {
+   @extend %text;
+   font-size: 1.6rem;
 }
