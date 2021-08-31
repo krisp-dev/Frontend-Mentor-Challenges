@@ -178,6 +178,39 @@ select {
   margin: 3.25rem 0;
 }
 
+.footer {
+  grid-column: 1 / -1;
+  background-color: #f1f3f4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo {
+  height: 5.5rem;
+  width: 5.5rem;
+  margin: 5.5rem 0 4.5rem;
+}
+
+.footer__nav--list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.75rem;
+}
+
+.footer__nav--link {
+  text-decoration: none;
+  color: #4c545d;
+}
+
+.footer__socials {
+  padding: 5rem 0;
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+}
+
 .header {
   padding: 12rem 2.5rem;
   display: flex;
