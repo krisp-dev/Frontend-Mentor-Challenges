@@ -4,22 +4,41 @@
 
    p {
       margin-bottom: 5rem;
+
+      @include media(medium) {
+         max-width: 70rem;
+         margin: 0 auto;
+      }
    }
 
    &__box {
+      @include media(medium) {
+         display: flex;
+         text-align: left;
+         margin-top: 8rem;
+      }
    }
 
    &__image {
       margin: 6rem auto;
       max-width: 40rem;
 
-      & img {
+      @include media(medium) {
+         max-width: 100%;
+         margin: 0 11rem 0 -4.5%;
       }
    }
 
    &__content {
+      display: flex;
+      flex-direction: column;
+      gap: 6rem;
+      margin-top: 5rem;
    }
 
    &__content-item {
+      @include media(medium) {
+         max-width: 35rem;
+      }
    }
 }

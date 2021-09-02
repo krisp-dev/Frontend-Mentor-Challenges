@@ -11,6 +11,15 @@
 
    grid-column: 1 / -1; // span background image across full screen width
 
+   @include media(medium) {
+      background-image: url(../../images/bg-header-desktop.png);
+
+      h1,
+      p {
+         max-width: 70rem;
+      }
+   }
+
    &__logo {
       margin-bottom: 6.5rem;
    }

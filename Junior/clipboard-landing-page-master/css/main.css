@@ -47,8 +47,20 @@ select {
   font-size: 3.1rem;
 }
 
+@media (min-width: 56.25em) {
+  .heading-1 {
+    font-size: 4.5rem;
+  }
+}
+
 .heading-2 {
   font-size: 2.7rem;
+}
+
+@media (min-width: 56.25em) {
+  .heading-2 {
+    font-size: 3.5rem;
+  }
 }
 
 .heading-3 {
@@ -56,7 +68,7 @@ select {
   margin-bottom: 1rem;
 }
 
-.text-1, .text-2 {
+.text-1, .text-2, .text-3 {
   color: #9fabb2;
   font-weight: 400;
   line-height: 1.7;
@@ -66,8 +78,30 @@ select {
   font-size: 1.7rem;
 }
 
+@media (min-width: 56.25em) {
+  .text-1 {
+    font-size: 2rem;
+  }
+}
+
 .text-2 {
   font-size: 1.6rem;
+}
+
+@media (min-width: 56.25em) {
+  .text-2 {
+    font-size: 1.8rem;
+  }
+}
+
+.text-3 {
+  font-size: 1.6rem;
+}
+
+@media (min-width: 56.25em) {
+  .text-3 {
+    line-height: 1.8;
+  }
 }
 
 .center-content {
@@ -112,6 +146,12 @@ select {
   margin-bottom: 1rem;
 }
 
+@media (min-width: 56.25em) {
+  .btn-primary, .btn-secondary {
+    width: 22.5rem;
+  }
+}
+
 .btn-primary {
   background-color: #26baa4;
   box-shadow: 0 0.2rem 0 0.1rem #238b7b;
@@ -144,9 +184,44 @@ select {
   margin-bottom: 5rem;
 }
 
+@media (min-width: 56.25em) {
+  .features p {
+    max-width: 70rem;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .features__box {
+    display: flex;
+    text-align: left;
+    margin-top: 8rem;
+  }
+}
+
 .features__image {
   margin: 6rem auto;
   max-width: 40rem;
+}
+
+@media (min-width: 56.25em) {
+  .features__image {
+    max-width: 100%;
+    margin: 0 11rem 0 -4.5%;
+  }
+}
+
+.features__content {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  margin-top: 5rem;
+}
+
+@media (min-width: 56.25em) {
+  .features__content-item {
+    max-width: 35rem;
+  }
 }
 
 .sponsors {
@@ -228,6 +303,16 @@ select {
   background-repeat: no-repeat;
   background-size: 100%;
   grid-column: 1 / -1;
+}
+
+@media (min-width: 56.25em) {
+  .header {
+    background-image: url(../../images/bg-header-desktop.png);
+  }
+  .header h1,
+  .header p {
+    max-width: 70rem;
+  }
 }
 
 .header__logo {

@@ -9,6 +9,10 @@
    color: #fff;
    font-weight: 600;
    margin-bottom: 1rem;
+
+   @include media(medium) {
+      width: 22.5rem;
+   }
 }
 
 .btn-primary {

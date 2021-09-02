@@ -9,11 +9,19 @@
 .heading-1 {
    @extend %heading;
    font-size: 3.1rem;
+
+   @include media(medium) {
+      font-size: 4.5rem;
+   }
 }
 
 .heading-2 {
    @extend %heading;
    font-size: 2.7rem;
+
+   @include media(medium) {
+      font-size: 3.5rem;
+   }
 }
 
 .heading-3 {
@@ -33,9 +41,26 @@
 .text-1 {
    @extend %text;
    font-size: 1.7rem;
+
+   @include media(medium) {
+      font-size: 2rem;
+   }
 }
 
 .text-2 {
    @extend %text;
    font-size: 1.6rem;
+
+   @include media(medium) {
+      font-size: 1.8rem;
+   }
+}
+
+.text-3 {
+   @extend %text;
+   font-size: 1.6rem;
+
+   @include media(medium) {
+      line-height: 1.8;
+   }
 }
