@@ -244,6 +244,14 @@ select {
   align-items: center;
 }
 
+@media (min-width: 56.25em) {
+  .sponsors {
+    flex-direction: row;
+    justify-content: center;
+    gap: 9.5rem;
+  }
+}
+
 .sponsors__image {
   padding: 3rem 0;
 }
