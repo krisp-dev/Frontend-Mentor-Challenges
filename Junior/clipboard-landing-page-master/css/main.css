@@ -157,6 +157,12 @@ select {
   color: #fff;
   font-weight: 600;
   margin-bottom: 1rem;
+  transition: all 0.3s;
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  filter: opacity(0.8);
+  transform: translateY(-0.3rem);
 }
 
 @media (min-width: 56.25em) {
@@ -346,6 +352,11 @@ select {
 .footer__nav--link {
   text-decoration: none;
   color: #4c545d;
+  transition: all 0.3s;
+}
+
+.footer__nav--link:hover {
+  color: #26baa4;
 }
 
 @media (min-width: 56.25em) {
@@ -359,6 +370,14 @@ select {
   display: flex;
   justify-content: space-between;
   width: 40%;
+}
+
+.footer__socials--svg {
+  transition: all 0.3s;
+}
+
+.footer__socials--svg:hover {
+  fill: #26baa4;
 }
 
 @media (min-width: 56.25em) {

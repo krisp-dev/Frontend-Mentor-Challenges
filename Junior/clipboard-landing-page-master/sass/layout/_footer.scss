@@ -36,6 +36,12 @@
          text-decoration: none;
          color: $clr-neutral-200;
 
+         transition: all 0.3s;
+
+         &:hover {
+            color: $clr-primary-100;
+         }
+
          @include media(medium) {
             margin-right: 7rem;
          }
@@ -48,12 +54,16 @@
       justify-content: space-between;
       width: 40%;
 
+      &--svg {
+         transition: all 0.3s;
+         &:hover {
+            fill: $clr-primary-100;
+         }
+      }
+
       @include media(medium) {
          justify-content: flex-end;
          gap: 2.5rem;
-      }
-
-      &--icon {
       }
    }
 }

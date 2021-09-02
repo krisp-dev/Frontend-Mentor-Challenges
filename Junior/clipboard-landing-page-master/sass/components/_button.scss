@@ -10,6 +10,13 @@
    font-weight: 600;
    margin-bottom: 1rem;
 
+   transition: all 0.3s;
+
+   &:hover {
+      filter: opacity(0.8);
+      transform: translateY(-0.3rem);
+   }
+
    @include media(medium) {
       width: 22.5rem;
    }
