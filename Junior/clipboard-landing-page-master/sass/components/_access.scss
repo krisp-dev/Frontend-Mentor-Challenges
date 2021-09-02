@@ -4,10 +4,19 @@
 
    p {
       margin-bottom: 5rem;
+
+      @include media(medium) {
+         max-width: 68rem;
+         margin: 0 auto 5rem;
+      }
    }
 
    &__image {
       max-width: 50rem;
       margin: 0 auto;
+
+      @include media(medium) {
+         max-width: 90rem;
+      }
    }
 }

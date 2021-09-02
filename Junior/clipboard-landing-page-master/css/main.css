@@ -128,9 +128,22 @@ select {
   margin-bottom: 5rem;
 }
 
+@media (min-width: 56.25em) {
+  .access p {
+    max-width: 68rem;
+    margin: 0 auto 5rem;
+  }
+}
+
 .access__image {
   max-width: 50rem;
   margin: 0 auto;
+}
+
+@media (min-width: 56.25em) {
+  .access__image {
+    max-width: 90rem;
+  }
 }
 
 .btn-primary, .btn-secondary {
