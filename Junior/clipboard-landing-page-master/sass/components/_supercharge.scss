@@ -9,12 +9,27 @@
       :first-child {
          margin-top: 3.5rem;
       }
+
+      @include media(medium) {
+         display: flex;
+         justify-content: center;
+         gap: 3rem;
+         margin-top: 7rem;
+
+         :first-child {
+            margin-top: 0;
+         }
+      }
    }
 
    &__item {
       display: flex;
       flex-direction: column;
       align-items: center;
+
+      @include media(medium) {
+         width: 35rem;
+      }
    }
 
    &__icon {

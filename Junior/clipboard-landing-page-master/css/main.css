@@ -260,10 +260,28 @@ select {
   margin-top: 3.5rem;
 }
 
+@media (min-width: 56.25em) {
+  .supercharge__box {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 7rem;
+  }
+  .supercharge__box :first-child {
+    margin-top: 0;
+  }
+}
+
 .supercharge__item {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (min-width: 56.25em) {
+  .supercharge__item {
+    width: 35rem;
+  }
 }
 
 .supercharge__icon {
