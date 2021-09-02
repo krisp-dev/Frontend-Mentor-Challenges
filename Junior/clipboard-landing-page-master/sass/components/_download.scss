@@ -4,5 +4,9 @@
 
    &__buttons {
       padding: 4.5rem 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
    }
 }

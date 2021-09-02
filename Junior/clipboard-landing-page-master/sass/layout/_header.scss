@@ -16,8 +16,10 @@
    }
 
    &__buttons {
-      display: flex;
-      flex-direction: column;
       margin-top: 4.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5rem;
    }
 }

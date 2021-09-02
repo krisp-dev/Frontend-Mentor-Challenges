@@ -94,6 +94,11 @@ select {
   margin-bottom: 5rem;
 }
 
+.access__image {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
 .btn-primary, .btn-secondary {
   border: none;
   cursor: pointer;
@@ -104,15 +109,12 @@ select {
   width: 31rem;
   color: #fff;
   font-weight: 600;
+  margin-bottom: 1rem;
 }
 
 .btn-primary {
   background-color: #26baa4;
   box-shadow: 0 0.2rem 0 0.1rem #238b7b;
-}
-
-.btn-primary:not(:last-child) {
-  margin-bottom: 2.5rem;
 }
 
 .btn-secondary {
@@ -127,6 +129,10 @@ select {
 
 .download__buttons {
   padding: 4.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 .features {
@@ -139,7 +145,8 @@ select {
 }
 
 .features__image {
-  margin: 6rem 0;
+  margin: 6rem auto;
+  max-width: 40rem;
 }
 
 .sponsors {
@@ -228,8 +235,10 @@ select {
 }
 
 .header__buttons {
-  display: flex;
-  flex-direction: column;
   margin-top: 4.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
 }
 /*# sourceMappingURL=main.css.map */
