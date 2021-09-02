@@ -2,6 +2,11 @@
    text-align: center;
    padding: 1rem 0 12.5rem;
 
+   @include media(medium) {
+      max-width: 69rem;
+      margin: 0 auto;
+   }
+
    &__buttons {
       padding: 4.5rem 0;
       display: flex;

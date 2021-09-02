@@ -5,6 +5,13 @@
    flex-direction: column;
    align-items: center;
 
+   position: relative;
+
+   @include media(medium) {
+      flex-direction: row;
+      justify-content: space-evenly;
+   }
+
    &__logo {
       height: 5.5rem;
       width: 5.5rem;
@@ -17,11 +24,21 @@
          flex-direction: column;
          align-items: center;
          gap: 2.75rem;
+
+         @include media(medium) {
+            flex-wrap: wrap;
+            height: 8rem;
+            align-items: flex-start;
+         }
       }
 
       &--link {
          text-decoration: none;
          color: $clr-neutral-200;
+
+         @include media(medium) {
+            margin-right: 7rem;
+         }
       }
    }
 
@@ -31,7 +48,17 @@
       justify-content: space-between;
       width: 40%;
 
+      @include media(medium) {
+         justify-content: flex-end;
+         gap: 2.5rem;
+      }
+
       &--icon {
       }
    }
+}
+
+.attribution {
+   position: absolute;
+   bottom: 0;
 }

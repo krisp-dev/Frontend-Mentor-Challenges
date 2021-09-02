@@ -180,6 +180,13 @@ select {
   padding: 1rem 0 12.5rem;
 }
 
+@media (min-width: 56.25em) {
+  .download {
+    max-width: 69rem;
+    margin: 0 auto;
+  }
+}
+
 .download__buttons {
   padding: 4.5rem 0;
   display: flex;
@@ -305,6 +312,14 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+
+@media (min-width: 56.25em) {
+  .footer {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
 }
 
 .footer__logo {
@@ -320,9 +335,23 @@ select {
   gap: 2.75rem;
 }
 
+@media (min-width: 56.25em) {
+  .footer__nav--list {
+    flex-wrap: wrap;
+    height: 8rem;
+    align-items: flex-start;
+  }
+}
+
 .footer__nav--link {
   text-decoration: none;
   color: #4c545d;
+}
+
+@media (min-width: 56.25em) {
+  .footer__nav--link {
+    margin-right: 7rem;
+  }
 }
 
 .footer__socials {
@@ -330,6 +359,18 @@ select {
   display: flex;
   justify-content: space-between;
   width: 40%;
+}
+
+@media (min-width: 56.25em) {
+  .footer__socials {
+    justify-content: flex-end;
+    gap: 2.5rem;
+  }
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
 }
 
 .header {
