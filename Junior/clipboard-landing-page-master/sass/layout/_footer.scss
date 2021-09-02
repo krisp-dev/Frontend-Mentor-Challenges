@@ -10,6 +10,7 @@
    @include media(medium) {
       flex-direction: row;
       justify-content: space-evenly;
+      flex-wrap: wrap;
    }
 
    &__logo {
@@ -19,6 +20,10 @@
    }
 
    &__nav {
+      @include media(medium) {
+         min-width: 57rem;
+      }
+
       &--list {
          display: flex;
          flex-direction: column;
@@ -62,8 +67,8 @@
       }
 
       @include media(medium) {
-         justify-content: flex-end;
          gap: 2.5rem;
+         width: auto;
       }
    }
 }
