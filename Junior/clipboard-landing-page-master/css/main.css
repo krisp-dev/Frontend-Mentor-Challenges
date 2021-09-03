@@ -379,12 +379,9 @@ select {
   width: 40%;
 }
 
-.footer__socials--svg {
-  transition: all 0.3s;
-}
-
-.footer__socials--svg:hover {
+.footer__socials--icons:hover path {
   fill: #26baa4;
+  transition: all 0.3s;
 }
 
 @media (min-width: 56.25em) {
