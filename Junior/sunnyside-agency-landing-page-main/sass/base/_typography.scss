@@ -1,5 +1,14 @@
 //////////////////////////////////////
 ///// HEADING STYLING
+.heading-1 {
+   font-family: $ff-secondary;
+   text-transform: uppercase;
+   text-align: center;
+   font-size: 4rem;
+   letter-spacing: .75rem;
+   color: $clr-white;
+   margin: 5.5rem 0;
+}
 
 //////////////////////////////////////
 ///// PARAGRAPH STYLING

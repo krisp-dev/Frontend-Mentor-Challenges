@@ -1,2 +1,18 @@
 //////////////////////////////////////
 ///// HEADER SECTION
+.header {
+   background: url(../../images/mobile/image-header.jpg);
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-position: bottom;
+
+   &__hero {
+
+   }
+
+   &__hero-arrow {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 13rem;
+   }
+}

@@ -1,2 +1,24 @@
 //////////////////////////////////////
 ///// NAVIGATION SECTION
+.nav {
+   display: flex;
+   justify-content: space-between;
+   padding: 3rem 2.5rem;
+
+   &__logo {
+
+   }
+
+   &__menu-burger div {
+      width: 2.5rem;
+      height: .2rem;
+      background-color: $clr-white;
+      margin: .6rem;
+   }
+
+   &__menu-list {
+      visibility: hidden;
+      display: flex;
+      position: absolute;
+   }
+}

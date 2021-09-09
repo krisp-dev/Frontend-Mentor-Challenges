@@ -1,1 +1,82 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  min-height: 100vh;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.heading-1 {
+  font-family: "Fraunces", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  letter-spacing: .75rem;
+  color: white;
+  margin: 5.5rem 0;
+}
+
+.header {
+  background: url(../../images/mobile/image-header.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.header__hero-arrow {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 13rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 2.5rem;
+}
+
+.nav__menu-burger div {
+  width: 2.5rem;
+  height: .2rem;
+  background-color: white;
+  margin: .6rem;
+}
+
+.nav__menu-list {
+  visibility: hidden;
+  display: flex;
+  position: absolute;
+}
+/*# sourceMappingURL=main.css.map */
