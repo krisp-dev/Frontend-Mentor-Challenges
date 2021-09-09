@@ -1,0 +1,31 @@
+.testimonials {
+   padding: 6.5rem 2rem;
+   text-align: center;
+}
+
+.testimonial {
+   margin-top: 6.5rem;
+   display: flex;
+   flex-direction: column;
+
+   &__user-photo {
+      border-radius: 50%;
+      width: 7rem;
+      height: 7rem;
+      margin: 0 auto 3.5rem;
+   }
+
+   &__user-name {
+      font-family: $ff-secondary;
+      color: $clr-neutral-100;
+      font-size: 2rem;
+      font-weight: 900;
+      margin-top: 3.5rem;
+   }
+
+   &__user-title {
+      color: $clr-neutral-400;
+      font-size: 1.4rem;
+      margin-top: 1rem;
+   }
+}

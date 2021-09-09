@@ -19,6 +19,13 @@
    font-size: 3rem;
 }
 
+.heading-4 {
+   font-family: $ff-secondary;
+   color: $clr-neutral-400;
+   text-transform: uppercase;
+   letter-spacing: .4rem;
+}
+
 //////////////////////////////////////
 ///// PARAGRAPH STYLING
 .text-1 {
@@ -29,5 +36,11 @@
 
 .text-2 {
    font-size: 1.7rem;
-   line-height: 1.5;
+   line-height: 1.6;
+}
+
+.text-3 {
+   color: $clr-neutral-200;
+   font-size: 1.9rem;
+   line-height: 1.6;
 }
