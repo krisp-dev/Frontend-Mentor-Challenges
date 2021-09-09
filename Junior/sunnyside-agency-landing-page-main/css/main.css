@@ -131,14 +131,20 @@ select {
 
 .features__card--graphic {
   background: url(../../images/mobile/image-graphic-design.jpg);
-  background-size: 100%;
+  background-size: 100% 100%;
   color: #25564b;
 }
 
 .features__card--photography {
   background: url(../../images/mobile/image-photography.jpg);
-  background-size: 100%;
+  background-size: 100% 100%;
   color: #19536b;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
 }
 
 .testimonials {
@@ -175,7 +181,7 @@ select {
 
 .header {
   background: url(../../images/mobile/image-header.jpg);
-  background-size: cover;
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: bottom;
   text-align: center;
