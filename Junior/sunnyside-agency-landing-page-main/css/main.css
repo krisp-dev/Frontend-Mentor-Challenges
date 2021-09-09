@@ -45,7 +45,17 @@ select {
   font-size: 4rem;
   letter-spacing: .75rem;
   color: white;
-  margin: 5.5rem 0;
+}
+
+.heading-2 {
+  font-family: "Fraunces", sans-serif;
+  color: #23303e;
+  font-size: 3.5rem;
+}
+
+.features__item {
+  padding: 6rem 3rem;
+  text-align: center;
 }
 
 .header {
@@ -53,6 +63,10 @@ select {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: bottom;
+}
+
+.header__hero h1 {
+  margin: 5.5rem 0;
 }
 
 .header__hero-arrow {
