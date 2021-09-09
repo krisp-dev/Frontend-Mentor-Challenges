@@ -180,17 +180,36 @@ select {
 }
 
 .footer {
-  background-color: #458c7e;
+  background-color: #91d4c6;
+  padding: 0 2rem;
 }
 
 .footer__logo {
-  color: #25564b;
   display: flex;
   justify-content: center;
+  padding: 6.5rem 0 3rem;
 }
 
 .footer__logo img {
-  width: 16rem;
+  width: 17rem;
+}
+
+.footer__nav-list {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0 8rem;
+}
+
+.footer__nav-links {
+  text-decoration: none;
+  color: #458c7e;
+}
+
+.footer__socials {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
 }
 
 .header {

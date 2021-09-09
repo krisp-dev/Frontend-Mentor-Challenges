@@ -1,31 +1,38 @@
 //////////////////////////////////////
 ///// FOOTER SECTION
 .footer {
-   background-color: $clr-primary-500;
+   background-color: $clr-primary-600;
+   padding: 0 2rem;
 
    &__logo {
-      color: $clr-primary-300;
       display: flex;
       justify-content: center;
+      padding: 6.5rem 0 3rem;
 
       img {
-         width: 16rem;
+         width: 17rem;
       }
    }
 
    &__nav {
-
    }
 
    &__nav-list {
-
+      display: flex;
+      justify-content: space-around;
+      margin: 1rem 0 8rem
    }
 
    &__nav-links {
-
+      text-decoration: none;
+      color: $clr-primary-500;
    }
 
    &__socials {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-bottom: 3rem;
 
       &--icons {
 
