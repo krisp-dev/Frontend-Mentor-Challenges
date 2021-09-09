@@ -1,2 +1,34 @@
 //////////////////////////////////////
 ///// FOOTER SECTION
+.footer {
+   background-color: $clr-primary-500;
+
+   &__logo {
+      color: $clr-primary-300;
+      display: flex;
+      justify-content: center;
+
+      img {
+         width: 16rem;
+      }
+   }
+
+   &__nav {
+
+   }
+
+   &__nav-list {
+
+   }
+
+   &__nav-links {
+
+   }
+
+   &__socials {
+
+      &--icons {
+
+      }
+   }
+}

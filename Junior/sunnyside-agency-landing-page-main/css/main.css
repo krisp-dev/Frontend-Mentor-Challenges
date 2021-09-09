@@ -179,6 +179,20 @@ select {
   margin-top: 1rem;
 }
 
+.footer {
+  background-color: #458c7e;
+}
+
+.footer__logo {
+  color: #25564b;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__logo img {
+  width: 16rem;
+}
+
 .header {
   background: url(../../images/mobile/image-header.jpg);
   background-size: 100% 100%;
