@@ -2,19 +2,32 @@
 ///// HEADING STYLING
 .heading-1 {
    font-family: $ff-secondary;
-   text-transform: uppercase;
-   text-align: center;
-   font-size: 4rem;
-   letter-spacing: .75rem;
    color: $clr-white;
+   font-size: 4rem;
+   text-transform: uppercase;
+   letter-spacing: .75rem;
 }
 
 .heading-2 {
    font-family: $ff-secondary;
    color: $clr-neutral-100;
    font-size: 3.5rem;
+}
 
+.heading-3 {
+   font-family: $ff-secondary;
+   font-size: 3rem;
 }
 
 //////////////////////////////////////
 ///// PARAGRAPH STYLING
+.text-1 {
+   color: $clr-neutral-300;
+   font-size: 1.8rem;
+   line-height: 1.6;
+}
+
+.text-2 {
+   font-size: 1.7rem;
+   line-height: 1.5;
+}

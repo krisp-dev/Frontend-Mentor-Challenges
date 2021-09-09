@@ -5,15 +5,63 @@
    }
 
    &__item {
-      padding: 6rem 3rem;
+      padding: 6rem 2.5rem;
       text-align: center;
+
+      p {
+         margin: 2.5rem 0;
+      }
    }
 
-   &__learn-more {
+   &__learnmore {
+      position: relative;
+      display: flex;
+      justify-content: center;
 
+      &-link {
+         font-family: $ff-secondary;
+         text-transform: uppercase;
+         color: #000;
+         text-decoration: none;
+         z-index: 2;
+      }
+      
+      &-border {
+         width: 15rem;
+         height: 1rem;
+         border-radius: 10rem;
+         background-color: $clr-primary-200;
+         opacity: 0.25;
+
+         position: absolute;
+         top: 1.5rem;
+         z-index: 1;
+
+         &--red {
+            background-color: $clr-primary-100;
+         }
+      }
    }
    
    &__card {
+      min-height: 60rem;
+      text-align: center;
+      padding: 80vh 1rem 0;
 
+      p {
+         margin: 3rem 0;
+      }
+
+      &--graphic {
+         background: url(../../images/mobile/image-graphic-design.jpg);
+         background-size: 100%;
+         color: $clr-primary-300;
+      }
+
+      &--photography {
+         background: url(../../images/mobile/image-photography.jpg);
+         background-size: 100%;
+         color: $clr-primary-400;
+      }
    }
 }
