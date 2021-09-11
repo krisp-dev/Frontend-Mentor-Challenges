@@ -98,8 +98,10 @@ select {
 }
 
 @media (min-width: 43.75em) {
-  .features__img img {
+  .features__img img,
+  .features__img picture {
     height: 100%;
+    width: 100%;
   }
 }
 

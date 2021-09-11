@@ -17,8 +17,10 @@
 
    &__img {
       @include media(medium) {
-         img {
+         img,
+         picture {
             height: 100%;
+            width: 100%;
          }
       }
    }
