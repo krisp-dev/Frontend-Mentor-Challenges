@@ -91,6 +91,10 @@ select {
     grid-row: 1 / 2;
     grid-column: 2 / 3;
   }
+  .features :nth-child(2),
+  .features :nth-child(4) {
+    align-items: start;
+  }
 }
 
 @media (min-width: 43.75em) {
@@ -110,6 +114,8 @@ select {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: left;
+    padding: 6rem 3.5rem;
   }
 }
 
