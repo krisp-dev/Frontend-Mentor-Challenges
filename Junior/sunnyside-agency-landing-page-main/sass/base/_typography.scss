@@ -5,7 +5,16 @@
    color: $clr-white;
    font-size: 4rem;
    text-transform: uppercase;
-   letter-spacing: .75rem;
+   letter-spacing: 0.75rem;
+
+   @include media(medium) {
+      font-size: 4.75rem;
+   }
+
+   @include media(large) {
+      font-size: 5.5rem;
+      font-weight: 900;
+   }
 }
 
 .heading-2 {
@@ -23,7 +32,7 @@
    font-family: $ff-secondary;
    color: $clr-neutral-400;
    text-transform: uppercase;
-   letter-spacing: .4rem;
+   letter-spacing: 0.4rem;
 }
 
 //////////////////////////////////////

@@ -5,15 +5,23 @@
    justify-content: space-between;
    padding: 3rem 2.5rem;
 
-   &__logo {
+   @include media(medium) {
+      padding: 4.5rem 4rem;
+   }
 
+   &__logo {
+      @include media(medium) {
+         img {
+            width: 17rem;
+         }
+      }
    }
 
    &__menu-burger div {
       width: 2.5rem;
-      height: .2rem;
+      height: 0.2rem;
       background-color: $clr-white;
-      margin: .6rem;
+      margin: 0.6rem;
    }
 
    &__menu-list {

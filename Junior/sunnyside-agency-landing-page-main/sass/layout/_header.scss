@@ -13,7 +13,7 @@
       background-size: 100% 100%;
       background-repeat: no-repeat;
       background-position: bottom;
-      height: 57.5rem;
+      height: 60rem;
    }
 
    @include media(large) {
@@ -23,6 +23,14 @@
    &__hero {
       h1 {
          margin: 5.5rem 0;
+
+         @include media(medium) {
+            margin: 5.5rem 0 3rem;
+         }
+
+         @include media(large) {
+            margin: 7rem 0 0;
+         }
       }
    }
 

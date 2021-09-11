@@ -43,7 +43,20 @@ select {
   color: white;
   font-size: 4rem;
   text-transform: uppercase;
-  letter-spacing: .75rem;
+  letter-spacing: 0.75rem;
+}
+
+@media (min-width: 43.75em) {
+  .heading-1 {
+    font-size: 4.75rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .heading-1 {
+    font-size: 5.5rem;
+    font-weight: 900;
+  }
 }
 
 .heading-2 {
@@ -61,7 +74,7 @@ select {
   font-family: "Fraunces", sans-serif;
   color: #a7abae;
   text-transform: uppercase;
-  letter-spacing: .4rem;
+  letter-spacing: 0.4rem;
 }
 
 .text-1 {
@@ -294,7 +307,7 @@ select {
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: bottom;
-    height: 57.5rem;
+    height: 60rem;
   }
 }
 
@@ -306,6 +319,18 @@ select {
 
 .header__hero h1 {
   margin: 5.5rem 0;
+}
+
+@media (min-width: 43.75em) {
+  .header__hero h1 {
+    margin: 5.5rem 0 3rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .header__hero h1 {
+    margin: 7rem 0 0;
+  }
 }
 
 .header__hero-arrow {
@@ -328,11 +353,23 @@ select {
   padding: 3rem 2.5rem;
 }
 
+@media (min-width: 43.75em) {
+  .nav {
+    padding: 4.5rem 4rem;
+  }
+}
+
+@media (min-width: 43.75em) {
+  .nav__logo img {
+    width: 17rem;
+  }
+}
+
 .nav__menu-burger div {
   width: 2.5rem;
-  height: .2rem;
+  height: 0.2rem;
   background-color: white;
-  margin: .6rem;
+  margin: 0.6rem;
 }
 
 .nav__menu-list {
