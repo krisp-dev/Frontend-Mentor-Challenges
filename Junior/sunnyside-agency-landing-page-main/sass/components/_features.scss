@@ -96,8 +96,21 @@
       text-align: center;
       padding: 80vh 1rem 0;
 
+      @include media(large) {
+         padding: 55vh 1rem 0;
+
+         h3 {
+            margin-top: 5rem;
+         }
+      }
+
       p {
          margin: 3rem 0;
+
+         @include media(large) {
+            width: 37rem;
+            margin: 3rem auto;
+         }
       }
 
       &--graphic {
@@ -110,6 +123,10 @@
             background-position: top center;
             background-repeat: no-repeat;
             background-size: cover;
+
+            p {
+               opacity: 0.82;
+            }
          }
       }
 
@@ -123,6 +140,10 @@
             background-position: top center;
             background-repeat: no-repeat;
             background-size: cover;
+
+            p {
+               opacity: 0.82;
+            }
          }
       }
    }

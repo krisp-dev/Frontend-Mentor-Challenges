@@ -1,12 +1,18 @@
 .testimonials {
    padding: 6.5rem 2rem;
    text-align: center;
+
+   @include media(large) {
+      padding: 16rem 0;
+   }
 }
 
 .testimonial {
    @include media(medium) {
       display: flex;
       gap: 4rem;
+      justify-content: center;
+      margin-top: 1.5rem;
    }
 }
 
@@ -15,11 +21,19 @@
    display: flex;
    flex-direction: column;
 
+   @include media(large) {
+      width: 26%;
+   }
+
    &__user-photo {
       border-radius: 50%;
       width: 7rem;
       height: 7rem;
       margin: 0 auto 3.5rem;
+
+      @include media(large) {
+         margin: 0 auto 6rem;
+      }
    }
 
    &__user-name {
@@ -28,6 +42,11 @@
       font-size: 2rem;
       font-weight: 900;
       margin-top: 3.5rem;
+
+      @include media(large) {
+         font-size: 1.8rem;
+         margin-top: 6.5rem;
+      }
    }
 
    &__user-title {

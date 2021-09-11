@@ -84,6 +84,13 @@ select {
   letter-spacing: 0.4rem;
 }
 
+@media (min-width: 75em) {
+  .heading-4 {
+    font-size: 2rem;
+    font-weight: 900;
+  }
+}
+
 .text-1 {
   color: #818498;
   font-size: 1.8rem;
@@ -212,8 +219,24 @@ select {
   padding: 80vh 1rem 0;
 }
 
+@media (min-width: 75em) {
+  .features__card {
+    padding: 55vh 1rem 0;
+  }
+  .features__card h3 {
+    margin-top: 5rem;
+  }
+}
+
 .features__card p {
   margin: 3rem 0;
+}
+
+@media (min-width: 75em) {
+  .features__card p {
+    width: 37rem;
+    margin: 3rem auto;
+  }
 }
 
 .features__card--graphic {
@@ -229,6 +252,9 @@ select {
     background-repeat: no-repeat;
     background-size: cover;
   }
+  .features__card--graphic p {
+    opacity: 0.82;
+  }
 }
 
 .features__card--photography {
@@ -243,6 +269,9 @@ select {
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+  }
+  .features__card--photography p {
+    opacity: 0.82;
   }
 }
 
@@ -264,10 +293,18 @@ select {
   text-align: center;
 }
 
+@media (min-width: 75em) {
+  .testimonials {
+    padding: 16rem 0;
+  }
+}
+
 @media (min-width: 43.75em) {
   .testimonial {
     display: flex;
     gap: 4rem;
+    justify-content: center;
+    margin-top: 1.5rem;
   }
 }
 
@@ -277,11 +314,23 @@ select {
   flex-direction: column;
 }
 
+@media (min-width: 75em) {
+  .testimonial-item {
+    width: 26%;
+  }
+}
+
 .testimonial-item__user-photo {
   border-radius: 50%;
   width: 7rem;
   height: 7rem;
   margin: 0 auto 3.5rem;
+}
+
+@media (min-width: 75em) {
+  .testimonial-item__user-photo {
+    margin: 0 auto 6rem;
+  }
 }
 
 .testimonial-item__user-name {
@@ -290,6 +339,13 @@ select {
   font-size: 2rem;
   font-weight: 900;
   margin-top: 3.5rem;
+}
+
+@media (min-width: 75em) {
+  .testimonial-item__user-name {
+    font-size: 1.8rem;
+    margin-top: 6.5rem;
+  }
 }
 
 .testimonial-item__user-title {
@@ -311,6 +367,19 @@ select {
 
 .footer__logo img {
   width: 17rem;
+}
+
+@media (min-width: 43.75em) {
+  .footer__nav {
+    width: 45%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 75em) {
+  .footer__nav {
+    width: 25%;
+  }
 }
 
 .footer__nav-list {

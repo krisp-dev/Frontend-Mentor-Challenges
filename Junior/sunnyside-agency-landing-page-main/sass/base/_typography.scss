@@ -38,6 +38,11 @@
    color: $clr-neutral-400;
    text-transform: uppercase;
    letter-spacing: 0.4rem;
+
+   @include media(large) {
+      font-size: 2rem;
+      font-weight: 900;
+   }
 }
 
 //////////////////////////////////////

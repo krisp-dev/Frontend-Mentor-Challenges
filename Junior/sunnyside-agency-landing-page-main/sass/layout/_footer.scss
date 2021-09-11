@@ -15,12 +15,20 @@
    }
 
    &__nav {
+      @include media(medium) {
+         width: 45%;
+         margin: 0 auto;
+      }
+
+      @include media(large) {
+         width: 25%;
+      }
    }
 
    &__nav-list {
       display: flex;
       justify-content: space-around;
-      margin: 1rem 0 8rem
+      margin: 1rem 0 8rem;
    }
 
    &__nav-links {
@@ -35,7 +43,6 @@
       margin-bottom: 3rem;
 
       &--icons {
-
       }
    }
 }
