@@ -28,18 +28,26 @@
    &__item {
       padding: 6rem 2.5rem;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
 
       @include media(medium) {
-         display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
          text-align: left;
          padding: 6rem 3.5rem;
       }
 
+      @include media(large) {
+         padding: 16rem 10rem 16rem 16rem;
+      }
+
       p {
          margin: 2.5rem 0;
+
+         @include media(large) {
+            margin: 3.5rem 0;
+         }
       }
    }
 
@@ -50,10 +58,15 @@
 
       &-link {
          font-family: $ff-secondary;
+         color: $clr-neutral-100;
+         font-weight: 900;
          text-transform: uppercase;
-         color: #000;
          text-decoration: none;
          z-index: 2;
+
+         @include media(large) {
+            font-size: 1.6rem;
+         }
       }
 
       &-border {
@@ -66,6 +79,11 @@
          position: absolute;
          top: 1.5rem;
          z-index: 1;
+
+         @include media(large) {
+            top: 1.3rem;
+            width: 13.5rem;
+         }
 
          &--red {
             background-color: $clr-primary-100;

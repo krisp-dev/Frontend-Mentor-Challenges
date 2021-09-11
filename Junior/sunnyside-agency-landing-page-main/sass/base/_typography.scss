@@ -21,6 +21,11 @@
    font-family: $ff-secondary;
    color: $clr-neutral-100;
    font-size: 3.5rem;
+
+   @include media(large) {
+      font-size: 4rem;
+      font-weight: 900;
+   }
 }
 
 .heading-3 {
@@ -41,6 +46,10 @@
    color: $clr-neutral-300;
    font-size: 1.8rem;
    line-height: 1.6;
+
+   @include media(large) {
+      line-height: 1.7;
+   }
 }
 
 .text-2 {

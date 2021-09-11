@@ -65,6 +65,13 @@ select {
   font-size: 3.5rem;
 }
 
+@media (min-width: 75em) {
+  .heading-2 {
+    font-size: 4rem;
+    font-weight: 900;
+  }
+}
+
 .heading-3 {
   font-family: "Fraunces", sans-serif;
   font-size: 3rem;
@@ -81,6 +88,12 @@ select {
   color: #818498;
   font-size: 1.8rem;
   line-height: 1.6;
+}
+
+@media (min-width: 75em) {
+  .text-1 {
+    line-height: 1.7;
+  }
 }
 
 .text-2 {
@@ -121,21 +134,33 @@ select {
 .features__item {
   padding: 6rem 2.5rem;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 @media (min-width: 43.75em) {
   .features__item {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: left;
     padding: 6rem 3.5rem;
   }
 }
 
+@media (min-width: 75em) {
+  .features__item {
+    padding: 16rem 10rem 16rem 16rem;
+  }
+}
+
 .features__item p {
   margin: 2.5rem 0;
+}
+
+@media (min-width: 75em) {
+  .features__item p {
+    margin: 3.5rem 0;
+  }
 }
 
 .features__learnmore {
@@ -146,10 +171,17 @@ select {
 
 .features__learnmore-link {
   font-family: "Fraunces", sans-serif;
+  color: #23303e;
+  font-weight: 900;
   text-transform: uppercase;
-  color: #000;
   text-decoration: none;
   z-index: 2;
+}
+
+@media (min-width: 75em) {
+  .features__learnmore-link {
+    font-size: 1.6rem;
+  }
 }
 
 .features__learnmore-border {
@@ -161,6 +193,13 @@ select {
   position: absolute;
   top: 1.5rem;
   z-index: 1;
+}
+
+@media (min-width: 75em) {
+  .features__learnmore-border {
+    top: 1.3rem;
+    width: 13.5rem;
+  }
 }
 
 .features__learnmore-border--red {
