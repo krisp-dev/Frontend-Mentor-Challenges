@@ -179,20 +179,27 @@ select {
   text-align: center;
 }
 
-.testimonial {
+@media (min-width: 43.75em) {
+  .testimonial {
+    display: flex;
+    gap: 4rem;
+  }
+}
+
+.testimonial-item {
   margin-top: 6.5rem;
   display: flex;
   flex-direction: column;
 }
 
-.testimonial__user-photo {
+.testimonial-item__user-photo {
   border-radius: 50%;
   width: 7rem;
   height: 7rem;
   margin: 0 auto 3.5rem;
 }
 
-.testimonial__user-name {
+.testimonial-item__user-name {
   font-family: "Fraunces", sans-serif;
   color: #23303e;
   font-size: 2rem;
@@ -200,7 +207,7 @@ select {
   margin-top: 3.5rem;
 }
 
-.testimonial__user-title {
+.testimonial-item__user-title {
   color: #a7abae;
   font-size: 1.4rem;
   margin-top: 1rem;

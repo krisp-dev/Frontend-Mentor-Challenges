@@ -4,6 +4,13 @@
 }
 
 .testimonial {
+   @include media(medium) {
+      display: flex;
+      gap: 4rem;
+   }
+}
+
+.testimonial-item {
    margin-top: 6.5rem;
    display: flex;
    flex-direction: column;
