@@ -6,9 +6,21 @@
    background-repeat: no-repeat;
    background-position: bottom;
    text-align: center;
+   position: relative;
+
+   @include media(medium) {
+      background: url(../../images/desktop/image-header.jpg);
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-position: bottom;
+      height: 57.5rem;
+   }
+
+   @include media(large) {
+      height: 80rem;
+   }
 
    &__hero {
-
       h1 {
          margin: 5.5rem 0;
       }
@@ -18,5 +30,11 @@
       display: flex;
       justify-content: center;
       padding-bottom: 13rem;
+
+      @include media(large) {
+         position: absolute;
+         left: 50%;
+         transform: translate(-50%, 45%);
+      }
    }
 }

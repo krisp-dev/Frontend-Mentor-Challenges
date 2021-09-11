@@ -285,6 +285,23 @@ select {
   background-repeat: no-repeat;
   background-position: bottom;
   text-align: center;
+  position: relative;
+}
+
+@media (min-width: 43.75em) {
+  .header {
+    background: url(../../images/desktop/image-header.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 57.5rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .header {
+    height: 80rem;
+  }
 }
 
 .header__hero h1 {
@@ -295,6 +312,14 @@ select {
   display: flex;
   justify-content: center;
   padding-bottom: 13rem;
+}
+
+@media (min-width: 75em) {
+  .header__hero-arrow {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 45%);
+  }
 }
 
 .nav {
