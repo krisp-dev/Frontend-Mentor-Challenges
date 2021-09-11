@@ -35,7 +35,7 @@
 
       @include media(medium) {
          text-align: left;
-         padding: 6rem 3.5rem;
+         padding: 8rem 4.5rem;
       }
 
       @include media(large) {
@@ -98,17 +98,31 @@
 
       @include media(large) {
          padding: 55vh 1rem 0;
+      }
 
-         h3 {
+      h3 {
+         @include media(medium) {
+            margin-top: 0;
+         }
+
+         @include media(large) {
             margin-top: 5rem;
+         }
+
+         @include media(largest) {
+            margin-top: 12rem;
          }
       }
 
       p {
-         margin: 3rem 0;
+         padding: 3rem 0;
+
+         @include media(medium) {
+            padding: 3rem 6rem;
+         }
 
          @include media(large) {
-            width: 37rem;
+            padding: 0 17rem;
             margin: 3rem auto;
          }
       }

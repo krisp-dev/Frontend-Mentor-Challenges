@@ -22,9 +22,13 @@
    color: $clr-neutral-100;
    font-size: 3.5rem;
 
+   @include media(medium) {
+      font-size: 3.75rem;
+      font-weight: 900;
+   }
+
    @include media(large) {
       font-size: 4rem;
-      font-weight: 900;
    }
 }
 
@@ -39,9 +43,13 @@
    text-transform: uppercase;
    letter-spacing: 0.4rem;
 
+   @include media(medium) {
+      font-size: 1.9rem;
+      font-weight: 900;
+   }
+
    @include media(large) {
       font-size: 2rem;
-      font-weight: 900;
    }
 }
 

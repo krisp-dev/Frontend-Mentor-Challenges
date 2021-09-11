@@ -65,10 +65,16 @@ select {
   font-size: 3.5rem;
 }
 
+@media (min-width: 43.75em) {
+  .heading-2 {
+    font-size: 3.75rem;
+    font-weight: 900;
+  }
+}
+
 @media (min-width: 75em) {
   .heading-2 {
     font-size: 4rem;
-    font-weight: 900;
   }
 }
 
@@ -84,10 +90,16 @@ select {
   letter-spacing: 0.4rem;
 }
 
+@media (min-width: 43.75em) {
+  .heading-4 {
+    font-size: 1.9rem;
+    font-weight: 900;
+  }
+}
+
 @media (min-width: 75em) {
   .heading-4 {
     font-size: 2rem;
-    font-weight: 900;
   }
 }
 
@@ -150,7 +162,7 @@ select {
 @media (min-width: 43.75em) {
   .features__item {
     text-align: left;
-    padding: 6rem 3.5rem;
+    padding: 8rem 4.5rem;
   }
 }
 
@@ -223,18 +235,39 @@ select {
   .features__card {
     padding: 55vh 1rem 0;
   }
+}
+
+@media (min-width: 43.75em) {
+  .features__card h3 {
+    margin-top: 0;
+  }
+}
+
+@media (min-width: 75em) {
   .features__card h3 {
     margin-top: 5rem;
   }
 }
 
+@media (min-width: 100em) {
+  .features__card h3 {
+    margin-top: 12rem;
+  }
+}
+
 .features__card p {
-  margin: 3rem 0;
+  padding: 3rem 0;
+}
+
+@media (min-width: 43.75em) {
+  .features__card p {
+    padding: 3rem 6rem;
+  }
 }
 
 @media (min-width: 75em) {
   .features__card p {
-    width: 37rem;
+    padding: 0 17rem;
     margin: 3rem auto;
   }
 }
