@@ -491,6 +491,7 @@ select {
 .nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 3rem 2.5rem;
 }
 
@@ -513,9 +514,47 @@ select {
   margin: 0.6rem;
 }
 
+@media (min-width: 43.75em) {
+  .nav__menu-burger div {
+    visibility: hidden;
+  }
+}
+
 .nav__menu-list {
   visibility: hidden;
-  display: flex;
   position: absolute;
+  display: flex;
+  justify-content: space-between;
+  right: 5rem;
+  font-family: "Barlow", sans-serif;
+}
+
+@media (min-width: 43.75em) {
+  .nav__menu-list {
+    visibility: visible;
+    gap: 2rem;
+    width: 36rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .nav__menu-list {
+    width: 47rem;
+  }
+}
+
+.nav__menu-links {
+  text-decoration: none;
+  color: white;
+}
+
+.nav__menu-links--contact {
+  font-family: "Fraunces", sans-serif;
+  text-transform: uppercase;
+  background-color: white;
+  color: black;
+  font-size: 1.6rem;
+  padding: 1.75rem 2.75rem;
+  border-radius: 10rem;
 }
 /*# sourceMappingURL=main.css.map */
