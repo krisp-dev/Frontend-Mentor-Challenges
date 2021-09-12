@@ -277,14 +277,14 @@ select {
 }
 
 .features__card--graphic {
-  background: url(../../images/mobile/image-graphic-design.jpg);
+  background: url(../images/mobile/image-graphic-design.jpg);
   background-size: 100% 100%;
   color: #25564b;
 }
 
 @media (min-width: 43.75em) {
   .features__card--graphic {
-    background: url(../../images/desktop/image-graphic-design.jpg);
+    background: url(../images/desktop/image-graphic-design.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -295,14 +295,14 @@ select {
 }
 
 .features__card--photography {
-  background: url(../../images/mobile/image-photography.jpg);
+  background: url(../images/mobile/image-photography.jpg);
   background-size: 100% 100%;
   color: #19536b;
 }
 
 @media (min-width: 43.75em) {
   .features__card--photography {
-    background: url(../../images/desktop/image-photography.jpg);
+    background: url(../images/desktop/image-photography.jpg);
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -448,7 +448,7 @@ select {
 }
 
 .header {
-  background: url(../../images/mobile/image-header.jpg);
+  background: url(../images/mobile/image-header.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -458,7 +458,7 @@ select {
 
 @media (min-width: 43.75em) {
   .header {
-    background: url(../../images/desktop/image-header.jpg);
+    background: url(../images/desktop/image-header.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-position: bottom;

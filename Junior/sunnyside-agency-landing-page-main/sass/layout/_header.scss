@@ -1,7 +1,7 @@
 //////////////////////////////////////
 ///// HEADER SECTION
 .header {
-   background: url(../../images/mobile/image-header.jpg);
+   background: url(../images/mobile/image-header.jpg);
    background-size: 100% 100%;
    background-repeat: no-repeat;
    background-position: bottom;
@@ -9,7 +9,7 @@
    position: relative;
 
    @include media(medium) {
-      background: url(../../images/desktop/image-header.jpg);
+      background: url(../images/desktop/image-header.jpg);
       background-size: 100% 100%;
       background-repeat: no-repeat;
       background-position: bottom;
