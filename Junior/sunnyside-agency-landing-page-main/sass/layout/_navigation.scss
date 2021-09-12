@@ -45,7 +45,7 @@
       height: 33rem;
       width: 30.5rem;
 
-      transform: translateY(-100%);
+      transform: translateY(-150%);
       opacity: 0;
 
       &::after {
@@ -65,7 +65,7 @@
          visibility: visible;
          transform: translateY(0);
          opacity: 1;
-         transition: all 0.4s;
+         transition: all 0.4s ease-in;
       }
 
       @include media(medium) {
