@@ -34,6 +34,11 @@
    &__nav-links {
       text-decoration: none;
       color: $clr-primary-500;
+
+      &:hover {
+         color: $clr-white;
+         transition: all 0.3s;
+      }
    }
 
    &__socials {
@@ -43,6 +48,10 @@
       margin-bottom: 3rem;
 
       &--icons {
+         &:hover path {
+            fill: $clr-white;
+            transition: all 0.3s;
+         }
       }
    }
 }

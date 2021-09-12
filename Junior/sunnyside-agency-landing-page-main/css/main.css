@@ -188,6 +188,10 @@ select {
   justify-content: center;
 }
 
+.features__learnmore:hover .features__learnmore-border {
+  opacity: 0.8;
+}
+
 .features__learnmore-link {
   font-family: "Fraunces", sans-serif;
   color: #23303e;
@@ -426,11 +430,21 @@ select {
   color: #458c7e;
 }
 
+.footer__nav-links:hover {
+  color: white;
+  transition: all 0.3s;
+}
+
 .footer__socials {
   display: flex;
   justify-content: center;
   gap: 3rem;
   margin-bottom: 3rem;
+}
+
+.footer__socials--icons:hover path {
+  fill: white;
+  transition: all 0.3s;
 }
 
 .header {

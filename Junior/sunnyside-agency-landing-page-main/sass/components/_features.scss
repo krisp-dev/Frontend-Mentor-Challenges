@@ -56,6 +56,12 @@
       display: flex;
       justify-content: center;
 
+      &:hover {
+         .features__learnmore-border {
+            opacity: 0.8;
+         }
+      }
+
       &-link {
          font-family: $ff-secondary;
          color: $clr-neutral-100;
