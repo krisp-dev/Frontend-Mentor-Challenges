@@ -512,6 +512,9 @@ select {
   height: 0.2rem;
   background-color: white;
   margin: 0.6rem;
+  position: relative;
+  z-index: 10;
+  transition: all 0.3s ease;
 }
 
 @media (min-width: 43.75em) {
@@ -521,12 +524,38 @@ select {
 }
 
 .nav__menu-list {
-  visibility: hidden;
   position: absolute;
   display: flex;
-  justify-content: space-between;
-  right: 5rem;
+  flex-direction: column;
+  justify-content: space-evenly;
   font-family: "Barlow", sans-serif;
+  background-color: white;
+  top: 10rem;
+  right: 3.5rem;
+  height: 33rem;
+  width: 30.5rem;
+  transform: translateY(-100%);
+  opacity: 0;
+}
+
+.nav__menu-list::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 3rem solid transparent;
+  border-bottom-color: white;
+  border-top: 0;
+  border-right: 0;
+  margin-left: -1rem;
+  margin-top: -2.75rem;
+}
+
+.nav__menu-list--active {
+  visibility: visible;
+  transform: translateY(0);
+  opacity: 1;
+  transition: all 0.4s;
 }
 
 @media (min-width: 43.75em) {
@@ -534,6 +563,17 @@ select {
     visibility: visible;
     gap: 2rem;
     width: 36rem;
+    top: 4.75rem;
+    right: 5rem;
+    height: auto;
+    width: 36rem;
+    flex-direction: row;
+    background-color: transparent;
+    transform: translateY(0);
+    opacity: 1;
+  }
+  .nav__menu-list::after {
+    visibility: hidden;
   }
 }
 
@@ -545,16 +585,47 @@ select {
 
 .nav__menu-links {
   text-decoration: none;
-  color: white;
+  color: #818498;
+  font-size: 2rem;
+}
+
+@media (min-width: 43.75em) {
+  .nav__menu-links {
+    color: white;
+  }
 }
 
 .nav__menu-links--contact {
   font-family: "Fraunces", sans-serif;
   text-transform: uppercase;
-  background-color: white;
+  background-color: #fad400;
   color: black;
   font-size: 1.6rem;
   padding: 1.75rem 2.75rem;
   border-radius: 10rem;
+}
+
+@media (min-width: 43.75em) {
+  .nav__menu-links--contact {
+    background-color: white;
+  }
+  .nav__menu-links--contact:hover {
+    background-color: transparent;
+    color: white;
+    box-shadow: 0 0.1rem 2rem rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+  }
+}
+
+.active .line1 {
+  transform: rotate(-45deg) translate(-0.5rem, 0.6rem);
+}
+
+.active .line2 {
+  opacity: 0;
+}
+
+.active .line3 {
+  transform: rotate(45deg) translate(-0.5rem, -0.6rem);
 }
 /*# sourceMappingURL=main.css.map */

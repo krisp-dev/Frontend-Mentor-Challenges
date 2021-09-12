@@ -24,23 +24,67 @@
       background-color: $clr-white;
       margin: 0.6rem;
 
+      position: relative;
+      z-index: 10;
+      transition: all 0.3s ease;
+
       @include media(medium) {
          visibility: hidden;
       }
    }
 
    &__menu-list {
-      visibility: hidden;
       position: absolute;
       display: flex;
-      justify-content: space-between;
-      right: 5rem;
+      flex-direction: column;
+      justify-content: space-evenly;
       font-family: $ff-primary;
+      background-color: $clr-white;
+      top: 10rem;
+      right: 3.5rem;
+      height: 33rem;
+      width: 30.5rem;
+
+      transform: translateY(-100%);
+      opacity: 0;
+
+      &::after {
+         content: "";
+         position: absolute;
+         top: 0;
+         right: 0;
+         border: 3rem solid transparent;
+         border-bottom-color: $clr-white;
+         border-top: 0;
+         border-right: 0;
+         margin-left: -1rem;
+         margin-top: -2.75rem;
+      }
+
+      &--active {
+         visibility: visible;
+         transform: translateY(0);
+         opacity: 1;
+         transition: all 0.4s;
+      }
 
       @include media(medium) {
          visibility: visible;
          gap: 2rem;
          width: 36rem;
+         top: 4.75rem;
+         right: 5rem;
+         height: auto;
+         width: 36rem;
+         flex-direction: row;
+         background-color: transparent;
+
+         transform: translateY(0);
+         opacity: 1;
+
+         &::after {
+            visibility: hidden;
+         }
       }
 
       @include media(large) {
@@ -50,16 +94,46 @@
 
    &__menu-links {
       text-decoration: none;
-      color: $clr-white;
+      color: $clr-neutral-300;
+      font-size: 2rem;
+
+      @include media(medium) {
+         color: $clr-white;
+      }
 
       &--contact {
          font-family: $ff-secondary;
          text-transform: uppercase;
-         background-color: $clr-white;
+         background-color: $clr-primary-200;
          color: black;
          font-size: 1.6rem;
          padding: 1.75rem 2.75rem;
          border-radius: 10rem;
+
+         @include media(medium) {
+            background-color: $clr-white;
+
+            &:hover {
+               background-color: transparent;
+               color: $clr-white;
+               box-shadow: 0 0.1rem 2rem rgba(#000, 0.3);
+
+               transition: all 0.3s;
+            }
+         }
       }
    }
+}
+
+//BURGER MENU ANIMATION
+.active .line1 {
+   transform: rotate(-45deg) translate(-0.5rem, 0.6rem);
+}
+
+.active .line2 {
+   opacity: 0;
+}
+
+.active .line3 {
+   transform: rotate(45deg) translate(-0.5rem, -0.6rem);
 }
