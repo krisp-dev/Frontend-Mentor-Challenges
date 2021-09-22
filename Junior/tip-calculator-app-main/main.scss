@@ -1,0 +1,63 @@
+//////////////////////////////////////
+///// GOOGLE FONT IMPORT
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;500;700&display=swap");
+
+//////////////////////////////////////
+///// COLOR SCHEME
+$clr-primary: hsl(172, 67%, 45%);
+
+$clr-neutral-100: hsl(183, 100%, 15%);
+$clr-neutral-200: hsl(186, 14%, 43%);
+$clr-neutral-300: hsl(184, 14%, 56%);
+$clr-neutral-400: hsl(185, 41%, 84%);
+$clr-neutral-500: hsl(189, 41%, 97%);
+
+$clr-white: hsl(0, 0%, 100%);
+
+//////////////////////////////////////
+///// MIXINS MEDIA QUERY MANAGER
+@mixin media($breakpoint) {
+   @if $breakpoint == medium {
+      @media (min-width: 53.125em) {
+         @content;
+      } //850px / 16 = 53.125em
+   }
+   @if $breakpoint == large {
+      @media (min-width: 75em) {
+         @content;
+      } //1200px / 16 = 75em
+   }
+}
+
+//////////////////////////////////////
+///// UNIVERSAL BASIC RESET
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+//////////////////////////////////////
+///// BASE LAYOUT
+html {
+   box-sizing: border-box;
+   font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+}
+
+body {
+   font-family: "Barlow Semi Condensed", sans-serif;
+   font-size: 2.4rem; // ### Body Copy - Font size (form inputs): 24px
+   min-height: 100vh;
+   background-color: $clr-neutral-400;
+}
+
+//////////////////////////////////////
+///// CONTAINER LAYOUT
+
+//////////////////////////////////////
+///// INPUT SECTION
+
+//////////////////////////////////////
+///// OUTPUT SECTION
