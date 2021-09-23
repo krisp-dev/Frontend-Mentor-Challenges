@@ -55,9 +55,77 @@ body {
 
 //////////////////////////////////////
 ///// CONTAINER LAYOUT
+.container {
+}
 
 //////////////////////////////////////
 ///// INPUT SECTION
+.inputs {
+   &__bill {
+   }
+
+   &__bill-text {
+   }
+
+   &__bill-input {
+   }
+
+   &__img {
+   }
+
+   &__tips {
+   }
+
+   &__tips-text {
+   }
+
+   &__tips-list {
+   }
+
+   &__tips-item {
+   }
+
+   &__tips-input {
+   }
+
+   &__people {
+   }
+
+   &__people-text {
+   }
+
+   &__people-input {
+   }
+
+   &__people-img {
+   }
+}
 
 //////////////////////////////////////
 ///// OUTPUT SECTION
+.outputs {
+   &__text {
+      &--small {
+      }
+   }
+
+   &__number {
+   }
+
+   &__tip-box {
+   }
+
+   &__tip-text {
+   }
+
+   &__total-box {
+   }
+
+   &__total-text {
+   }
+}
+
+//////////////////////////////////////
+///// BUTTON SECTION
+.btn {
+}

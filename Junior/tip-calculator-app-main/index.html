@@ -1,45 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="css/main.css">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+      <link
+         rel="icon"
+         type="image/png"
+         sizes="32x32"
+         href="./images/favicon-32x32.png"
+      />
+      <link rel="stylesheet" href="css/main.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      <title>Frontend Mentor | Tip calculator app</title>
 
-  Bill
-
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
-
-  Number of People
-
-  Tip Amount
-  / person
-
-  Total
-  / person
-
-  Reset
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://github.com/krisp-dev">krisp-dev</a>.
-  </div>
-</body>
+      <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+      <style>
+         .attribution {
+            font-size: 11px;
+            text-align: center;
+         }
+         .attribution a {
+            color: hsl(228, 45%, 44%);
+         }
+      </style>
+   </head>
+   <body>
+      <div class="logo">
+         <img src="images/logo.svg" alt="Splitter" />
+      </div>
+      <main class="container">
+         <section class="inputs">
+            <div class="inputs__bill">
+               <h2 class="inputs__bill-text">Bill</h2>
+               <input
+                  class="inputs__bill-input"
+                  type="number"
+                  name="Bill"
+                  placeholder="0.00"
+               />
+               <img
+                  class="inputs__bill-img"
+                  src="images/icon-dollar.svg"
+                  alt="Dollar sign"
+               />
+            </div>
+            <div class="inputs__tips">
+               <h2 class="inputs__tips-text">Select Tip %</h2>
+               <ul class="inputs__tips-list">
+                  <li class="inputs__tips-item">5</li>
+                  <li class="inputs__tips-item">10</li>
+                  <li class="inputs__tips-item">15</li>
+                  <li class="inputs__tips-item">25</li>
+                  <li class="inputs__tips-item">50</li>
+                  <input
+                     class="inputs__tips-input"
+                     type="number"
+                     name="Custom tip"
+                     placeholder="Custom"
+                  />
+               </ul>
+            </div>
+            <div class="inputs__people">
+               <h2 class="inputs__people-text">Number of People</h2>
+               <input
+                  class="inputs__people-input"
+                  type="number"
+                  name="Number of People"
+                  placeholder="0"
+               />
+               <img
+                  class="inputs__people-img"
+                  src="images/icon-person.svg"
+                  alt="Person icon"
+               />
+            </div>
+         </section>
+         <section class="outputs">
+            <div class="outputs__tip-box">
+               <div class="outputs__tip-text">
+                  <h3 class="outputs__text">Tip Amount</h3>
+                  <span class="outputs__text--small">/ person</span>
+               </div>
+               <span class="outputs__number">0.00</span>
+            </div>
+            <div class="outputs__total-box">
+               <div class="outputs__total-text">
+                  <h3 class="outputs__text">Tip Amount</h3>
+                  <span class="outputs__text--small">/ person</span>
+               </div>
+               <span class="outputs__number">0.00</span>
+            </div>
+            <button class="btn">Reset</button>
+         </section>
+      </main>
+      <div class="attribution">
+         Challenge by
+         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+         >. Coded by <a href="https://github.com/krisp-dev">krisp-dev</a>.
+      </div>
+   </body>
 </html>
