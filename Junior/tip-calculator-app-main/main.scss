@@ -47,85 +47,200 @@ html {
 }
 
 body {
-   font-family: "Barlow Semi Condensed", sans-serif;
+   font-family: "Space Mono", sans-serif;
    font-size: 2.4rem; // ### Body Copy - Font size (form inputs): 24px
    min-height: 100vh;
    background-color: $clr-neutral-400;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.logo {
+   margin: 5rem 0 3rem;
 }
 
 //////////////////////////////////////
 ///// CONTAINER LAYOUT
 .container {
+   background-color: $clr-white;
+   width: 100%;
+   padding: 3.5rem 3rem;
+   border-top-left-radius: 2.5rem;
+   border-top-right-radius: 2.5rem;
 }
 
 //////////////////////////////////////
 ///// INPUT SECTION
 .inputs {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+
    &__bill {
+      position: relative;
    }
 
-   &__bill-text {
+   p {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: $clr-neutral-200;
+      margin-bottom: 0.5rem;
+   }
+
+   input {
+      font-family: inherit;
+      font-size: inherit;
+      font-weight: 700;
+      text-align: right;
+      padding: 0 1.25rem;
+      color: $clr-neutral-100;
+      background-color: $clr-neutral-500;
+      border: none;
+      border-radius: 0.5rem;
+
+      &::placeholder {
+         color: $clr-neutral-200;
+      }
+
+      &:focus,
+      &:active {
+         outline-color: $clr-primary;
+      }
    }
 
    &__bill-input {
+      height: 4.5rem;
+      margin-bottom: 3.5rem;
    }
 
-   &__img {
+   &__bill-img {
+      position: absolute;
+      left: 1.75rem;
+      top: 4.25rem;
    }
 
    &__tips {
+      display: flex;
+      flex-direction: column;
    }
 
    &__tips-text {
+      display: flex;
    }
 
    &__tips-list {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.7rem;
+
+      max-width: 47.5rem;
    }
 
    &__tips-item {
+      background-color: $clr-neutral-100;
+      height: 4.7rem;
+      width: 14.7rem;
+      color: $clr-white;
+      font-weight: 700;
+      border-radius: 0.5rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+         background-color: $clr-primary;
+         color: $clr-neutral-100;
+      }
+
+      &:active {
+         background-color: $clr-neutral-400;
+      }
    }
 
    &__tips-input {
+      height: 4.7rem;
+      width: 14.7rem;
+      margin-bottom: 3.5rem;
    }
 
    &__people {
+      position: relative;
    }
 
    &__people-text {
    }
 
    &__people-input {
+      width: 100%;
+      height: 4.5rem;
+      margin-bottom: 3.5rem;
    }
 
    &__people-img {
+      position: absolute;
+      left: 1.75rem;
+      top: 4.25rem;
    }
 }
 
 //////////////////////////////////////
 ///// OUTPUT SECTION
 .outputs {
+   background-color: $clr-neutral-100;
+   border-radius: 1.5rem;
+   padding: 3.5rem 2.5rem 2rem;
+
+   max-width: 47.5rem;
+   margin: 0 auto;
+
    &__text {
+      color: $clr-white;
+      font-size: 1.6rem;
+      font-weight: 700;
+
       &--small {
+         color: $clr-neutral-300;
+         font-size: 1.4rem;
+         font-weight: 700;
       }
    }
 
    &__number {
+      color: $clr-primary;
+      font-size: 3.2rem;
+      font-weight: 700;
    }
 
-   &__tip-box {
-   }
-
-   &__tip-text {
-   }
-
+   &__tip-box,
    &__total-box {
+      display: flex;
+      justify-content: space-between;
    }
 
+   &__tip-text,
    &__total-text {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 2.5rem;
    }
 }
 
 //////////////////////////////////////
 ///// BUTTON SECTION
 .btn {
+   width: 100%;
+   font-family: inherit;
+   font-size: 2rem;
+   font-weight: 700;
+   text-transform: uppercase;
+   border: none;
+   outline: none;
+   border-radius: 0.5rem;
+   height: 5rem;
+   background-color: $clr-primary;
+   color: $clr-neutral-100;
 }

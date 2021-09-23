@@ -33,7 +33,7 @@
       <main class="container">
          <section class="inputs">
             <div class="inputs__bill">
-               <h2 class="inputs__bill-text">Bill</h2>
+               <p class="inputs__bill-text">Bill</p>
                <input
                   class="inputs__bill-input"
                   type="number"
@@ -47,23 +47,25 @@
                />
             </div>
             <div class="inputs__tips">
-               <h2 class="inputs__tips-text">Select Tip %</h2>
+               <p class="inputs__tips-text">Select Tip %</p>
                <ul class="inputs__tips-list">
-                  <li class="inputs__tips-item">5</li>
+                  <li class="inputs__tips-item">5%</li>
                   <li class="inputs__tips-item">10</li>
                   <li class="inputs__tips-item">15</li>
                   <li class="inputs__tips-item">25</li>
                   <li class="inputs__tips-item">50</li>
-                  <input
-                     class="inputs__tips-input"
-                     type="number"
-                     name="Custom tip"
-                     placeholder="Custom"
-                  />
+                  <li>
+                     <input
+                        class="inputs__tips-input"
+                        type="number"
+                        name="Custom tip"
+                        placeholder="Custom"
+                     />
+                  </li>
                </ul>
             </div>
             <div class="inputs__people">
-               <h2 class="inputs__people-text">Number of People</h2>
+               <p class="inputs__people-text">Number of People</p>
                <input
                   class="inputs__people-input"
                   type="number"
@@ -80,17 +82,17 @@
          <section class="outputs">
             <div class="outputs__tip-box">
                <div class="outputs__tip-text">
-                  <h3 class="outputs__text">Tip Amount</h3>
+                  <p class="outputs__text">Tip Amount</p>
                   <span class="outputs__text--small">/ person</span>
                </div>
-               <span class="outputs__number">0.00</span>
+               <span class="outputs__number">$0.00</span>
             </div>
             <div class="outputs__total-box">
                <div class="outputs__total-text">
-                  <h3 class="outputs__text">Tip Amount</h3>
+                  <p class="outputs__text">Total</p>
                   <span class="outputs__text--small">/ person</span>
                </div>
-               <span class="outputs__number">0.00</span>
+               <span class="outputs__number">$0.00</span>
             </div>
             <button class="btn">Reset</button>
          </section>
