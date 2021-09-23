@@ -68,7 +68,7 @@ body {
 }
 
 .inputs input:focus, .inputs input:active {
-  outline-color: #26c0ab;
+  outline-color: #a1e8e0;
 }
 
 .inputs__bill-input {
@@ -110,6 +110,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: all 0.25s;
 }
 
 .inputs__tips-item:hover {
@@ -118,7 +119,7 @@ body {
 }
 
 .inputs__tips-item:active {
-  background-color: #c5e4e7;
+  background-color: #a1e8e0;
 }
 
 .inputs__tips-input {
@@ -192,5 +193,15 @@ body {
   height: 5rem;
   background-color: #26c0ab;
   color: #00494d;
+  transition: all 0.25s;
+}
+
+.btn:hover {
+  background-color: #a1e8e0;
+  transform: translateY(-0.3rem);
+}
+
+.btn:active {
+  transform: translateY(-0.1rem);
 }
 /*# sourceMappingURL=main.css.map */

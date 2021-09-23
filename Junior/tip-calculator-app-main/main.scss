@@ -11,6 +11,7 @@ $clr-neutral-200: hsl(186, 14%, 43%);
 $clr-neutral-300: hsl(184, 14%, 56%);
 $clr-neutral-400: hsl(185, 41%, 84%);
 $clr-neutral-500: hsl(189, 41%, 97%);
+$clr-neutral-600: hsl(173, 61%, 77%);
 
 $clr-white: hsl(0, 0%, 100%);
 
@@ -105,7 +106,7 @@ body {
 
       &:focus,
       &:active {
-         outline-color: $clr-primary;
+         outline-color: $clr-neutral-600;
       }
    }
 
@@ -151,13 +152,15 @@ body {
       justify-content: center;
       align-items: center;
 
+      transition: all 0.25s;
+
       &:hover {
          background-color: $clr-primary;
          color: $clr-neutral-100;
       }
 
       &:active {
-         background-color: $clr-neutral-400;
+         background-color: $clr-neutral-600;
       }
    }
 
@@ -243,4 +246,15 @@ body {
    height: 5rem;
    background-color: $clr-primary;
    color: $clr-neutral-100;
+
+   transition: all 0.25s;
+
+   &:hover {
+      background-color: $clr-neutral-600;
+      transform: translateY(-0.3rem);
+   }
+
+   &:active {
+      transform: translateY(-0.1rem);
+   }
 }
