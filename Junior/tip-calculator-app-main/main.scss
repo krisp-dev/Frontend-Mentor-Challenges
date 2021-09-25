@@ -51,10 +51,19 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
+
+   @include media(medium) {
+      justify-content: center;
+   }
 }
 
 .logo {
    margin: 5rem 0 3rem;
+
+   @include media(medium) {
+      margin: 0;
+      margin-bottom: 8rem;
+   }
 }
 
 //////////////////////////////////////
@@ -163,6 +172,7 @@ body {
       color: $clr-white;
       font-weight: 700;
       border-radius: 0.5rem;
+      cursor: pointer;
 
       display: flex;
       justify-content: center;
@@ -294,12 +304,13 @@ body {
    height: 5rem;
    background-color: $clr-primary;
    color: $clr-neutral-100;
+   cursor: pointer;
 
    transition: all 0.25s;
 
    @include media(medium) {
       position: absolute;
-      max-width: 33.5rem;
+      width: 33rem;
       bottom: 4rem;
    }
 
