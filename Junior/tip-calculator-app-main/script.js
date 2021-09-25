@@ -7,8 +7,7 @@ const noOfPeople = document.querySelector(".inputs__people-input");
 const tipAmount = document.getElementById("tipAmount");
 const totalAmount = document.getElementById("totalAmount");
 const resetBtn = document.querySelector(".btn");
-
-console.log(tips);
+const error = document.querySelector(".error");
 
 //////////////////////////////////////
 ///// FUNCTIONS
@@ -63,7 +62,6 @@ const resetTotals = function () {
 ///// EVENT LISTENERS
 // get tip value by clicking on each button and attach event listeners
 tips.forEach(function (i) {
-   console.log(i);
    i.addEventListener("click", () => {
       // clear custom tip value and calculate totals on tip click
       customTip.value = "";
@@ -71,7 +69,16 @@ tips.forEach(function (i) {
 
       // add event listeners for each of the input fields
       noOfPeople.addEventListener("keyup", () => {
-         calcTotals(i);
+         // check if number of people is empty or 0 and display error msg
+         if (noOfPeople.value === "" || noOfPeople.value < 1) {
+            error.classList.add("error-active");
+            noOfPeople.classList.add("error-border");
+            resetTotals();
+         } else {
+            error.classList.remove("error-active");
+            noOfPeople.classList.remove("error-border");
+            calcTotals(i);
+         }
       });
 
       bill.addEventListener("keyup", () => {

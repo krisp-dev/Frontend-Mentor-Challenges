@@ -72,24 +72,29 @@
                </ul>
             </div>
             <div class="inputs__people">
-               <p class="inputs__people-text">Number of People</p>
+               <div class="inputs__people-text">
+                  <p>Number of People</p>
+                  <span class="error">Can't be zero</span>
+               </div>
                <!-- step, onfocus, onkeydown, oninput are used to ONLY allow positive WHOLE numbers -->
-               <input
-                  class="inputs__people-input"
-                  type="number"
-                  name="Number of People"
-                  placeholder="0"
-                  min="0"
-                  step="1"
-                  onfocus="this.previousValue = this.value"
-                  onkeydown="this.previousValue = this.value"
-                  oninput="validity.valid || (value = this.previousValue)"
-               />
-               <img
-                  class="inputs__people-img"
-                  src="images/icon-person.svg"
-                  alt="Person icon"
-               />
+               <div>
+                  <input
+                     class="inputs__people-input"
+                     type="number"
+                     name="Number of People"
+                     placeholder="0"
+                     min="0"
+                     step="1"
+                     onfocus="this.previousValue = this.value"
+                     onkeydown="this.previousValue = this.value"
+                     oninput="validity.valid || (value = this.previousValue)"
+                  />
+                  <img
+                     class="inputs__people-img"
+                     src="images/icon-person.svg"
+                     alt="Person icon"
+                  />
+               </div>
             </div>
          </section>
          <section class="outputs">

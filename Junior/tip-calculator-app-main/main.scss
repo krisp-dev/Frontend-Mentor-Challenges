@@ -115,16 +115,10 @@ body {
       padding: 0 1.25rem;
       color: $clr-neutral-100;
       background-color: $clr-neutral-500;
-      border: none;
       border-radius: 0.5rem;
 
       &::placeholder {
          color: $clr-neutral-300;
-      }
-
-      &:focus,
-      &:active {
-         outline-color: $clr-neutral-600;
       }
 
       /* Remove input arrows/spinners */
@@ -143,6 +137,12 @@ body {
    &__bill-input {
       height: 4.5rem;
       margin-bottom: 3.5rem;
+      border: none;
+
+      &:focus,
+      &:active {
+         outline-color: $clr-neutral-600;
+      }
 
       @include media(medium) {
          width: 38rem;
@@ -200,7 +200,10 @@ body {
          color: $clr-neutral-100;
       }
 
-      &:active {
+      &:active,
+      &:focus,
+      &:target,
+      &:checked {
          background-color: $clr-neutral-600;
       }
    }
@@ -209,6 +212,12 @@ body {
       height: 4.7rem;
       width: 14.7rem;
       margin-bottom: 3.5rem;
+      border: none;
+
+      &:focus,
+      &:active {
+         outline-color: $clr-neutral-600;
+      }
 
       @include media(medium) {
          width: 11.7rem;
@@ -216,13 +225,26 @@ body {
    }
 
    &__people {
-      position: relative;
+      & div {
+         position: relative;
+      }
+   }
+
+   &__people-text {
+      display: flex;
+      justify-content: space-between;
    }
 
    &__people-input {
       width: 100%;
       height: 4.5rem;
       margin-bottom: 3.5rem;
+      border: none;
+
+      &:focus,
+      &:active {
+         outline-color: $clr-neutral-600;
+      }
 
       @include media(medium) {
          width: 38rem;
@@ -233,7 +255,7 @@ body {
    &__people-img {
       position: absolute;
       left: 1.75rem;
-      top: 4.25rem;
+      top: 1.5rem;
    }
 }
 
@@ -344,4 +366,30 @@ body {
    &:active {
       transform: translateY(0);
    }
+}
+
+//////////////////////////////////////
+///// ERROR CLASSES
+.error {
+   font-size: 1.6rem;
+   font-weight: 700;
+   color: red;
+   display: none;
+}
+
+.error-active {
+   display: block;
+}
+
+.error-border {
+   border: 2px solid red;
+
+   &:focus,
+   &:active {
+      outline-color: red;
+   }
+}
+
+.bgcolor {
+   background-color: red;
 }
