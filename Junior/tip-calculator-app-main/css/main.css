@@ -93,6 +93,7 @@ body {
   background-color: #f4fafa;
   border: none;
   border-radius: 0.5rem;
+  /* Remove input arrows/spinners */
 }
 
 .inputs input::placeholder {
@@ -101,6 +102,15 @@ body {
 
 .inputs input:focus, .inputs input:active {
   outline-color: #a1e8e0;
+}
+
+.inputs input::-webkit-outer-spin-button, .inputs input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.inputs input[type="number"] {
+  -moz-appearance: textfield;
 }
 
 .inputs__bill-input {

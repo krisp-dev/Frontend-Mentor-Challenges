@@ -126,6 +126,18 @@ body {
       &:active {
          outline-color: $clr-neutral-600;
       }
+
+      /* Remove input arrows/spinners */
+      // Chrome, Safari, Edge, Opera
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+         margin: 0;
+      }
+      //Firefox
+      &[type="number"] {
+         -moz-appearance: textfield;
+      }
    }
 
    &__bill-input {
