@@ -20,13 +20,9 @@ $clr-white: hsl(0, 0%, 100%);
 @mixin media($breakpoint) {
    @if $breakpoint == medium {
       @media (min-width: 53.125em) {
+         //850px / 16 = 53.125em
          @content;
-      } //850px / 16 = 53.125em
-   }
-   @if $breakpoint == large {
-      @media (min-width: 75em) {
-         @content;
-      } //1200px / 16 = 75em
+      }
    }
 }
 
@@ -66,9 +62,13 @@ body {
 .container {
    background-color: $clr-white;
    width: 100%;
+   max-width: 92rem;
    padding: 3.5rem 3rem;
-   border-top-left-radius: 2.5rem;
-   border-top-right-radius: 2.5rem;
+   border-radius: 2.5rem;
+
+   @include media(medium) {
+      display: flex;
+   }
 }
 
 //////////////////////////////////////
@@ -77,6 +77,11 @@ body {
    display: flex;
    flex-direction: column;
    align-items: center;
+
+   @include media(medium) {
+      align-items: flex-start;
+      padding: 1rem 0 1.25rem 2rem;
+   }
 
    &__bill {
       position: relative;
@@ -87,6 +92,10 @@ body {
       font-weight: 700;
       color: $clr-neutral-200;
       margin-bottom: 0.5rem;
+
+      @include media(medium) {
+         margin-bottom: 1rem;
+      }
    }
 
    input {
@@ -101,7 +110,7 @@ body {
       border-radius: 0.5rem;
 
       &::placeholder {
-         color: $clr-neutral-200;
+         color: $clr-neutral-300;
       }
 
       &:focus,
@@ -113,6 +122,10 @@ body {
    &__bill-input {
       height: 4.5rem;
       margin-bottom: 3.5rem;
+
+      @include media(medium) {
+         width: 38rem;
+      }
    }
 
    &__bill-img {
@@ -136,8 +149,11 @@ body {
       justify-content: center;
       flex-wrap: wrap;
       gap: 1.7rem;
-
       max-width: 47.5rem;
+
+      @include media(medium) {
+         justify-content: flex-start;
+      }
    }
 
    &__tips-item {
@@ -151,8 +167,11 @@ body {
       display: flex;
       justify-content: center;
       align-items: center;
-
       transition: all 0.25s;
+
+      @include media(medium) {
+         width: 11.7rem;
+      }
 
       &:hover {
          background-color: $clr-primary;
@@ -168,6 +187,10 @@ body {
       height: 4.7rem;
       width: 14.7rem;
       margin-bottom: 3.5rem;
+
+      @include media(medium) {
+         width: 11.7rem;
+      }
    }
 
    &__people {
@@ -181,6 +204,11 @@ body {
       width: 100%;
       height: 4.5rem;
       margin-bottom: 3.5rem;
+
+      @include media(medium) {
+         width: 38rem;
+         margin-bottom: 0;
+      }
    }
 
    &__people-img {
@@ -200,6 +228,13 @@ body {
    max-width: 47.5rem;
    margin: 0 auto;
 
+   @include media(medium) {
+      margin: 0;
+      width: 45rem;
+      padding: 5.5rem 4rem 3rem;
+      position: relative;
+   }
+
    &__text {
       color: $clr-white;
       font-size: 1.6rem;
@@ -216,12 +251,20 @@ body {
       color: $clr-primary;
       font-size: 3.2rem;
       font-weight: 700;
+
+      @include media(medium) {
+         font-size: 4.5rem;
+      }
    }
 
    &__tip-box,
    &__total-box {
       display: flex;
       justify-content: space-between;
+
+      @include media(medium) {
+         margin-bottom: 2.5rem;
+      }
    }
 
    &__tip-text,
@@ -229,6 +272,11 @@ body {
       display: flex;
       flex-direction: column;
       margin-bottom: 2.5rem;
+
+      @include media(medium) {
+         justify-content: center;
+         margin-bottom: 0;
+      }
    }
 }
 
@@ -249,6 +297,12 @@ body {
 
    transition: all 0.25s;
 
+   @include media(medium) {
+      position: absolute;
+      max-width: 33.5rem;
+      bottom: 4rem;
+   }
+
    &:hover {
       background-color: $clr-neutral-600;
       transform: translateY(-0.3rem);
@@ -256,5 +310,18 @@ body {
 
    &:active {
       transform: translateY(-0.1rem);
+   }
+}
+
+.disabled {
+   opacity: 0.2;
+
+   &:hover {
+      background-color: $clr-primary;
+      transform: translateY(0);
+   }
+
+   &:active {
+      transform: translateY(0);
    }
 }
