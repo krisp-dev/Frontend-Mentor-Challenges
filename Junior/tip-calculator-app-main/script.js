@@ -90,3 +90,14 @@ tips.forEach(function (i) {
       });
    });
 });
+
+// reset everything after button click
+resetBtn.addEventListener("click", () => {
+   bill.value = "";
+   noOfPeople.value = "";
+   customTip.value = "";
+   tipAmount.textContent = "$0.00";
+   totalAmount.textContent = "$0.00";
+   error.classList.remove("error-active");
+   noOfPeople.classList.remove("error-border");
+});
