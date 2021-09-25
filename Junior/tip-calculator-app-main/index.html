@@ -35,11 +35,14 @@
          <section class="inputs">
             <div class="inputs__bill">
                <p class="inputs__bill-text">Bill</p>
+               <!-- oninput is used to ONLY allow positive numbers -->
                <input
                   class="inputs__bill-input"
                   type="number"
                   name="Bill"
                   placeholder="0"
+                  min="0"
+                  oninput="this.value = Math.abs(this.value)"
                />
                <img
                   class="inputs__bill-img"
@@ -56,22 +59,31 @@
                   <li class="inputs__tips-item">25</li>
                   <li class="inputs__tips-item">50</li>
                   <li>
+                     <!-- oninput is used to ONLY allow positive numbers -->
                      <input
                         class="inputs__tips-input"
                         type="number"
                         name="Custom tip"
                         placeholder="Custom"
+                        min="0"
+                        oninput="this.value = Math.abs(this.value)"
                      />
                   </li>
                </ul>
             </div>
             <div class="inputs__people">
                <p class="inputs__people-text">Number of People</p>
+               <!-- step, onfocus, onkeydown, oninput are used to ONLY allow positive WHOLE numbers -->
                <input
                   class="inputs__people-input"
                   type="number"
                   name="Number of People"
                   placeholder="0"
+                  min="0"
+                  step="1"
+                  onfocus="this.previousValue = this.value"
+                  onkeydown="this.previousValue = this.value"
+                  oninput="validity.valid || (value = this.previousValue)"
                />
                <img
                   class="inputs__people-img"
