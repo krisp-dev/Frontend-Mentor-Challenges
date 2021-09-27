@@ -384,5 +384,6 @@ body {
 }
 
 .active {
-   background-color: red;
+   background-color: $clr-neutral-600;
+   color: $clr-neutral-100;
 }
