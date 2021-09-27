@@ -15,20 +15,24 @@ let tipNumber;
 
 //////////////////////////////////////
 ///// FUNCTIONS
+// calculate single tip
 const calcTip = function (tip) {
    return bill.value * (tip / 100);
 };
 
+// calculate tip per person & display it
 const tipPerPerson = function (percent) {
    const calcTipPerPerson = calcTip(percent) / noOfPeople.value;
    tipAmount.textContent = `$${Number(calcTipPerPerson.toFixed(2))}`;
 };
 
+// calculate total per person & display it
 const totalPerPerson = function (percent) {
    const totalBill = Number(bill.value) + Number(calcTip(percent));
    totalAmount.textContent = `$${(totalBill / noOfPeople.value).toFixed(2)}`;
 };
 
+// calculate custom tip using above functions
 const calcCustomTip = function () {
    tipPerPerson(customTip.value);
    totalPerPerson(customTip.value);
@@ -54,26 +58,20 @@ const resetTotals = function () {
 
 //////////////////////////////////////
 ///// EVENT LISTENERS
-
+let current = document.getElementsByClassName("active");
 // get tip value by clicking on each button and attach event listeners
 tips.forEach(function (i) {
    i.addEventListener("click", () => {
-      /* let current = document.getElementsByClassName("active");
-      current.className = i.className.replace(" active", "");
-      console.log(i.className);
-      this.className += " active"; */
-
-      tipNumber = i.textContent.slice(0, -1);
-
-      //fix for when noOfPeople is <1 and tip is clicked it displays $Infinity
-      if (noOfPeople.value < 1) {
-         calcTotals(tipNumber);
-         resetTotals();
-      } else {
-         // clear custom tip value and calculate totals on tip click
-         customTip.value = "";
-         calcTotals(tipNumber);
+      // add 'active' class to current tip% clicked
+      if (current[0]) {
+         current[0].className = current[0].className.replace(" active", "");
       }
+      i.className += " active";
+
+      // remove % symbol and calculate totals
+      tipNumber = i.textContent.slice(0, -1);
+      customTip.value = "";
+      calcTotals(tipNumber);
 
       // add event listeners for each of the input fields
       noOfPeople.addEventListener("keyup", () => {
@@ -99,6 +97,7 @@ tips.forEach(function (i) {
       });
 
       customTip.addEventListener("keyup", () => {
+         i.classList.remove("active");
          calcTotals(customTip);
       });
    });
@@ -114,4 +113,8 @@ resetBtn.addEventListener("click", () => {
    error.classList.remove("error-active");
    noOfPeople.classList.remove("error-border");
    tipNumber = 0;
+   // remove active class from tip% button
+   if (current[0]) {
+      current[0].className = current[0].className.replace(" active", "");
+   }
 });
