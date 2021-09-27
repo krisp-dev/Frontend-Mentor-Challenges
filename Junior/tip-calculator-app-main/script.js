@@ -1,3 +1,5 @@
+"use strict";
+
 //////////////////////////////////////
 ///// DOM ELEMENTS
 const bill = document.querySelector(".inputs__bill-input");
@@ -9,6 +11,8 @@ const totalAmount = document.getElementById("totalAmount");
 const resetBtn = document.querySelector(".btn");
 const error = document.querySelector(".error");
 
+let tipNumber;
+
 //////////////////////////////////////
 ///// FUNCTIONS
 const calcTip = function (tip) {
@@ -16,20 +20,15 @@ const calcTip = function (tip) {
 };
 
 const tipPerPerson = function (percent) {
-   // calculate tip of bill per person
    const calcTipPerPerson = calcTip(percent) / noOfPeople.value;
-   // display tip amount
    tipAmount.textContent = `$${Number(calcTipPerPerson.toFixed(2))}`;
 };
 
 const totalPerPerson = function (percent) {
-   // add bill + tip
    const totalBill = Number(bill.value) + Number(calcTip(percent));
-   // calculate & display total per person amount
    totalAmount.textContent = `$${(totalBill / noOfPeople.value).toFixed(2)}`;
 };
 
-// calculate custom tip & total per person using above functions parsing in customTip.value
 const calcCustomTip = function () {
    tipPerPerson(customTip.value);
    totalPerPerson(customTip.value);
@@ -37,14 +36,9 @@ const calcCustomTip = function () {
 
 // calculate totals based on user input
 const calcTotals = function (percent) {
-   if (
-      bill.value &&
-      noOfPeople.value &&
-      percent.textContent &&
-      !customTip.value
-   ) {
-      tipPerPerson(percent.textContent);
-      totalPerPerson(percent.textContent);
+   if (bill.value && noOfPeople.value && percent && !customTip.value) {
+      tipPerPerson(percent);
+      totalPerPerson(percent);
    } else if (bill.value && noOfPeople.value && customTip.value) {
       calcCustomTip();
    } else {
@@ -52,20 +46,34 @@ const calcTotals = function (percent) {
    }
 };
 
+// reset tip amount per person & total per person
 const resetTotals = function () {
-   // set totals to 0
    tipAmount.textContent = "$0.00";
    totalAmount.textContent = "$0.00";
 };
 
 //////////////////////////////////////
 ///// EVENT LISTENERS
+
 // get tip value by clicking on each button and attach event listeners
 tips.forEach(function (i) {
    i.addEventListener("click", () => {
-      // clear custom tip value and calculate totals on tip click
-      customTip.value = "";
-      calcTotals(i);
+      /* let current = document.getElementsByClassName("active");
+      current.className = i.className.replace(" active", "");
+      console.log(i.className);
+      this.className += " active"; */
+
+      tipNumber = i.textContent.slice(0, -1);
+
+      //fix for when noOfPeople is <1 and tip is clicked it displays $Infinity
+      if (noOfPeople.value < 1) {
+         calcTotals(tipNumber);
+         resetTotals();
+      } else {
+         // clear custom tip value and calculate totals on tip click
+         customTip.value = "";
+         calcTotals(tipNumber);
+      }
 
       // add event listeners for each of the input fields
       noOfPeople.addEventListener("keyup", () => {
@@ -77,12 +85,17 @@ tips.forEach(function (i) {
          } else {
             error.classList.remove("error-active");
             noOfPeople.classList.remove("error-border");
-            calcTotals(i);
+            calcTotals(tipNumber);
          }
       });
 
       bill.addEventListener("keyup", () => {
-         calcTotals(i);
+         //fix for when noOfPeople is <1 and bill is changed it displays $Infinity
+         if (noOfPeople.value < 1) {
+            resetTotals();
+         } else {
+            calcTotals(tipNumber);
+         }
       });
 
       customTip.addEventListener("keyup", () => {
@@ -100,4 +113,5 @@ resetBtn.addEventListener("click", () => {
    totalAmount.textContent = "$0.00";
    error.classList.remove("error-active");
    noOfPeople.classList.remove("error-border");
+   tipNumber = 0;
 });

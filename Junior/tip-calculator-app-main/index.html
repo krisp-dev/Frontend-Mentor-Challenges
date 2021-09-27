@@ -36,28 +36,30 @@
             <div class="inputs__bill">
                <p class="inputs__bill-text">Bill</p>
                <!-- oninput is used to ONLY allow positive numbers -->
-               <input
-                  class="inputs__bill-input"
-                  type="number"
-                  name="Bill"
-                  placeholder="0"
-                  min="0"
-                  oninput="this.value = Math.abs(this.value)"
-               />
-               <img
-                  class="inputs__bill-img"
-                  src="images/icon-dollar.svg"
-                  alt="Dollar sign"
-               />
+               <div>
+                  <input
+                     class="inputs__bill-input"
+                     type="number"
+                     name="Bill"
+                     placeholder="0"
+                     min="0"
+                     oninput="this.value = Math.abs(this.value)"
+                  />
+                  <img
+                     class="inputs__bill-img"
+                     src="images/icon-dollar.svg"
+                     alt="Dollar sign"
+                  />
+               </div>
             </div>
             <div class="inputs__tips">
                <p class="inputs__tips-text">Select Tip %</p>
                <ul class="inputs__tips-list">
                   <li class="inputs__tips-item">5%</li>
-                  <li class="inputs__tips-item">10</li>
-                  <li class="inputs__tips-item">15</li>
-                  <li class="inputs__tips-item">25</li>
-                  <li class="inputs__tips-item">50</li>
+                  <li class="inputs__tips-item">10%</li>
+                  <li class="inputs__tips-item">15%</li>
+                  <li class="inputs__tips-item">25%</li>
+                  <li class="inputs__tips-item">50%</li>
                   <li>
                      <!-- oninput is used to ONLY allow positive numbers -->
                      <input

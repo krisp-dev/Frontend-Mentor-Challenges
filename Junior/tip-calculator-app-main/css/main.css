@@ -66,10 +66,6 @@ body {
   }
 }
 
-.inputs__bill {
-  position: relative;
-}
-
 .inputs p {
   font-size: 1.6rem;
   font-weight: 700;
@@ -92,6 +88,7 @@ body {
   color: #00494d;
   background-color: #f4fafa;
   border-radius: 0.5rem;
+  cursor: pointer;
   /* Remove input arrows/spinners */
 }
 
@@ -106,6 +103,10 @@ body {
 
 .inputs input[type="number"] {
   -moz-appearance: textfield;
+}
+
+.inputs__bill div, .inputs__people div {
+  position: relative;
 }
 
 .inputs__bill-input {
@@ -124,10 +125,10 @@ body {
   }
 }
 
-.inputs__bill-img {
+.inputs__bill-img, .inputs__people-img {
   position: absolute;
   left: 1.75rem;
-  top: 4.25rem;
+  top: 1.5rem;
 }
 
 .inputs__tips {
@@ -162,6 +163,7 @@ body {
   font-weight: 700;
   border-radius: 0.5rem;
   cursor: pointer;
+  text-decoration: none;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -179,10 +181,6 @@ body {
   color: #00494d;
 }
 
-.inputs__tips-item:active, .inputs__tips-item:focus, .inputs__tips-item:target, .inputs__tips-item:checked {
-  background-color: #a1e8e0;
-}
-
 .inputs__tips-input {
   height: 4.7rem;
   width: 14.7rem;
@@ -198,10 +196,6 @@ body {
   .inputs__tips-input {
     width: 11.7rem;
   }
-}
-
-.inputs__people div {
-  position: relative;
 }
 
 .inputs__people-text {
@@ -225,12 +219,6 @@ body {
     width: 38rem;
     margin-bottom: 0;
   }
-}
-
-.inputs__people-img {
-  position: absolute;
-  left: 1.75rem;
-  top: 1.5rem;
 }
 
 .outputs {
@@ -363,7 +351,7 @@ body {
   outline-color: red;
 }
 
-.bgcolor {
+.active {
   background-color: red;
 }
 /*# sourceMappingURL=main.css.map */
