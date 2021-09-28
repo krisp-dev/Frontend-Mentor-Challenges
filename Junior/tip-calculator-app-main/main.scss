@@ -346,23 +346,20 @@ body {
    &:active {
       transform: translateY(-0.1rem);
    }
-}
 
-.disabled {
-   opacity: 0.2;
+   &:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
 
-   &:hover {
-      background-color: $clr-primary;
-      transform: translateY(0);
-   }
-
-   &:active {
-      transform: translateY(0);
+      &:hover {
+         background-color: $clr-primary;
+         transform: translateY(0);
+      }
    }
 }
 
 //////////////////////////////////////
-///// ERROR CLASSES
+///// ERROR & ACTIVE CLASSES
 .error {
    font-size: 1.6rem;
    font-weight: 700;

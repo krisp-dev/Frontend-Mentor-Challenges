@@ -71,31 +71,10 @@ tips.forEach(function (i) {
       // remove % symbol and calculate totals
       tipNumber = i.textContent.slice(0, -1);
       customTip.value = "";
+      resetBtn.removeAttribute("disabled");
       calcTotals(tipNumber);
 
-      // add event listeners for each of the input fields
-      noOfPeople.addEventListener("keyup", () => {
-         // check if number of people is empty or 0 and display error msg
-         if (noOfPeople.value === "" || noOfPeople.value < 1) {
-            error.classList.add("error-active");
-            noOfPeople.classList.add("error-border");
-            resetTotals();
-         } else {
-            error.classList.remove("error-active");
-            noOfPeople.classList.remove("error-border");
-            calcTotals(tipNumber);
-         }
-      });
-
-      bill.addEventListener("keyup", () => {
-         //fix for when noOfPeople is <1 and bill is changed it displays $Infinity
-         if (noOfPeople.value < 1) {
-            resetTotals();
-         } else {
-            calcTotals(tipNumber);
-         }
-      });
-
+      // calculate custom tip
       customTip.addEventListener("keyup", () => {
          i.classList.remove("active");
          calcTotals(customTip);
@@ -103,7 +82,32 @@ tips.forEach(function (i) {
    });
 });
 
-// reset everything after button click
+// Number of People event listener
+noOfPeople.addEventListener("keyup", () => {
+   // check if number of people is empty or 0 and display error msg
+   if (noOfPeople.value === "" || noOfPeople.value < 1) {
+      error.classList.add("error-active");
+      noOfPeople.classList.add("error-border");
+      resetTotals();
+   } else {
+      resetBtn.removeAttribute("disabled");
+      error.classList.remove("error-active");
+      noOfPeople.classList.remove("error-border");
+      calcTotals(tipNumber);
+   }
+});
+
+// Bill input event listener
+bill.addEventListener("keyup", () => {
+   //fix for when noOfPeople is <1 and bill is changed it displays $Infinity
+   if (noOfPeople.value < 1) {
+      resetTotals();
+   } else {
+      calcTotals(tipNumber);
+   }
+});
+
+// Reset everything after button click
 resetBtn.addEventListener("click", () => {
    bill.value = "";
    noOfPeople.value = "";
@@ -117,4 +121,5 @@ resetBtn.addEventListener("click", () => {
    if (current[0]) {
       current[0].className = current[0].className.replace(" active", "");
    }
+   resetBtn.toggleAttribute("disabled");
 });

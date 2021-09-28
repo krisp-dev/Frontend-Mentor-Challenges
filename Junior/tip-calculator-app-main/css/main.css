@@ -319,16 +319,13 @@ body {
   transform: translateY(-0.1rem);
 }
 
-.disabled {
-  opacity: 0.2;
+.btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
 }
 
-.disabled:hover {
+.btn:disabled:hover {
   background-color: #26c0ab;
-  transform: translateY(0);
-}
-
-.disabled:active {
   transform: translateY(0);
 }
 
