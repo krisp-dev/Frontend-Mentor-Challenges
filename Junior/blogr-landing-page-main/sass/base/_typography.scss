@@ -1,0 +1,33 @@
+//////////////////////////////////////
+///// HEADING STYLING
+%heading {
+}
+
+.heading-1 {
+   @extend %heading;
+}
+
+.heading-2 {
+   @extend %heading;
+}
+
+.heading-3 {
+   @extend %heading;
+}
+
+//////////////////////////////////////
+///// PARAGRAPH STYLING
+%text {
+}
+
+.text-1 {
+   @extend %text;
+}
+
+.text-2 {
+   @extend %text;
+}
+
+.text-3 {
+   @extend %text;
+}
