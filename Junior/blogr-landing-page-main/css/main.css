@@ -1,1 +1,108 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Overpass", sans-serif;
+  font-size: 1.6rem;
+  min-height: 100vh;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+img,
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+.heading-1 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  font-size: 3.4rem;
+}
+
+.text-1 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  font-size: 1.9rem;
+}
+
+.center-content {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: minmax(2.5rem, 1fr) minmax(0, 144rem) minmax(2.5rem, 1fr);
+}
+
+.center-content > * {
+  grid-column: 2;
+}
+
+.stretch-content {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+}
+
+.hero {
+  position: relative;
+  z-index: 10;
+  padding: 5.5rem 0;
+  border-bottom-left-radius: 10rem;
+  background-image: url("../../images/bg-pattern-intro.svg"), linear-gradient(to right bottom, #ff8f70, #ff3d54);
+  background-position: 35% 33.5%;
+  background-size: 350%;
+}
+
+.hero__nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero__nav--logo {
+  height: 3.2rem;
+}
+
+.hero h1 {
+  margin-top: 11rem;
+  padding: 0 0.75rem;
+}
+
+.hero p {
+  margin-top: 1.5rem;
+  margin-bottom: 4.5rem;
+}
+
+.hero__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 10rem;
+}
+/*# sourceMappingURL=main.css.map */
