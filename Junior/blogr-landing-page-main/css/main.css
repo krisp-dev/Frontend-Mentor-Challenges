@@ -69,6 +69,28 @@ select {
   margin-left: calc(50% - 50vw);
 }
 
+.btn-white, .btn-outline {
+  display: block;
+  border: none;
+  min-width: 14rem;
+  padding: 1.5rem;
+  border-radius: 5rem;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-size: 1.7rem;
+}
+
+.btn-white {
+  color: #ff525d;
+  background-color: white;
+}
+
+.btn-outline {
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+}
+
 .hero {
   position: relative;
   z-index: 10;
@@ -102,7 +124,7 @@ select {
 .hero__buttons {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 1.5rem;
   margin-bottom: 10rem;
 }
 /*# sourceMappingURL=main.css.map */
