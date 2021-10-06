@@ -1,0 +1,25 @@
+.banner {
+   background-image: url("../../images/bg-pattern-circles.svg"),
+      linear-gradient(to right bottom, $clr-gradient-200, $clr-gradient-201);
+   background-size: 160%;
+   background-position: center 1175%;
+   background-repeat: no-repeat;
+
+   border-top-right-radius: 10rem;
+   border-bottom-left-radius: 10rem;
+   position: relative;
+   padding: 22rem 0 10rem;
+   margin-top: 16rem;
+
+   &__img {
+      position: absolute;
+      left: -7%;
+      top: -31%;
+   }
+
+   &__content {
+      h2 {
+         margin-bottom: 2rem;
+      }
+   }
+}

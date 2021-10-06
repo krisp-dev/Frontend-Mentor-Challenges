@@ -51,7 +51,7 @@ select {
   font-weight: 600;
   text-align: center;
   color: white;
-  font-size: 3.4rem;
+  font-size: 4rem;
 }
 
 .heading-3 {
@@ -78,6 +78,14 @@ select {
   line-height: 1.8;
 }
 
+.text-3 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: white;
+  line-height: 1.8;
+}
+
 .center-content {
   display: grid;
   grid-template-rows: min-content;
@@ -91,6 +99,28 @@ select {
 .stretch-content {
   width: 100vw;
   margin-left: calc(50% - 50vw);
+}
+
+.banner {
+  background-image: url("../../images/bg-pattern-circles.svg"), linear-gradient(to right bottom, #2c2d3f, #3f4164);
+  background-size: 160%;
+  background-position: center 1175%;
+  background-repeat: no-repeat;
+  border-top-right-radius: 10rem;
+  border-bottom-left-radius: 10rem;
+  position: relative;
+  padding: 22rem 0 10rem;
+  margin-top: 16rem;
+}
+
+.banner__img {
+  position: absolute;
+  left: -7%;
+  top: -31%;
+}
+
+.banner__content h2 {
+  margin-bottom: 2rem;
 }
 
 .btn-white, .btn-outline {
@@ -134,7 +164,6 @@ select {
 
 .hero {
   position: relative;
-  z-index: 10;
   padding: 5.5rem 0;
   border-bottom-left-radius: 10rem;
   background-image: url("../../images/bg-pattern-intro.svg"), linear-gradient(to right bottom, #ff8f70, #ff3d54);

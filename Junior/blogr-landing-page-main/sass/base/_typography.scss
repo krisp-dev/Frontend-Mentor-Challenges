@@ -20,7 +20,7 @@
    text-align: center;
 
    color: $clr-white;
-   font-size: 3.4rem;
+   font-size: 4rem;
 }
 
 .heading-3 {
@@ -60,4 +60,10 @@
 
 .text-3 {
    // @extend %text;
+   font-family: $ff-primary;
+   font-weight: 300;
+   text-align: center;
+
+   color: $clr-white;
+   line-height: 1.8;
 }
