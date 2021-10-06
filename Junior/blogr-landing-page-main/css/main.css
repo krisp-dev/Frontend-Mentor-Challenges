@@ -178,6 +178,49 @@ select {
   margin-bottom: 4rem;
 }
 
+.footer {
+  background-color: #25252d;
+  border-top-right-radius: 10rem;
+  padding: 5rem 0 0;
+  font-family: "Ubuntu", sans-serif;
+  text-align: center;
+  font-size: 1.9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer__logo {
+  padding: 2.5rem 0 7rem;
+}
+
+.footer__product, .footer__company, .footer__connect {
+  margin-bottom: 3rem;
+}
+
+.footer__product-item, .footer__company-item, .footer__connect-item {
+  font-weight: 400;
+  color: #c8c8cb;
+  margin: 1rem 0;
+}
+
+.footer__product-item:first-child, .footer__company-item:first-child, .footer__connect-item:first-child {
+  font-weight: 700;
+  color: white;
+  margin-bottom: 3.5rem;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin: 2rem 0 1rem;
+  color: #c8c8cb;
+}
+
+.attribution a {
+  color: #ff8f70;
+}
+
 .hero {
   position: relative;
   padding: 5.5rem 0;
