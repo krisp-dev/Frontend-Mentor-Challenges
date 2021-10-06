@@ -162,6 +162,22 @@ select {
   margin-bottom: 4rem;
 }
 
+.features2 {
+  padding: 10rem 0;
+}
+
+.features2__img {
+  padding: 4.5rem 0;
+}
+
+.features2__content h3 {
+  margin-bottom: 2rem;
+}
+
+.features2__content p:not(:last-child) {
+  margin-bottom: 4rem;
+}
+
 .hero {
   position: relative;
   padding: 5.5rem 0;
