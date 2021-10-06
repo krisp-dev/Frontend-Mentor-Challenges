@@ -46,12 +46,36 @@ select {
   font-size: 3.4rem;
 }
 
+.heading-2 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: white;
+  font-size: 3.4rem;
+}
+
+.heading-3 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 600;
+  text-align: center;
+  color: #1f3f5b;
+  font-size: 2.8rem;
+}
+
 .text-1 {
   font-family: "Overpass", sans-serif;
   font-weight: 300;
   text-align: center;
   color: white;
   font-size: 1.9rem;
+}
+
+.text-2 {
+  font-family: "Overpass", sans-serif;
+  font-weight: 300;
+  text-align: center;
+  color: #4b5862;
+  line-height: 1.8;
 }
 
 .center-content {
@@ -89,6 +113,23 @@ select {
   color: white;
   background-color: transparent;
   border: 1px solid white;
+}
+
+.features {
+  padding: 10rem 0;
+}
+
+.features__img {
+  padding: 4.5rem 0;
+}
+
+.features__content h3 {
+  padding: 0 5rem;
+  margin-bottom: 2rem;
+}
+
+.features__content p:not(:last-child) {
+  margin-bottom: 4rem;
 }
 
 .hero {
