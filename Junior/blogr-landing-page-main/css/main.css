@@ -103,8 +103,8 @@ select {
 
 .banner {
   background-image: url("../../images/bg-pattern-circles.svg"), linear-gradient(to right bottom, #2c2d3f, #3f4164);
-  background-size: 160%;
-  background-position: center 1175%;
+  background-size: cover;
+  background-position: center 100%;
   background-repeat: no-repeat;
   border-top-right-radius: 10rem;
   border-bottom-left-radius: 10rem;
@@ -114,9 +114,13 @@ select {
 }
 
 .banner__img {
+  grid-column: 1 / -1;
   position: absolute;
-  left: -7%;
-  top: -31%;
+  top: -18rem;
+  max-width: 40rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
 }
 
 .banner__content h2 {
@@ -151,6 +155,8 @@ select {
 
 .features__img {
   padding: 4.5rem 0;
+  display: flex;
+  justify-content: center;
 }
 
 .features__content h3 {
@@ -168,6 +174,8 @@ select {
 
 .features2__img {
   padding: 4.5rem 0;
+  display: flex;
+  justify-content: center;
 }
 
 .features2__content h3 {
