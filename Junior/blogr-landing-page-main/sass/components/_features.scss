@@ -1,5 +1,11 @@
 .features {
    padding: 10rem 0;
+   position: relative;
+   overflow: hidden;
+
+   @include media(medium) {
+      padding: 16rem 0 25rem;
+   }
 
    &__container {
       @include media(small) {
@@ -7,6 +13,10 @@
          flex-direction: row-reverse;
          gap: 2rem;
          margin-top: 5rem;
+      }
+
+      @include media(medium) {
+         margin-top: 10rem;
       }
    }
 
@@ -19,12 +29,28 @@
          padding: 0;
          align-self: center;
       }
+
+      @include media(medium) {
+         img {
+            position: absolute;
+            top: 7rem;
+            right: -27.5rem;
+         }
+      }
    }
 
    &__content {
       @include media(small) {
          width: 100%;
          margin-left: 3rem;
+      }
+
+      @include media(medium) {
+         padding: 0 13.5rem 0 3rem;
+      }
+
+      @include media(large) {
+         padding: 0 0 0 13.5rem;
       }
 
       h3 {
@@ -34,10 +60,18 @@
          @include media(small) {
             padding: 0;
          }
+
+         @include media(medium) {
+            margin-bottom: 2.5rem;
+         }
       }
 
       p:not(:last-child) {
          margin-bottom: 4rem;
+
+         @include media(medium) {
+            margin-bottom: 8rem;
+         }
       }
    }
 }

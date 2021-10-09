@@ -9,15 +9,15 @@
    }
 
    @if $breakpoint == medium {
-      //1250px / 16 = 78.125em
-      @media (min-width: 78.125em) {
+      //1100px / 16 = 68.75em
+      @media (min-width: 68.75em) {
          @content;
       }
    }
 
    @if $breakpoint == large {
-      //1920px / 16 = 120em
-      @media (min-width: 120em) {
+      //1440px / 16 = 90em
+      @media (min-width: 90em) {
          @content;
       }
    }

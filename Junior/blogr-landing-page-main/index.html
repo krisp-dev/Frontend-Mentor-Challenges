@@ -36,14 +36,20 @@
       </header>
 
       <main>
-         <section class="features">
+         <section class="features stretch-content">
             <h2 class="heading-2--dark">Designed for the future</h2>
             <div class="features__container">
                <div class="features__img stretch-content">
-                  <img
-                     src="images/illustration-editor-mobile.svg"
-                     alt="Editor illustration"
-                  />
+                  <picture>
+                     <source
+                        srcset="images/illustration-editor-desktop.svg"
+                        media="(min-width: 68.75em)"
+                     />
+                     <img
+                        src="images/illustration-editor-mobile.svg"
+                        alt="Editor illustration"
+                     />
+                  </picture>
                </div>
                <div class="features__content">
                   <h3 class="heading-3">Introducing an extensible editor</h3>
