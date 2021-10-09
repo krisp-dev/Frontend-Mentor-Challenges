@@ -2,18 +2,38 @@
    padding: 10rem 0;
 
    &__container {
+      @include media(small) {
+         display: flex;
+         flex-direction: row-reverse;
+         gap: 2rem;
+         margin-top: 5rem;
+      }
    }
 
    &__img {
       padding: 4.5rem 0;
       display: flex;
       justify-content: center;
+
+      @include media(small) {
+         padding: 0;
+         align-self: center;
+      }
    }
 
    &__content {
+      @include media(small) {
+         width: 100%;
+         margin-left: 3rem;
+      }
+
       h3 {
          padding: 0 5rem;
          margin-bottom: 2rem;
+
+         @include media(small) {
+            padding: 0;
+         }
       }
 
       p:not(:last-child) {

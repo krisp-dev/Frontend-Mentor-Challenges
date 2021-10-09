@@ -11,6 +11,10 @@
 
    color: $clr-white;
    font-size: 3.4rem;
+
+   @include media(small) {
+      font-size: 4.2rem;
+   }
 }
 
 .heading-2 {
@@ -21,6 +25,12 @@
 
    color: $clr-white;
    font-size: 4rem;
+
+   &--dark {
+      color: $clr-primary-200;
+      font-size: 3rem;
+      text-align: center;
+   }
 }
 
 .heading-3 {
@@ -31,6 +41,11 @@
 
    color: $clr-primary-200;
    font-size: 2.8rem;
+
+   @include media(small) {
+      text-align: left;
+      font-size: 2.4rem;
+   }
 }
 
 //////////////////////////////////////
@@ -56,6 +71,10 @@
 
    color: $clr-neutral-200;
    line-height: 1.8;
+
+   @include media(small) {
+      text-align: left;
+   }
 }
 
 .text-3 {

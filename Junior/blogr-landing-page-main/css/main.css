@@ -46,6 +46,12 @@ select {
   font-size: 3.4rem;
 }
 
+@media (min-width: 50em) {
+  .heading-1 {
+    font-size: 4.2rem;
+  }
+}
+
 .heading-2 {
   font-family: "Overpass", sans-serif;
   font-weight: 600;
@@ -54,12 +60,25 @@ select {
   font-size: 4rem;
 }
 
+.heading-2--dark {
+  color: #1f3f5b;
+  font-size: 3rem;
+  text-align: center;
+}
+
 .heading-3 {
   font-family: "Overpass", sans-serif;
   font-weight: 600;
   text-align: center;
   color: #1f3f5b;
   font-size: 2.8rem;
+}
+
+@media (min-width: 50em) {
+  .heading-3 {
+    text-align: left;
+    font-size: 2.4rem;
+  }
 }
 
 .text-1 {
@@ -76,6 +95,12 @@ select {
   text-align: center;
   color: #4b5862;
   line-height: 1.8;
+}
+
+@media (min-width: 50em) {
+  .text-2 {
+    text-align: left;
+  }
 }
 
 .text-3 {
@@ -153,15 +178,44 @@ select {
   padding: 10rem 0;
 }
 
+@media (min-width: 50em) {
+  .features__container {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 2rem;
+    margin-top: 5rem;
+  }
+}
+
 .features__img {
   padding: 4.5rem 0;
   display: flex;
   justify-content: center;
 }
 
+@media (min-width: 50em) {
+  .features__img {
+    padding: 0;
+    align-self: center;
+  }
+}
+
+@media (min-width: 50em) {
+  .features__content {
+    width: 100%;
+    margin-left: 3rem;
+  }
+}
+
 .features__content h3 {
   padding: 0 5rem;
   margin-bottom: 2rem;
+}
+
+@media (min-width: 50em) {
+  .features__content h3 {
+    padding: 0;
+  }
 }
 
 .features__content p:not(:last-child) {
@@ -172,10 +226,37 @@ select {
   padding: 3rem 0 10rem;
 }
 
+@media (min-width: 50em) {
+  .features2 {
+    padding-top: 13rem;
+  }
+}
+
+@media (min-width: 50em) {
+  .features2__container {
+    display: flex;
+    gap: 2rem;
+  }
+}
+
 .features2__img {
   padding: 4.5rem 0;
   display: flex;
   justify-content: center;
+}
+
+@media (min-width: 50em) {
+  .features2__img {
+    padding: 0;
+    align-self: center;
+    margin-left: -15%;
+  }
+}
+
+@media (min-width: 50em) {
+  .features2__content {
+    width: 100%;
+  }
 }
 
 .features2__content h3 {
@@ -196,6 +277,15 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media (min-width: 50em) {
+  .footer {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    text-align: left;
+  }
 }
 
 .footer__logo {
@@ -236,6 +326,12 @@ select {
   background-image: url("../../images/bg-pattern-intro.svg"), linear-gradient(to right bottom, #ff8f70, #ff3d54);
   background-position: 35% 33.5%;
   background-size: 350%;
+}
+
+@media (min-width: 50em) {
+  .hero {
+    background-size: 200%;
+  }
 }
 
 .hero__nav {

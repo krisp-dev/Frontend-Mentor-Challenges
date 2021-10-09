@@ -1,16 +1,34 @@
 .features2 {
    padding: 3rem 0 10rem;
 
+   @include media(small) {
+      padding-top: 13rem;
+   }
+
    &__container {
+      @include media(small) {
+         display: flex;
+         gap: 2rem;
+      }
    }
 
    &__img {
       padding: 4.5rem 0;
       display: flex;
       justify-content: center;
+
+      @include media(small) {
+         padding: 0;
+         align-self: center;
+         margin-left: -15%;
+      }
    }
 
    &__content {
+      @include media(small) {
+         width: 100%;
+      }
+
       h3 {
          margin-bottom: 2rem;
       }

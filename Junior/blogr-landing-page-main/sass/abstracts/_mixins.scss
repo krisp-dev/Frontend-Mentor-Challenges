@@ -1,21 +1,21 @@
 //////////////////////////////////////
 ///// MIXINS MEDIA QUERY MANAGER
 @mixin media($breakpoint) {
-   @if $breakpoint == medium {
-      //900px / 16 = 56.25em
-      @media (min-width: 56.25em) {
+   @if $breakpoint == small {
+      //800px / 16 = 50em
+      @media (min-width: 50em) {
          @content;
       }
    }
 
-   @if $breakpoint == large {
+   @if $breakpoint == medium {
       //1250px / 16 = 78.125em
       @media (min-width: 78.125em) {
          @content;
       }
    }
 
-   @if $breakpoint == largest {
+   @if $breakpoint == large {
       //1920px / 16 = 120em
       @media (min-width: 120em) {
          @content;
