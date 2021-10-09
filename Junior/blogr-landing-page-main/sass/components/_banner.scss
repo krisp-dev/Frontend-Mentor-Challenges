@@ -11,6 +11,10 @@
    padding: 22rem 0 10rem;
    margin-top: 16rem;
 
+   @include media(large) {
+      padding: 12.5rem 0;
+   }
+
    &__img {
       grid-column: 1 / -1;
 
@@ -21,9 +25,23 @@
       left: 0;
       right: 0;
       margin: 0 auto;
+
+      @include media(large) {
+         margin: 0;
+         left: 5rem;
+         top: -6.75rem;
+         max-width: 55.2rem;
+      }
    }
 
    &__content {
+      @include media(large) {
+         width: 50%;
+         margin-left: auto;
+         margin-right: 5rem;
+         padding-right: 10rem;
+      }
+
       h2 {
          margin-bottom: 2rem;
       }

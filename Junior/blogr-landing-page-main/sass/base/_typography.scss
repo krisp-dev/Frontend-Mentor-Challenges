@@ -26,6 +26,10 @@
    color: $clr-white;
    font-size: 4rem;
 
+   @include media(large) {
+      text-align: left;
+   }
+
    &--dark {
       color: $clr-primary-200;
       font-size: 3rem;
@@ -93,4 +97,8 @@
 
    color: $clr-white;
    line-height: 1.8;
+
+   @include media(large) {
+      text-align: left;
+   }
 }

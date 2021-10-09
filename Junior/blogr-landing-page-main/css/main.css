@@ -60,6 +60,12 @@ select {
   font-size: 4rem;
 }
 
+@media (min-width: 90em) {
+  .heading-2 {
+    text-align: left;
+  }
+}
+
 .heading-2--dark {
   color: #1f3f5b;
   font-size: 3rem;
@@ -123,6 +129,12 @@ select {
   line-height: 1.8;
 }
 
+@media (min-width: 90em) {
+  .text-3 {
+    text-align: left;
+  }
+}
+
 .center-content {
   display: grid;
   grid-template-rows: min-content;
@@ -150,6 +162,12 @@ select {
   margin-top: 16rem;
 }
 
+@media (min-width: 90em) {
+  .banner {
+    padding: 12.5rem 0;
+  }
+}
+
 .banner__img {
   grid-column: 1 / -1;
   position: absolute;
@@ -158,6 +176,24 @@ select {
   left: 0;
   right: 0;
   margin: 0 auto;
+}
+
+@media (min-width: 90em) {
+  .banner__img {
+    margin: 0;
+    left: 5rem;
+    top: -6.75rem;
+    max-width: 55.2rem;
+  }
+}
+
+@media (min-width: 90em) {
+  .banner__content {
+    width: 50%;
+    margin-left: auto;
+    margin-right: 5rem;
+    padding-right: 10rem;
+  }
 }
 
 .banner__content h2 {
