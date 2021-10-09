@@ -1,7 +1,7 @@
 .features {
-   padding: 10rem 0;
+   padding: 10rem 2.5rem;
    position: relative;
-   overflow: hidden;
+   overflow-x: hidden;
 
    @include media(medium) {
       padding: 16rem 0 25rem;

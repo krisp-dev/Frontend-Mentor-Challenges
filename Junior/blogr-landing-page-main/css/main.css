@@ -223,9 +223,9 @@ select {
 }
 
 .features {
-  padding: 10rem 0;
+  padding: 10rem 2.5rem;
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 @media (min-width: 68.75em) {
@@ -317,12 +317,20 @@ select {
 }
 
 .features2 {
-  padding: 3rem 0 10rem;
+  padding: 3rem 2.5rem 10rem;
+  position: relative;
+  overflow-x: hidden;
 }
 
 @media (min-width: 50em) {
   .features2 {
     padding-top: 13rem;
+  }
+}
+
+@media (min-width: 68.75em) {
+  .features2 {
+    padding: 20rem 0 30rem;
   }
 }
 
@@ -347,9 +355,29 @@ select {
   }
 }
 
+@media (min-width: 68.75em) {
+  .features2__img img {
+    position: absolute;
+    top: 12rem;
+    left: -27.5rem;
+  }
+}
+
 @media (min-width: 50em) {
   .features2__content {
     width: 100%;
+  }
+}
+
+@media (min-width: 68.75em) {
+  .features2__content {
+    padding: 10rem 5rem 0 25rem;
+  }
+}
+
+@media (min-width: 90em) {
+  .features2__content {
+    padding-right: 17rem;
   }
 }
 
@@ -357,8 +385,20 @@ select {
   margin-bottom: 2rem;
 }
 
+@media (min-width: 68.75em) {
+  .features2__content h3 {
+    margin-bottom: 2.5rem;
+  }
+}
+
 .features2__content p:not(:last-child) {
   margin-bottom: 4rem;
+}
+
+@media (min-width: 68.75em) {
+  .features2__content p:not(:last-child) {
+    margin-bottom: 8rem;
+  }
 }
 
 .footer {

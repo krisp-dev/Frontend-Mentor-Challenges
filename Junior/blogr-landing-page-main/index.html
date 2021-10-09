@@ -91,13 +91,19 @@
             </div>
          </section>
 
-         <section class="features2">
+         <section class="features2 stretch-content">
             <div class="features2__container">
                <div class="features2__img stretch-content">
-                  <img
-                     src="images/illustration-laptop-mobile.svg"
-                     alt="Laptop illustration"
-                  />
+                  <picture>
+                     <source
+                        srcset="images/illustration-laptop-desktop.svg"
+                        media="(min-width: 68.75em)"
+                     />
+                     <img
+                        src="images/illustration-laptop-mobile.svg"
+                        alt="Laptop illustration"
+                     />
+                  </picture>
                </div>
                <div class="features2__content">
                   <h3 class="heading-3">Free, open, simple</h3>
