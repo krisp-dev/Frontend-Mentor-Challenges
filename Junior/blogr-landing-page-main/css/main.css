@@ -499,6 +499,14 @@ select {
   font-weight: 700;
 }
 
+.dropdown-open .dropdown-menu.dropdown-active {
+  display: block;
+}
+
+.nav-container.dropdown-open .nav-toggle {
+  color: red;
+}
+
 .hero {
   position: relative;
   padding: 5.5rem 0;
