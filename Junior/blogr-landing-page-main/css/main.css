@@ -453,6 +453,52 @@ select {
   color: #ff8f70;
 }
 
+.nav {
+  position: absolute;
+  top: 12.5rem;
+  right: 2.5rem;
+  background-color: white;
+  width: 32.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2.5rem 0;
+}
+
+.nav-container {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-toggle {
+  font-size: 2.25rem;
+  color: #1f3f5b;
+  font-weight: 700;
+}
+
+.dropdown-menu {
+  display: none;
+  background-color: #c8c8cb;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  padding: 1rem 9rem;
+}
+
+.dropdown-menu li {
+  margin: 1rem 0;
+}
+
+.dropdown-menu a {
+  font-size: 1.7rem;
+  color: #1f3f5b;
+  text-decoration: none;
+  font-weight: 700;
+}
+
 .hero {
   position: relative;
   padding: 5.5rem 0;
