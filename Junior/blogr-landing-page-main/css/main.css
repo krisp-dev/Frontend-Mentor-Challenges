@@ -474,8 +474,22 @@ select {
   align-items: center;
 }
 
+@media (min-width: 68.75em) {
+  .hero__nav {
+    justify-content: flex-start;
+    gap: 9rem;
+    margin: 0 14rem;
+  }
+}
+
 .hero__nav--logo {
   height: 3.2rem;
+}
+
+@media (min-width: 68.75em) {
+  .hero__nav--logo {
+    height: 4rem;
+  }
 }
 
 .hero__nav--burger {
@@ -487,6 +501,12 @@ select {
 
 .hero__nav--burger-active {
   background-image: url(../../images/icon-close.svg);
+}
+
+@media (min-width: 68.75em) {
+  .hero__nav--burger {
+    display: none;
+  }
 }
 
 .hero h1 {
@@ -518,6 +538,21 @@ select {
   padding: 3rem 0;
   border-radius: 1rem;
   box-shadow: 0 1rem 2rem 0.7rem rgba(0, 0, 0, 0.25);
+  display: none;
+}
+
+@media (min-width: 68.75em) {
+  .nav {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    top: 0;
+    padding: 0;
+    background-color: transparent;
+    box-shadow: none;
+    width: 100%;
+  }
 }
 
 .nav hr {
@@ -526,6 +561,12 @@ select {
   height: 0.15rem;
   border: none;
   background-color: rgba(200, 200, 203, 0.5);
+}
+
+@media (min-width: 68.75em) {
+  .nav hr {
+    display: none;
+  }
 }
 
 .nav--active {
@@ -539,13 +580,29 @@ select {
   align-items: center;
 }
 
+@media (min-width: 68.75em) {
+  .nav-container {
+    margin: 0;
+    margin-right: 3rem;
+  }
+}
+
 .nav-toggle {
   display: flex;
   align-items: center;
   gap: 1rem;
   font-size: 2.25rem;
   color: #1f3f5b;
-  font-weight: 700;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+}
+
+@media (min-width: 68.75em) {
+  .nav-toggle {
+    font-size: 1.7rem;
+    color: white;
+    cursor: pointer;
+  }
 }
 
 .dropdown-menu {
@@ -556,9 +613,28 @@ select {
   opacity: 0.88;
 }
 
+@media (min-width: 68.75em) {
+  .dropdown-menu {
+    position: absolute;
+    width: 17rem;
+    margin-left: 5rem;
+    margin-top: 4rem;
+    background-color: white;
+    opacity: 1;
+    box-shadow: 0 1rem 2rem 0.7rem rgba(0, 0, 0, 0.25);
+    border-radius: 0.5rem;
+  }
+}
+
 .dropdown-menu ul {
   list-style: none;
   padding: 1rem 9rem;
+}
+
+@media (min-width: 68.75em) {
+  .dropdown-menu ul {
+    padding: 1rem 2rem;
+  }
 }
 
 .dropdown-menu li {
@@ -566,11 +642,23 @@ select {
   text-align: center;
 }
 
+@media (min-width: 68.75em) {
+  .dropdown-menu li {
+    text-align: left;
+  }
+}
+
 .dropdown-menu a {
   font-size: 1.7rem;
   color: #1f3f5b;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 500;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.dropdown-menu a:hover {
+  font-weight: 900;
+  cursor: pointer;
 }
 
 .dropdown-open .dropdown-menu.dropdown-active {
@@ -586,6 +674,14 @@ select {
   transition: all 0.25s;
 }
 
+@media (min-width: 68.75em) {
+  .nav-container.dropdown-open .nav-toggle {
+    opacity: 1;
+    text-decoration: underline;
+    text-decoration-thickness: 0.25rem;
+  }
+}
+
 .nav-buttonbox {
   display: flex;
   flex-direction: column;
@@ -594,12 +690,27 @@ select {
   gap: 2rem;
 }
 
+@media (min-width: 68.75em) {
+  .nav-buttonbox {
+    flex-direction: row;
+    margin-top: 0;
+    margin-left: auto;
+  }
+}
+
 .nav-buttonbox a {
   text-decoration: none;
-  font-family: "Overpass", sans-serif;
+  font-family: "Ubuntu", sans-serif;
   font-size: 2.25rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #1f3f5b;
+}
+
+@media (min-width: 68.75em) {
+  .nav-buttonbox a {
+    font-size: 1.7rem;
+    color: white;
+  }
 }
 
 .nav-buttonbox button {
@@ -609,7 +720,41 @@ select {
   color: white;
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
-  padding: 1.75rem 4rem;
+  padding: 1.5rem 0;
   border-radius: 10rem;
+}
+
+@media (min-width: 68.75em) {
+  .nav-buttonbox button {
+    width: 14rem;
+    font-size: 1.7rem;
+    background-image: none;
+    background-color: white;
+    color: #ff525d;
+  }
+  .nav-buttonbox button:hover, .nav-buttonbox button:active {
+    background-color: #ff7a85;
+    color: white;
+  }
+}
+
+.nav-img--dark {
+  display: block;
+}
+
+@media (min-width: 68.75em) {
+  .nav-img--dark {
+    display: none;
+  }
+}
+
+.nav-img--light {
+  display: none;
+}
+
+@media (min-width: 68.75em) {
+  .nav-img--light {
+    display: block;
+  }
 }
 /*# sourceMappingURL=main.css.map */

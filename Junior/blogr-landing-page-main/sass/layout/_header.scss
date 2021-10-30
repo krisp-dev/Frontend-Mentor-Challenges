@@ -16,8 +16,18 @@
       justify-content: space-between;
       align-items: center;
 
+      @include media(medium) {
+         justify-content: flex-start;
+         gap: 9rem;
+         margin: 0 14rem;
+      }
+
       &--logo {
          height: 3.2rem;
+
+         @include media(medium) {
+            height: 4rem;
+         }
       }
 
       &--burger {
@@ -28,6 +38,10 @@
 
          &-active {
             background-image: url(../../images/icon-close.svg);
+         }
+
+         @include media(medium) {
+            display: none;
          }
       }
    }
