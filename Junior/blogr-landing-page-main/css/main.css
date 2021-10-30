@@ -478,6 +478,12 @@ select {
   .hero__nav {
     justify-content: flex-start;
     gap: 9rem;
+    margin: 0 4rem;
+  }
+}
+
+@media (min-width: 90em) {
+  .hero__nav {
     margin: 0 14rem;
   }
 }

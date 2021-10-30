@@ -19,6 +19,10 @@
       @include media(medium) {
          justify-content: flex-start;
          gap: 9rem;
+         margin: 0 4rem;
+      }
+
+      @include media(large) {
          margin: 0 14rem;
       }
 
