@@ -7,15 +7,26 @@
    display: flex;
    flex-direction: column;
    align-items: center;
-   padding: 2.5rem 0;
-   display: none;
+   padding: 3rem 0;
+   border-radius: 1rem;
+   box-shadow: 0 1rem 2rem 0.7rem rgba(0, 0, 0, 0.25);
+
+   // display: none;
+
+   hr {
+      width: 80%;
+      margin: 0 auto;
+      height: 0.15rem;
+      border: none;
+      background-color: hsla(240, 3%, 79%, 0.5);
+   }
 
    &--active {
       display: block;
    }
 
    &-container {
-      margin: 1rem 0;
+      margin: 2.5rem 0;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -23,7 +34,7 @@
    &-toggle {
       display: flex;
       align-items: center;
-      gap: 2rem;
+      gap: 1rem;
       font-size: 2.25rem;
       color: $clr-primary-200;
       font-weight: 700;
@@ -33,13 +44,17 @@
 .dropdown-menu {
    display: none;
    background-color: hsla(240, 3%, 79%, 0.5);
+   margin-top: 1.75rem;
+   border-radius: 1rem;
+   opacity: 0.88;
 
    ul {
       list-style: none;
       padding: 1rem 9rem;
    }
    li {
-      margin: 1rem 0;
+      margin: 1.5rem 0;
+      text-align: center;
    }
    a {
       font-size: 1.7rem;
@@ -52,17 +67,46 @@
 .dropdown-open {
    .dropdown-menu.dropdown-active {
       display: block;
-      opacity: 0.8;
    }
 }
 
 .nav-container.dropdown-open {
    .nav-toggle {
-      opacity: 0.8;
-      transition: all 0.25s;
+      opacity: 0.88;
       img {
          transform: rotate(180deg);
          transition: all 0.25s;
       }
+   }
+}
+
+.nav-buttonbox {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   margin-top: 2rem;
+   gap: 2rem;
+
+   a {
+      text-decoration: none;
+      font-family: $ff-primary;
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: $clr-primary-200;
+   }
+
+   button {
+      border: none;
+      background-image: linear-gradient(
+         to right,
+         $clr-gradient-100,
+         $clr-gradient-101
+      );
+      font-size: 2.25rem;
+      color: $clr-white;
+      font-family: $ff-secondary;
+      font-weight: 700;
+      padding: 1.75rem 4rem;
+      border-radius: 10rem;
    }
 }

@@ -515,8 +515,17 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2.5rem 0;
-  display: none;
+  padding: 3rem 0;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem 0.7rem rgba(0, 0, 0, 0.25);
+}
+
+.nav hr {
+  width: 80%;
+  margin: 0 auto;
+  height: 0.15rem;
+  border: none;
+  background-color: rgba(200, 200, 203, 0.5);
 }
 
 .nav--active {
@@ -524,7 +533,7 @@ select {
 }
 
 .nav-container {
-  margin: 1rem 0;
+  margin: 2.5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -533,7 +542,7 @@ select {
 .nav-toggle {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1rem;
   font-size: 2.25rem;
   color: #1f3f5b;
   font-weight: 700;
@@ -542,6 +551,9 @@ select {
 .dropdown-menu {
   display: none;
   background-color: rgba(200, 200, 203, 0.5);
+  margin-top: 1.75rem;
+  border-radius: 1rem;
+  opacity: 0.88;
 }
 
 .dropdown-menu ul {
@@ -550,7 +562,8 @@ select {
 }
 
 .dropdown-menu li {
-  margin: 1rem 0;
+  margin: 1.5rem 0;
+  text-align: center;
 }
 
 .dropdown-menu a {
@@ -562,16 +575,41 @@ select {
 
 .dropdown-open .dropdown-menu.dropdown-active {
   display: block;
-  opacity: 0.8;
 }
 
 .nav-container.dropdown-open .nav-toggle {
-  opacity: 0.8;
-  transition: all 0.25s;
+  opacity: 0.88;
 }
 
 .nav-container.dropdown-open .nav-toggle img {
   transform: rotate(180deg);
   transition: all 0.25s;
+}
+
+.nav-buttonbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+.nav-buttonbox a {
+  text-decoration: none;
+  font-family: "Overpass", sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #1f3f5b;
+}
+
+.nav-buttonbox button {
+  border: none;
+  background-image: linear-gradient(to right, #ff8f70, #ff3d54);
+  font-size: 2.25rem;
+  color: white;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  padding: 1.75rem 4rem;
+  border-radius: 10rem;
 }
 /*# sourceMappingURL=main.css.map */
