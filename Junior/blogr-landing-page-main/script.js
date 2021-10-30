@@ -1,10 +1,22 @@
 // Get all menu items from document
 document.querySelectorAll(".nav-toggle").forEach(dropDownFunc);
 
+// Burger icon opening menu
+const navToggle = function () {
+   const burger = document.querySelector(".hero__nav--burger");
+   const nav = document.querySelector(".nav");
+
+   burger.addEventListener("click", function () {
+      // Toggle the nav bar
+      nav.classList.toggle("nav--active");
+
+      // Toggle burger close icon
+      burger.classList.toggle("hero__nav--burger-active");
+   });
+};
+
 // Dropdown menu Open and Close function
 function dropDownFunc(dropDown) {
-   console.log(dropDown.classList.contains("click-dropdown"));
-
    if (dropDown.classList.contains("click-dropdown") === true) {
       dropDown.addEventListener("click", function (event) {
          event.preventDefault();
@@ -49,7 +61,4 @@ const closeDropdown = function () {
    });
 };
 
-// Close the dropdown on mouse out from the dropdown list
-document.querySelectorAll(".dropdown-menu").forEach(function (dropDownList) {
-   dropDownList.onmouseleave = closeDropdown;
-});
+navToggle();
