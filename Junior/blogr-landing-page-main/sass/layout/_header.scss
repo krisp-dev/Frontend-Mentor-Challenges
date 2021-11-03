@@ -2,7 +2,7 @@
    position: relative;
    padding: 5.5rem 0;
    border-bottom-left-radius: 10rem;
-   background-image: url("../../images/bg-pattern-intro.svg"),
+   background-image: url("../images/bg-pattern-intro.svg"),
       linear-gradient(to right bottom, $clr-gradient-100, $clr-gradient-101);
    background-position: 35% 33.5%;
    background-size: 350%;
@@ -41,11 +41,11 @@
       &--burger {
          width: 3.2rem;
          height: 3.2rem;
-         background-image: url(../../images/icon-hamburger.svg);
+         background-image: url(../images/icon-hamburger.svg);
          background-repeat: no-repeat;
 
          &-active {
-            background-image: url(../../images/icon-close.svg);
+            background-image: url(../images/icon-close.svg);
          }
 
          @include media(medium) {

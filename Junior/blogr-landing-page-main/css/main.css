@@ -169,7 +169,7 @@ select {
 }
 
 .banner {
-  background-image: url("../../images/bg-pattern-circles.svg"), linear-gradient(to right bottom, #2c2d3f, #3f4164);
+  background-image: url("../images/bg-pattern-circles.svg"), linear-gradient(to right bottom, #2c2d3f, #3f4164);
   background-size: cover;
   background-position: center 100%;
   background-repeat: no-repeat;
@@ -504,7 +504,7 @@ select {
   position: relative;
   padding: 5.5rem 0;
   border-bottom-left-radius: 10rem;
-  background-image: url("../../images/bg-pattern-intro.svg"), linear-gradient(to right bottom, #ff8f70, #ff3d54);
+  background-image: url("../images/bg-pattern-intro.svg"), linear-gradient(to right bottom, #ff8f70, #ff3d54);
   background-position: 35% 33.5%;
   background-size: 350%;
 }
@@ -554,12 +554,12 @@ select {
 .hero__nav--burger {
   width: 3.2rem;
   height: 3.2rem;
-  background-image: url(../../images/icon-hamburger.svg);
+  background-image: url(../images/icon-hamburger.svg);
   background-repeat: no-repeat;
 }
 
 .hero__nav--burger-active {
-  background-image: url(../../images/icon-close.svg);
+  background-image: url(../images/icon-close.svg);
 }
 
 @media (min-width: 68.75em) {
