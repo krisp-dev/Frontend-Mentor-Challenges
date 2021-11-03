@@ -560,6 +560,7 @@ select {
 }
 
 .hero__nav--burger-active {
+  cursor: pointer;
   background-image: url(../images/icon-close.svg);
 }
 

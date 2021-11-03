@@ -46,6 +46,7 @@
          background-repeat: no-repeat;
 
          &-active {
+            cursor: pointer;
             background-image: url(../images/icon-close.svg);
          }
 
