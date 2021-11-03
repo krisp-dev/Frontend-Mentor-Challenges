@@ -255,7 +255,7 @@ select {
 .features {
   padding: 10rem 2.5rem;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 @media (min-width: 68.75em) {
