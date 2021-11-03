@@ -552,6 +552,7 @@ select {
 }
 
 .hero__nav--burger {
+  cursor: pointer;
   width: 3.2rem;
   height: 3.2rem;
   background-image: url(../images/icon-hamburger.svg);
