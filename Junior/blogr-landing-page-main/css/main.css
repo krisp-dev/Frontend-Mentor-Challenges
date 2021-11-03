@@ -52,6 +52,18 @@ select {
   }
 }
 
+@media (min-width: 68.75em) {
+  .heading-1 {
+    font-size: 5.35rem;
+  }
+}
+
+@media (min-width: 90em) {
+  .heading-1 {
+    font-size: 6.5rem;
+  }
+}
+
 .heading-2 {
   font-family: "Overpass", sans-serif;
   font-weight: 600;
@@ -105,6 +117,18 @@ select {
   text-align: center;
   color: white;
   font-size: 1.9rem;
+}
+
+@media (min-width: 68.75em) {
+  .text-1 {
+    font-size: 2.05rem;
+  }
+}
+
+@media (min-width: 90em) {
+  .text-1 {
+    font-size: 2.2rem;
+  }
 }
 
 .text-2 {
@@ -434,6 +458,12 @@ select {
   }
 }
 
+@media (min-width: 90em) {
+  .footer {
+    padding: 5rem 0;
+  }
+}
+
 .footer__logo {
   padding: 2.5rem 0 7rem;
 }
@@ -447,6 +477,12 @@ select {
   color: #c8c8cb;
   margin: 1rem 0;
   cursor: pointer;
+}
+
+@media (min-width: 90em) {
+  .footer__product-item, .footer__company-item, .footer__connect-item {
+    margin: 1.75rem 0;
+  }
 }
 
 .footer__product-item:first-child, .footer__company-item:first-child, .footer__connect-item:first-child {
