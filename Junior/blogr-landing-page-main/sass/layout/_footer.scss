@@ -30,11 +30,16 @@
          font-weight: 400;
          color: $clr-neutral-100;
          margin: 1rem 0;
+         cursor: pointer;
 
          &:first-child {
             font-weight: 700;
             color: $clr-white;
             margin-bottom: 3.5rem;
+         }
+
+         &:hover {
+            text-decoration: underline;
          }
       }
    }

@@ -209,6 +209,8 @@ select {
   font-family: "Ubuntu", sans-serif;
   font-weight: 700;
   font-size: 1.7rem;
+  cursor: pointer;
+  transition: all 0.25s;
 }
 
 .btn-white {
@@ -216,10 +218,20 @@ select {
   background-color: white;
 }
 
+.btn-white:hover {
+  color: white;
+  background-color: #ff7a85;
+}
+
 .btn-outline {
   color: white;
   background-color: transparent;
   border: 1px solid white;
+}
+
+.btn-outline:hover {
+  color: #ff525d;
+  background-color: white;
 }
 
 .features {
@@ -434,12 +446,17 @@ select {
   font-weight: 400;
   color: #c8c8cb;
   margin: 1rem 0;
+  cursor: pointer;
 }
 
 .footer__product-item:first-child, .footer__company-item:first-child, .footer__connect-item:first-child {
   font-weight: 700;
   color: white;
   margin-bottom: 3.5rem;
+}
+
+.footer__product-item:hover, .footer__company-item:hover, .footer__connect-item:hover {
+  text-decoration: underline;
 }
 
 .attribution {
@@ -710,6 +727,7 @@ select {
   font-size: 2.25rem;
   font-weight: 500;
   color: #1f3f5b;
+  cursor: pointer;
 }
 
 @media (min-width: 68.75em) {
@@ -728,11 +746,13 @@ select {
   font-weight: 700;
   padding: 1.5rem 0;
   border-radius: 10rem;
+  width: 14rem;
+  cursor: pointer;
+  transition: all 0.25s;
 }
 
 @media (min-width: 68.75em) {
   .nav-buttonbox button {
-    width: 14rem;
     font-size: 1.7rem;
     background-image: none;
     background-color: white;

@@ -7,12 +7,20 @@
    font-family: $ff-secondary;
    font-weight: 700;
    font-size: 1.7rem;
+   cursor: pointer;
+
+   transition: all 0.25s;
 }
 
 .btn-white {
    @extend %button;
    color: $clr-primary-100;
    background-color: $clr-white;
+
+   &:hover {
+      color: $clr-white;
+      background-color: $clr-primary-101;
+   }
 }
 
 .btn-outline {
@@ -20,4 +28,9 @@
    color: $clr-white;
    background-color: transparent;
    border: 1px solid white;
+
+   &:hover {
+      color: $clr-primary-100;
+      background-color: $clr-white;
+   }
 }
