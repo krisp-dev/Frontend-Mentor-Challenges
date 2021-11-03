@@ -11,6 +11,10 @@
       background-size: 200%;
    }
 
+   @include media(large) {
+      background-position: 25.5% 52.5%;
+   }
+
    &__nav {
       display: flex;
       justify-content: space-between;
