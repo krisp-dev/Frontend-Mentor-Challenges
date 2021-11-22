@@ -1,0 +1,98 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+/*=============== VARIABLES ===============*/
+$clr-primary-100: hsl(163, 72%, 41%);
+$clr-primary-200: hsl(356, 69%, 56%);
+
+$clr-primary-fb: hsl(208, 92%, 53%);
+$clr-primary-tt: hsl(203, 89%, 53%);
+$clr-primary-ig1: hsl(37, 97%, 70%);
+$clr-primary-ig2: hsl(329, 70%, 58%);
+$clr-primary-yt: hsl(348, 97%, 39%);
+
+$clr-darktheme-100: hsl(230, 17%, 14%);
+$clr-darktheme-200: hsl(232, 19%, 15%);
+$clr-darktheme-300: hsl(228, 28%, 20%);
+$clr-darktheme-400: hsl(228, 34%, 66%);
+$clr-darktheme-toggle1: hsl(210, 78%, 56%);
+$clr-darktheme-toggle2: hsl(146, 68%, 55%);
+
+$clr-lighttheme-100: hsl(225, 100%, 98%);
+$clr-lighttheme-200: hsl(227, 47%, 96%);
+$clr-lighttheme-300: hsl(228, 12%, 44%);
+$clr-lighttheme-400: hsl(230, 17%, 14%);
+$clr-lighttheme-toggle: hsl(230, 22%, 74%);
+
+$clr-white: hsl(0, 0%, 100%);
+
+$ff-body: "Inter", sans-serif;
+
+/*=============== MIXINS ===============*/
+@mixin insta-gradient() {
+   background: linear-gradient(to right($clr-primary-ig1, $clr-primary-ig2));
+}
+
+@mixin darktheme-toggle() {
+   background: linear-gradient(
+      to right($clr-darktheme-toggle1, $clr-darktheme-toggle2)
+   );
+}
+
+@mixin media($breakpoint) {
+   // @if $breakpoint == medium {
+   //    @media (min-width: 56.25em) {
+   //       @content;
+   //    } //900px / 16 = 56.25em
+   // }
+
+   // @if $breakpoint == large {
+   //    @media (min-width: 78.125em) {
+   //       @content;
+   //    } //1250px / 16 = 78.125em
+   // }
+
+   // @if $breakpoint == largest {
+   //    @media (min-width: 120em) {
+   //       @content;
+   //    } //1920px / 16 = 120em
+   // }
+}
+
+/*=============== UNIVERSAL BASIC RESET ===============*/
+*,
+*::before,
+*::after {
+   margin: 0;
+   padding: 0;
+   box-sizing: inherit;
+}
+
+/*=============== BASE LAYOUT ===============*/
+html {
+   box-sizing: border-box;
+   font-size: 62.5%; // 1rem = 10px,   10px/16px = 62.5
+   scroll-behavior: smooth;
+}
+
+body {
+   font-family: $ff-body;
+   font-size: 1.4rem; // Body Copy - Font size (Overview Card Headings): 14px
+   min-height: 100vh;
+}
+
+/*=============== SMALL FIXES ===============*/
+// Make images easier to work with
+img,
+picture {
+   display: block;
+   max-width: 100%;
+}
+
+// Inherit fonts for inputs and buttons
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
