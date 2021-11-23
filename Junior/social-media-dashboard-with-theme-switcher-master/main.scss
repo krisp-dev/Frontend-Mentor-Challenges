@@ -79,6 +79,10 @@ body {
    font-family: $ff-body;
    font-size: 1.4rem; // Body Copy - Font size (Overview Card Headings): 14px
    min-height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   // justify-content: center;
 }
 
 /*=============== SMALL FIXES ===============*/
@@ -96,3 +100,10 @@ textarea,
 select {
    font: inherit;
 }
+
+/*
+====================================================================================
+====================================================================================
+*/
+
+/*=============== HEADER ===============*/
