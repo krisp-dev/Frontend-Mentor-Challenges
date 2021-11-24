@@ -29,14 +29,12 @@ $clr-white: hsl(0, 0%, 100%);
 $ff-body: "Inter", sans-serif;
 
 /*=============== MIXINS ===============*/
-@mixin insta-gradient() {
-   background: linear-gradient(to right($clr-primary-ig1, $clr-primary-ig2));
+@mixin bordertop($color) {
+   border-top: 4px solid $color;
 }
 
-@mixin darktheme-toggle() {
-   background: linear-gradient(
-      to right($clr-darktheme-toggle1, $clr-darktheme-toggle2)
-   );
+@mixin gradient($color1, $color2) {
+   background: linear-gradient(to right, $color1, $color2);
 }
 
 @mixin media($breakpoint) {
@@ -79,6 +77,11 @@ body {
    font-family: $ff-body;
    font-size: 1.4rem; // Body Copy - Font size (Overview Card Headings): 14px
    min-height: 100vh;
+   background: linear-gradient(
+      to bottom,
+      $clr-lighttheme-100 30%,
+      $clr-white 30% 100%
+   );
    display: flex;
    flex-direction: column;
    align-items: center;
@@ -107,3 +110,56 @@ select {
 */
 
 /*=============== HEADER ===============*/
+.header {
+   display: flex;
+   justify-content: space-between;
+
+   width: 77.5%;
+}
+
+.content {
+   &-title {
+   }
+
+   &-stats {
+   }
+}
+
+/*=============== TOTALS ===============*/
+.totals {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
+   justify-content: space-between;
+   gap: 3rem;
+
+   width: 77.5%;
+}
+
+.card {
+   background-color: $clr-lighttheme-200;
+   border-radius: 0.5rem;
+   position: relative;
+
+   &:nth-child(1) {
+      @include bordertop($clr-primary-fb);
+   }
+   &:nth-child(2) {
+      @include bordertop($clr-primary-tt);
+   }
+   &:nth-child(3) {
+      &::before {
+         content: "";
+         position: absolute;
+         width: 100%;
+         height: 4px;
+         @include gradient($clr-primary-ig1, $clr-primary-ig2);
+         top: 0;
+         border-top-right-radius: 0.5rem;
+         border-top-left-radius: 0.5rem;
+      }
+   }
+
+   &:nth-child(4) {
+      @include bordertop($clr-primary-yt);
+   }
+}
