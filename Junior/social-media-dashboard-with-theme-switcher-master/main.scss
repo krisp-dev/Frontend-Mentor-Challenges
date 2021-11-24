@@ -88,7 +88,6 @@ body {
    // justify-content: center;
 }
 
-/*=============== SMALL FIXES ===============*/
 // Make images easier to work with
 img,
 picture {
@@ -96,18 +95,8 @@ picture {
    max-width: 100%;
 }
 
-// Inherit fonts for inputs and buttons
-input,
-button,
-textarea,
-select {
-   font: inherit;
-}
-
-/*
-====================================================================================
-====================================================================================
-*/
+/*===================================================================================
+===================================================================================*/
 
 /*=============== HEADER ===============*/
 .header {
@@ -140,6 +129,12 @@ select {
    border-radius: 0.5rem;
    position: relative;
 
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   gap: 2.75rem;
+   padding: 3rem 0;
+
    &:nth-child(1) {
       @include bordertop($clr-primary-fb);
    }
@@ -147,19 +142,37 @@ select {
       @include bordertop($clr-primary-tt);
    }
    &:nth-child(3) {
+      @include bordertop(transparent);
+
       &::before {
          content: "";
          position: absolute;
          width: 100%;
          height: 4px;
          @include gradient($clr-primary-ig1, $clr-primary-ig2);
-         top: 0;
+         top: -4px;
          border-top-right-radius: 0.5rem;
          border-top-left-radius: 0.5rem;
       }
    }
-
    &:nth-child(4) {
       @include bordertop($clr-primary-yt);
+   }
+
+   &__socials {
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+
+      &-link {
+         text-decoration: none;
+      }
+   }
+
+   &__interactions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
    }
 }
