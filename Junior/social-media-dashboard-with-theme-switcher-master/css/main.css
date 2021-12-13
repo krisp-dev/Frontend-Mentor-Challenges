@@ -54,7 +54,19 @@ picture {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  padding: 3.5rem 0 4.5rem 0;
   width: 77.5%;
+}
+
+.content-stats {
+  font-weight: 700;
+  color: #63687e;
+}
+
+.toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /*=============== TOTALS ===============*/
@@ -84,8 +96,8 @@ picture {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2.75rem;
-  padding: 3rem 0;
+  gap: 1.75rem;
+  padding: 3rem 0 2.5rem 0;
 }
 
 .card:nth-child(1) {
@@ -129,6 +141,23 @@ picture {
 
 .card__socials-link {
   text-decoration: none;
+  color: #63687e;
+  font-weight: 700;
+}
+
+.card__stats {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #63687e;
+  font-size: 1.3rem;
+}
+
+.card__stats span {
+  font-size: 5.5rem;
+  font-weight: 700;
+  letter-spacing: 0rem;
+  color: #000;
 }
 
 .card__interactions {
@@ -139,5 +168,12 @@ picture {
       -ms-flex-align: center;
           align-items: center;
   gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.card__interactions-text {
+  color: #1db489;
+  font-weight: 700;
+  font-size: 1.3rem;
 }
 /*# sourceMappingURL=main.css.map */
