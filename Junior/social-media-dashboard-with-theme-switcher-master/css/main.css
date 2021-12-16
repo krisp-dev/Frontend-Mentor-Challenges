@@ -179,6 +179,17 @@ picture {
 
 /*=============== OVERVIEW ===============*/
 .overview {
+  width: 77.5%;
+  margin-top: 4.5rem;
+}
+
+.overview__title {
+  color: #63687e;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.overview-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(22.5rem, 1fr))[auto-fit];
@@ -187,21 +198,13 @@ picture {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 3rem;
-  margin-top: 5rem;
-  margin-bottom: 2rem;
-  width: 77.5%;
-}
-
-.overview__title {
-  color: #63687e;
-  font-size: 2.5rem;
   margin-bottom: 2rem;
 }
 
 .label {
   background-color: #f0f2fa;
   border-radius: 0.5rem;
-  padding: 3rem 2.25rem 2rem;
+  padding: 2.75rem 2.25rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,7 +225,6 @@ picture {
 }
 
 .label__title-text {
-  font-size: 1.5rem;
   font-weight: 700;
   color: #63687e;
 }
