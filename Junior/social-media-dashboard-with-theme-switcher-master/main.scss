@@ -210,3 +210,72 @@ picture {
       }
    }
 }
+
+/*=============== OVERVIEW ===============*/
+.overview {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(22.5rem, 1fr));
+   justify-content: space-between;
+   gap: 3rem;
+   margin-top: 5rem;
+   margin-bottom: 2rem;
+
+   width: 77.5%;
+
+   &__title {
+      color: $clr-lighttheme-300;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+   }
+}
+
+.label {
+   background-color: $clr-lighttheme-200;
+   border-radius: 0.5rem;
+   padding: 3rem 2.25rem 2rem;
+   display: flex;
+   flex-direction: column;
+   gap: 2.25rem;
+
+   &__title {
+      display: flex;
+      justify-content: space-between;
+
+      &-text {
+         font-size: 1.5rem;
+         font-weight: 700;
+         color: $clr-lighttheme-300;
+      }
+
+      &-img {
+      }
+   }
+
+   &__stats {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+
+      &-number {
+         font-size: 3.25rem;
+         font-weight: 700;
+      }
+
+      &-percent {
+         display: flex;
+         align-items: center;
+         gap: 0.5rem;
+         font-weight: 700;
+         font-size: 1.3rem;
+         margin-bottom: 0.4rem;
+
+         &--green {
+            color: $clr-primary-100;
+         }
+
+         &--red {
+            color: $clr-primary-200;
+         }
+      }
+   }
+}
