@@ -66,6 +66,14 @@ body {
    flex-direction: column;
    align-items: center;
    // justify-content: center;
+
+   @media only screen and (max-width: 618px) {
+      background: linear-gradient(
+         to bottom,
+         var(--clr-lighttheme-100) 12.5%,
+         var(--clr-white) 12.5% 100%
+      );
+   }
 }
 
 body.dark {
@@ -96,6 +104,11 @@ picture {
    padding: 3.5rem 0 4.5rem 0;
 
    width: 77.5%;
+
+   @media only screen and (max-width: 618px) {
+      flex-direction: column;
+      gap: 3rem;
+   }
 }
 
 .content {
@@ -114,6 +127,10 @@ picture {
    align-items: center;
    gap: 2rem;
    margin-right: 1rem;
+
+   @media only screen and (max-width: 618px) {
+      justify-content: space-between;
+   }
 
    &__text {
       color: var(--clr-lighttheme-300);
