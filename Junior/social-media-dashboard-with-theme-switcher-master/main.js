@@ -1,4 +1,4 @@
-const themeButton = document.getElementById("checkbox");
+const toggleSwitch = document.getElementById("checkbox");
 const darkTheme = "dark";
 const iconTheme = "bx-toggle-right";
 
@@ -17,10 +17,8 @@ if (selectedTheme) {
    );
 }
 
-// Toggle the theme using toggle button
-themeButton.addEventListener("click", () => {
-   // Toggle theme & icon
+// Toggle & save the theme
+toggleSwitch.addEventListener("click", () => {
    document.body.classList.toggle(darkTheme);
-   // Save theme & icon to local storage
    localStorage.setItem("selected-theme", getCurrentTheme());
 });

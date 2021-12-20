@@ -19,7 +19,8 @@
   --clr-lighttheme-200: hsl(227, 47%, 96%);
   --clr-lighttheme-300: hsl(228, 12%, 44%);
   --clr-lighttheme-400: hsl(230, 17%, 14%);
-  --clr-lighttheme-toggle: hsl(230, 22%, 74%);
+  --clr-lighttheme-toggle1: hsl(230, 22%, 74%);
+  --clr-lighttheme-toggle2: hsl(230, 22%, 74%);
   --clr-white: hsl(0, 0%, 100%);
   --clr-black: hsl(0, 0%, 0%);
 }
@@ -65,7 +66,8 @@ body.dark {
   --clr-lighttheme-200: var(--clr-darktheme-300);
   --clr-lighttheme-300: var(--clr-darktheme-400);
   --clr-lighttheme-400: var(--clr-darktheme-100);
-  --clr-lighttheme-toggle: var(--clr-darktheme-toggle1);
+  --clr-lighttheme-toggle1: var(--clr-darktheme-toggle1);
+  --clr-lighttheme-toggle2: var(--clr-darktheme-toggle2);
   --clr-white: var(--clr-darktheme-100);
   --clr-black: #fff;
 }
@@ -111,7 +113,7 @@ picture {
 }
 
 .theme__text {
-  color: var(--clr-lighttheme-toggle);
+  color: var(--clr-lighttheme-300);
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -124,7 +126,8 @@ picture {
 .theme__toggle-label {
   width: 3.2rem;
   height: 1.6rem;
-  background-color: var(--clr-lighttheme-toggle);
+  background: -webkit-gradient(linear, left top, right top, from(var(--clr-lighttheme-toggle1)), to(var(--clr-lighttheme-toggle2)));
+  background: linear-gradient(to right, var(--clr-lighttheme-toggle1), var(--clr-lighttheme-toggle2));
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
