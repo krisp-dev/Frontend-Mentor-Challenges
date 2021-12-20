@@ -33,10 +33,13 @@
             <h1 class="content-title">Social Media Dashboard</h1>
             <p class="content-stats">Total Followers: 23,004</p>
          </div>
-         <div class="toggle">
-            <span class="toggle-text">Dark Mode</span>
-            <div class="toggle-icon">
-               <div class="toggle-icon--switch"></div>
+         <div class="theme">
+            <span class="theme__text">Dark Mode</span>
+            <div class="theme__toggle">
+               <input type="checkbox" class="theme__toggle-checkbox" id="checkbox">
+               <label for="checkbox" class="theme__toggle-label">
+                  <div class='theme__toggle-ball'>
+               </label>
             </div>
          </div>
       </header>
@@ -123,7 +126,7 @@
                   alt="Down"
                   class="card__interactions-img"
                />
-               <p class="card__interactions-text">144 Today</p>
+               <p class="card__interactions-text card__interactions-text--red">144 Today</p>
             </div>
          </div>
       </section>
@@ -290,5 +293,7 @@
             >Frontend Mentor</a
          >. Coded by <a href="https://github.com/krisp-dev">krisp-dev</a>
       </div>
+   
+   <script src="main.js"></script>
    </body>
 </html>

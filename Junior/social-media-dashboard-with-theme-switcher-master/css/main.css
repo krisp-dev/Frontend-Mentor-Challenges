@@ -1,7 +1,29 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 /*=============== VARIABLES ===============*/
-/*=============== MIXINS ===============*/
+:root {
+  --clr-primary-100: hsl(163, 72%, 41%);
+  --clr-primary-200: hsl(356, 69%, 56%);
+  --clr-fb: hsl(208, 92%, 53%);
+  --clr-tt: hsl(203, 89%, 53%);
+  --clr-ig1: hsl(37, 97%, 70%);
+  --clr-ig2: hsl(329, 70%, 58%);
+  --clr-yt: hsl(348, 97%, 39%);
+  --clr-darktheme-100: hsl(230, 17%, 14%);
+  --clr-darktheme-200: hsl(232, 19%, 15%);
+  --clr-darktheme-300: hsl(228, 28%, 20%);
+  --clr-darktheme-400: hsl(228, 34%, 66%);
+  --clr-darktheme-toggle1: hsl(210, 78%, 56%);
+  --clr-darktheme-toggle2: hsl(146, 68%, 55%);
+  --clr-lighttheme-100: hsl(225, 100%, 98%);
+  --clr-lighttheme-200: hsl(227, 47%, 96%);
+  --clr-lighttheme-300: hsl(228, 12%, 44%);
+  --clr-lighttheme-400: hsl(230, 17%, 14%);
+  --clr-lighttheme-toggle: hsl(230, 22%, 74%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-black: hsl(0, 0%, 0%);
+}
+
 /*=============== UNIVERSAL BASIC RESET ===============*/
 *,
 *::before,
@@ -24,8 +46,8 @@ body {
   font-family: "Inter", sans-serif;
   font-size: 1.4rem;
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #f5f7ff), color-stop(30%, white));
-  background: linear-gradient(to bottom, #f5f7ff 30%, white 30% 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, var(--clr-lighttheme-100)), color-stop(30%, var(--clr-white)));
+  background: linear-gradient(to bottom, var(--clr-lighttheme-100) 30%, var(--clr-white) 30% 100%);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,6 +58,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+body.dark {
+  --clr-lighttheme-100: var(--clr-darktheme-200);
+  --clr-lighttheme-200: var(--clr-darktheme-300);
+  --clr-lighttheme-300: var(--clr-darktheme-400);
+  --clr-lighttheme-400: var(--clr-darktheme-100);
+  --clr-lighttheme-toggle: var(--clr-darktheme-toggle1);
+  --clr-white: var(--clr-darktheme-100);
+  --clr-black: #fff;
 }
 
 img,
@@ -58,15 +90,74 @@ picture {
   width: 77.5%;
 }
 
-.content-stats {
-  font-weight: 700;
-  color: #63687e;
+.content-title {
+  color: var(--clr-black);
 }
 
-.toggle {
+.content-stats {
+  font-weight: 700;
+  color: var(--clr-lighttheme-300);
+}
+
+.theme {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  margin-right: 1rem;
+}
+
+.theme__text {
+  color: var(--clr-lighttheme-toggle);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.theme__toggle-checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.theme__toggle-label {
+  width: 3.2rem;
+  height: 1.6rem;
+  background-color: var(--clr-lighttheme-toggle);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5rem;
+  padding: 0.5rem;
+  position: relative;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+.theme__toggle-ball {
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: var(--clr-white);
+  position: absolute;
+  top: 0.2rem;
+  left: 0.2rem;
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform 0.22s linear;
+  transition: -webkit-transform 0.22s linear;
+  transition: transform 0.22s linear;
+  transition: transform 0.22s linear, -webkit-transform 0.22s linear;
+}
+
+.theme__toggle-checkbox:checked + .theme__toggle-label .theme__toggle-ball {
+  -webkit-transform: translateX(1.6rem);
+          transform: translateX(1.6rem);
 }
 
 /*=============== TOTALS ===============*/
@@ -83,7 +174,7 @@ picture {
 }
 
 .card {
-  background-color: #f0f2fa;
+  background-color: var(--clr-lighttheme-200);
   border-radius: 0.5rem;
   position: relative;
   display: -webkit-box;
@@ -101,11 +192,11 @@ picture {
 }
 
 .card:nth-child(1) {
-  border-top: 4px solid #198ff5;
+  border-top: 4px solid var(--clr-fb);
 }
 
 .card:nth-child(2) {
-  border-top: 4px solid #1ca0f2;
+  border-top: 4px solid var(--clr-tt);
 }
 
 .card:nth-child(3) {
@@ -117,15 +208,15 @@ picture {
   position: absolute;
   width: 100%;
   height: 4px;
-  background: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
-  background: linear-gradient(to right, #fdc468, #df4996);
+  background: -webkit-gradient(linear, left top, right top, from(var(--clr-ig1)), to(var(--clr-ig2)));
+  background: linear-gradient(to right, var(--clr-ig1), var(--clr-ig2));
   top: -4px;
   border-top-right-radius: 0.5rem;
   border-top-left-radius: 0.5rem;
 }
 
 .card:nth-child(4) {
-  border-top: 4px solid #c4032a;
+  border-top: 4px solid var(--clr-yt);
 }
 
 .card__socials {
@@ -141,7 +232,7 @@ picture {
 
 .card__socials-link {
   text-decoration: none;
-  color: #63687e;
+  color: var(--clr-lighttheme-300);
   font-weight: 700;
 }
 
@@ -149,7 +240,7 @@ picture {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
-  color: #63687e;
+  color: var(--clr-lighttheme-300);
   font-size: 1.3rem;
 }
 
@@ -157,7 +248,7 @@ picture {
   font-size: 5.5rem;
   font-weight: 700;
   letter-spacing: 0rem;
-  color: #000;
+  color: var(--clr-black);
 }
 
 .card__interactions {
@@ -172,9 +263,13 @@ picture {
 }
 
 .card__interactions-text {
-  color: #1db489;
+  color: var(--clr-primary-100);
   font-weight: 700;
   font-size: 1.3rem;
+}
+
+.card__interactions-text--red {
+  color: var(--clr-primary-200);
 }
 
 /*=============== OVERVIEW ===============*/
@@ -184,7 +279,7 @@ picture {
 }
 
 .overview__title {
-  color: #63687e;
+  color: var(--clr-black);
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
 }
@@ -202,7 +297,7 @@ picture {
 }
 
 .label {
-  background-color: #f0f2fa;
+  background-color: var(--clr-lighttheme-200);
   border-radius: 0.5rem;
   padding: 2.75rem 2.25rem 2rem;
   display: -webkit-box;
@@ -226,7 +321,7 @@ picture {
 
 .label__title-text {
   font-weight: 700;
-  color: #63687e;
+  color: var(--clr-lighttheme-300);
 }
 
 .label__stats {
@@ -244,6 +339,7 @@ picture {
 .label__stats-number {
   font-size: 3.25rem;
   font-weight: 700;
+  color: var(--clr-black);
 }
 
 .label__stats-percent {
@@ -260,10 +356,10 @@ picture {
 }
 
 .label__stats-percent--green {
-  color: #1db489;
+  color: var(--clr-primary-100);
 }
 
 .label__stats-percent--red {
-  color: #dc414c;
+  color: var(--clr-primary-200);
 }
 /*# sourceMappingURL=main.css.map */
