@@ -1,0 +1,148 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+
+.age-card {
+   width: 100%;
+   max-width: 36rem;
+   background: $white;
+   border-radius: 1.5rem 1.5rem 6rem 1.5rem;
+   padding: 3rem 1.5rem;
+}
+
+.age-fields {
+   border: 0;
+   padding: 0;
+   margin: 0;
+
+   display: flex;
+   gap: 1rem;
+}
+
+.field {
+   &__label {
+      display: block;
+      font-size: 0.7rem;
+      letter-spacing: 0.125rem;
+      text-transform: uppercase;
+      color: $grey-500;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+   }
+
+   &__input {
+      width: 100%;
+      padding: 0.75rem;
+      font-size: 1rem;
+      font-weight: 700;
+      border: 1px solid $grey-200;
+      border-radius: 0.5rem;
+      outline: none;
+
+      &::placeholder {
+         color: $grey-200;
+      }
+
+      &:focus {
+         outline: 2px solid $primary-purple;
+         border-color: $primary-purple;
+      }
+   }
+
+   &__error {
+      margin: 0.4rem 0 0;
+      font-size: 0.75rem;
+      color: $primary-red;
+      font-style: italic;
+      min-height: 1rem;
+   }
+}
+
+.age-form {
+   position: relative;
+   padding-bottom: 2.5rem;
+   border-bottom: 1px solid $grey-200;
+   margin-bottom: 2rem;
+}
+
+.submit {
+   position: absolute;
+   left: 50%;
+   bottom: -2rem;
+   transform: translateX(-50%);
+
+   background: $primary-purple;
+   border: 0;
+   border-radius: 999px;
+   width: 4rem;
+   height: 4rem;
+   cursor: pointer;
+
+   display: grid;
+   place-items: center;
+
+   &:hover,
+   &:focus {
+      background: $black;
+      outline: none;
+   }
+
+   &:focus-visible {
+      outline: 3px solid $primary-purple;
+      outline-offset: 4px;
+   }
+
+   &__icon {
+      width: 2rem;
+      height: 2rem;
+   }
+}
+
+.result {
+   font-size: 2.75rem;
+   line-height: 1.1;
+   font-weight: 700;
+   font-style: italic;
+   padding-top: 1.5rem;
+
+   &__line {
+      margin: 0;
+   }
+
+   &__value {
+      color: $primary-purple;
+   }
+}
+
+@include respond-up("tablet") {
+   .age-card {
+      padding: 4rem 3rem;
+      max-width: 42rem;
+      border-radius: 1.5rem 1.5rem 10rem 1.5rem;
+   }
+
+   .age-fields {
+      gap: 2rem;
+      width: 75%;
+   }
+
+   .field__label {
+      font-size: 0.8rem;
+   }
+
+   .field__input {
+      font-size: 1.5rem;
+      padding: 1rem;
+      font-weight: 900;
+   }
+
+   .result {
+      font-size: 4.5rem;
+   }
+
+   .submit {
+      left: 95%;
+      bottom: -2.5rem;
+      width: 5rem;
+      height: 5rem;
+   }
+}

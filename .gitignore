@@ -1,0 +1,13 @@
+# Dependencies
+node_modules
+
+# Vite build (we keep /site, so dist can be ignored)
+dist
+
+# OS / misc
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+.env.local
