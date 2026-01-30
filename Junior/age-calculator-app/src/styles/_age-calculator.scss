@@ -55,6 +55,20 @@
       font-style: italic;
       min-height: 1rem;
    }
+
+   &--error {
+      .field__label {
+         color: $primary-red;
+      }
+
+      .field__input {
+         border-color: $primary-red;
+
+         &:focus {
+            outline: 2px solid $primary-red;
+         }
+      }
+   }
 }
 
 .age-form {
